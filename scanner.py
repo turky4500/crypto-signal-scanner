@@ -47,10 +47,10 @@ BINANCE_ENDPOINTS = [
 ]
 BINANCE_USDT_QUOTE    = "USDT"
 MIN_VOLUME_USDT       = 1_000_000      # الحد الأدنى لحجم التداول خلال 24 ساعة (USDT)
-MAX_PAIRS             = 200            # الحد الأقصى لأزواج العملات للمعالجة
-REQUEST_TIMEOUT       = 30             # مهلة الطلب بالثواني
-RATE_LIMIT_DELAY      = 0.25           # تأخير بين الطلبات لتجنب تجاوز الحد (ثانية)
-MAX_RETRIES           = 2              # عدد محاولات إعادة الطلب (للإصدار المحلي)
+MAX_PAIRS             = 50             # الحد الأقصى لأزواج العملات للمعالجة (للسرعة)
+REQUEST_TIMEOUT       = 15             # مهلة الطلب بالثواني
+RATE_LIMIT_DELAY      = 0.1            # تأخير بين الطلبات لتجنب تجاوز الحد (ثانية)
+MAX_RETRIES           = 1              # عدد محاولات إعادة الطلب
 RETRY_DELAY           = 5              # تأخير بين المحاولات
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -422,6 +422,52 @@ class BinanceSpotScanner:
         logger.info(f"✅ تم العثور على {len(pairs)} عملة نشطة من CoinGecko")
         return pairs
 
+    def _get_ohlc_from_coingecko(self, coin_id: str, days: int = 30) -> Optional[List[List]]:
+        """
+        جلب بيانات OHLC من CoinGecko API.
+
+        Args:
+            coin_id: معرف العملة في CoinGecko (مثل 'bitcoin')
+            days: عدد الأيام للبيانات
+
+        Returns:
+            قائمة OHLC أو None
+        """
+        url = f"{COINGECKO_API_BASE}/coins/{coin_id}/ohlc"
+        params = {"vs_currency": "usd", "days": str(days)}
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                response = self.session.get(url, params=params, timeout=REQUEST_TIMEOUT)
+                if response.status_code == 200:
+                    data = response.json()
+                    if isinstance(data, list) and len(data) >= 20:
+                        # CoinGecko returns [timestamp, open, high, low, close]
+                        # Convert to Binance kline format: [open_time, open, high, low, close, volume]
+                        klines = []
+                        for candle in data:
+                            klines.append([
+                                int(candle[0]),   # timestamp (milliseconds)
+                                float(candle[1]),  # open
+                                float(candle[2]),  # high
+                                float(candle[3]),  # low
+                                float(candle[4]),  # close
+                                0.0,               # volume (not available from CoinGecko OHLC)
+                            ])
+                        logger.info(f"✅ CoinGecko OHLC: {len(klines)} candles for {coin_id}")
+                        return klines
+                    return None
+                elif response.status_code == 429:
+                    logger.warning(f"⚠️ CoinGecko rate limited, waiting...")
+                    time.sleep(RETRY_DELAY)
+                else:
+                    logger.warning(f"⚠️ CoinGecko OHLC error {response.status_code} for {coin_id}")
+                    return None
+            except Exception as e:
+                logger.warning(f"⚠️ CoinGecko OHLC error {coin_id}: {e}")
+                if attempt < MAX_RETRIES:
+                    time.sleep(RETRY_DELAY)
+        return None
+
     def _get_histohour_from_cryptocompare(self, symbol: str) -> Optional[List]:
         """
         جلب بيانات OHLCV كل ساعة من CryptoCompare API كبديل.
@@ -487,8 +533,8 @@ class BinanceSpotScanner:
 
         try:
             ticker = yf.Ticker(yf_symbol)
-            # جلب بيانات 15 يوم بأطار ساعة للحصول على 350+ شمعة
-            hist = ticker.history(period="15d", interval="1h", auto_adjust=True)
+            # جلب بيانات 10 أيام بأطار ساعة للحصول على ~240 شمعة
+            hist = ticker.history(period="10d", interval="1h", auto_adjust=True)
 
             if hist.empty or len(hist) < 50:
                 logger.warning(f"⚠️ Yahoo Finance: لا توجد بيانات كافية لـ {yf_symbol}")
@@ -519,15 +565,16 @@ class BinanceSpotScanner:
     # جلب بيانات الشموع (Klines)
     # ─────────────────────────────────────────────────────────────────────────
 
-    def get_klines(self, symbol: str, interval: str = "1h", limit: int = 250) -> Optional[List[List]]:
+    def get_klines(self, symbol: str, interval: str = "1h", limit: int = 250, coin_id: Optional[str] = None) -> Optional[List[List]]:
         """
         جلب بيانات الشموع (OHLCV) لزوج محدد.
-        يحاول: Binance → Yahoo Finance كبديل.
+        يحاول: Binance → Yahoo Finance → CoinGecko كبديل.
 
         Args:
             symbol: رمز العملة (مثل 'BTCUSDT')
             interval: الإطار الزمني (مثل '1h', '4h', '1d')
             limit: عدد الشموع المطلوب (الحد الأقصى 1000)
+            coin_id: معرف العملة في CoinGecko (للسحب المباشر)
 
         Returns:
             قائمة الشموع أو None في حالة الفشل
@@ -540,10 +587,22 @@ class BinanceSpotScanner:
             return data
 
         # ─────────────────────────────────────────────────────────────────────────
-        # Fallback: Yahoo Finance
+        # Fallback 1: Yahoo Finance
         # ─────────────────────────────────────────────────────────────────────────
         base = symbol.replace("USDT", "").upper()
-        return self._get_klines_from_yfinance(base)
+        yf_data = self._get_klines_from_yfinance(base)
+        if yf_data and len(yf_data) >= 50:
+            return yf_data
+
+        # ─────────────────────────────────────────────────────────────────────────
+        # Fallback 2: CoinGecko OHLC
+        # ─────────────────────────────────────────────────────────────────────────
+        if coin_id:
+            cg_data = self._get_ohlc_from_coingecko(coin_id, days=90)
+            if cg_data and len(cg_data) >= 20:
+                return cg_data
+
+        return None
 
     # ─────────────────────────────────────────────────────────────────────────
     # ─────────────────────────────────────────────────────────────────────────
@@ -1047,10 +1106,11 @@ class BinanceSpotScanner:
 
         for i, pair in enumerate(pairs):
             symbol = pair["symbol"]
+            coin_id = pair.get("coin_id")  # موجود فقط في بيانات CoinGecko
             logger.info(f"  [{i+1}/{len(pairs)}] تحليل {symbol}...", extra={"continue": True})
 
             try:
-                klines = self.get_klines(symbol, "1h", 250)
+                klines = self.get_klines(symbol, "1h", 250, coin_id=coin_id)
                 if not klines or len(klines) < 50:
                     errors_count += 1
                     logger.info(f"\r  [{i+1}/{len(pairs)}] {symbol} - بيانات غير كافية")
