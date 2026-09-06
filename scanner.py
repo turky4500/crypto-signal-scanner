@@ -38,19 +38,73 @@ logger = logging.getLogger(__name__)
 # ─────────────────────────────────────────────────────────────────────────────
 # ثوابت الاتصال بـ Binance API
 # ─────────────────────────────────────────────────────────────────────────────
-BINANCE_API_BASE      = "https://api.binance.com/api/v3"
+# محاولة عدة نقاط وصول (Binance has regional endpoints)
+BINANCE_ENDPOINTS = [
+    "https://api.binance.com/api/v3",
+    "https://api1.binance.com/api/v3",
+    "https://api2.binance.com/api/v3",
+    "https://api3.binance.com/api/v3",
+]
 BINANCE_USDT_QUOTE    = "USDT"
 MIN_VOLUME_USDT       = 1_000_000      # الحد الأدنى لحجم التداول خلال 24 ساعة (USDT)
 MAX_PAIRS             = 200            # الحد الأقصى لأزواج العملات للمعالجة
 REQUEST_TIMEOUT       = 30             # مهلة الطلب بالثواني
 RATE_LIMIT_DELAY      = 0.25           # تأخير بين الطلبات لتجنب تجاوز الحد (ثانية)
-MAX_RETRIES           = 3              # عدد محاولات إعادة الطلب
+MAX_RETRIES           = 2              # عدد محاولات إعادة الطلب (للإصدار المحلي)
 RETRY_DELAY           = 5              # تأخير بين المحاولات
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CoinGecko API (fallback when Binance is geo-blocked)
 # ─────────────────────────────────────────────────────────────────────────────
 COINGECKO_API_BASE = "https://api.coingecko.com/api/v3"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CryptoCompare API (alternative independent source) - Requires API Key
+# ─────────────────────────────────────────────────────────────────────────────
+CRYPTOCOMPARE_API = "https://min-api.cryptocompare.com/data"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Yahoo Finance - مصدر بديل للعملات المشفرة الرئيسية
+# ─────────────────────────────────────────────────────────────────────────────
+YFINANCE_COINS = [
+    "BTC-USD", "ETH-USD", "BNB-USD", "SOL-USD", "XRP-USD",
+    "ADA-USD", "DOGE-USD", "DOT-USD", "MATIC-USD", "SHIB-USD",
+    "LTC-USD", "AVAX-USD", "LINK-USD", "UNI-USD", "ATOM-USD",
+    "XLM-USD", "ETC-USD", "FIL-USD", "APT-USD", "NEAR-USD",
+    "ALGO-USD", "FTM-USD", "AAVE-USD", "GRT-USD", "ARB-USD",
+    "OP-USD", "INJ-USD", "SAND-USD", "MANA-USD", "AXS-USD",
+    "THETA-USD", "EOS-USD", "XTZ-USD", "CAKE-USD", "SNX-USD",
+    "CRV-USD", "LDO-USD", "MKR-USD", "RUNE-USD", "ZIL-USD",
+    "ENJ-USD", "BAT-USD", "COMP-USD", "1INCH-USD", "CHZ-USD",
+    "ENS-USD", "FXS-USD", "GMX-USD", "WOO-USD", "GALA-USD",
+    "IMX-USD", "RNDR-USD", "OCEAN-USD", "FET-USD", "AGIX-USD",
+    "VET-USD", "HBAR-USD", "NEO-USD", "KCS-USD", "TRX-USD",
+    "KAVA-USD", "ZEC-USD", "DASH-USD", "WAVES-USD", "HOT-USD",
+    "XMR-USD", "NANO-USD", "IOTA-USD", "DCR-USD", "ZRX-USD",
+    "OMG-USD", "SC-USD", "RVN-USD", "KSM-USD", "ICX-USD",
+    "QTUM-USD", "ONT-USD", "ADA-USD", "ALPHA-USD", "BAND-USD",
+    "BEL-USD", "BLZ-USD", "COTI-USD", "DENT-USD", "DGB-USD",
+    "EGLD-USD", "HNT-USD", "IOTX-USD", "JASMY-USD", "JOE-USD",
+    "KDA-USD", "KEY-USD", "LINA-USD", "LRC-USD", "LSK-USD",
+    "MINA-USD", "MOVR-USD", "OGN-USD", "ONE-USD", "ONG-USD",
+    "PAXG-USD", "PIXEL-USD", "POLS-USD", "POND-USD", "POWR-USD",
+    "QI-USD", "RAD-USD", "RARE-USD", "REEF-USD", "REN-USD",
+    "REQ-USD", "RLC-USD", "RSR-USD", "RSS-USD", "RVC-USD",
+    "SCRT-USD", "SFP-USD", "SLP-USD", "SPELL-USD", "SRM-USD",
+    "STMX-USD", "STORJ-USD", "SUSHI-USD", "SXP-USD", "SYS-USD",
+    "T-USD", "TFUEL-USD", "TKO-USD", "TLM-USD", "TROY-USD",
+    "TVK-USD", "UMA-USD", "UNFI-USD", "UTK-USD", "VGX-USD",
+    "VIDT-USD", "VTHO-USD", "WAN-USD", "WAXP-USD", "WIN-USD",
+    "WNC-USD", "WRX-USD", "XEM-USD", "XNO-USD", "XVS-USD",
+    "YFI-USD", "YFII-USD", "YGG-USD", "ZEN-USD", "ZKS-USD",
+    "ZK-USD", "SUI-USD", "SEI-USD", "TIA-USD", "PEPE-USD",
+    "WIF-USD", "FLOKI-USD", "BONK-USD", "PYTH-USD", "JTO-USD",
+    "WLD-USD", "STRK-USD", "REZ-USD", "BB-USD", "NOT-USD",
+    "IO-USD", "PIXEL-USD", "PORTAL-USD", "ALT-USD", "W-USD",
+    "BOME-USD", "SAGA-USD", "MER-USD", "LISTA-USD", "DOGS-USD",
+    "HMSTR-USD", "CATI-USD", "SLERF-USD", "NFP-USD", "UXLINK-USD",
+    "KAIA-USD", "ACT-USD", "PNUT-USD", "CHILL-USD", "MOODENG-USD",
+]
 
 # ─────────────────────────────────────────────────────────────────────────────
 # إعدادات المؤشرات الفنية
@@ -84,13 +138,30 @@ class BinanceSpotScanner:
         """تهيئة الاتصال بجلسة الطلبات."""
         self.session = requests.Session()
         self.session.headers.update({
-            "User-Agent": "Mozilla/5.0 (compatible; CryptoSignalScanner/1.0)",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             "Accept": "application/json",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Referer": "https://www.binance.com/",
         })
-        self.base_url = BINANCE_API_BASE
+        self._endpoints = BINANCE_ENDPOINTS.copy()
+        self._current_endpoint_idx = 0
         self._indicators_config = INDICATOR_CONFIG.copy()
         self.signals: List[Dict[str, Any]] = []
         self.stats: Dict[str, Any] = {}
+
+    @property
+    def base_url(self) -> str:
+        """الحصول على نقطة الوصول الحالية."""
+        return self._endpoints[self._current_endpoint_idx]
+
+    def _rotate_endpoint(self) -> bool:
+        """التبديل إلى نقطة الوصول التالية. يُرجع True إذا وجدت واحدة."""
+        for i in range(1, len(self._endpoints)):
+            idx = (self._current_endpoint_idx + i) % len(self._endpoints)
+            logger.info(f"🔄 التبديل إلى نقطة الوصول: {self._endpoints[idx]}")
+            self._current_endpoint_idx = idx
+            return True
+        return False
 
     # ─────────────────────────────────────────────────────────────────────────
     # وظائف المساعدة - الطلبات الآمنة
@@ -113,30 +184,81 @@ class BinanceSpotScanner:
         else:
             url = f"{self.base_url}{endpoint}"
 
-        for attempt in range(1, MAX_RETRIES + 1):
-            try:
-                response = self.session.get(url, params=params, timeout=REQUEST_TIMEOUT)
-                response.raise_for_status()
-                return response.json()
-            except requests.exceptions.HTTPError as e:
-                status = e.response.status_code
-                if status == 429:
-                    # تجاوز حد معدل الطلبات - انتظار طويل
-                    wait = RETRY_DELAY * 3
-                    logger.warning(f"⚠️ تجاوز حد Rate Limit، انتظار {wait}s قبل إعادة المحاولة...")
-                    time.sleep(wait)
-                elif status == 451:
-                    # غير متاح لأسباب قانونية (geo-block)
-                    logger.warning(f"⚠️ Binance غير متاح من هذا الموقع (HTTP 451)، سيتم استخدام بديل...")
-                    return None
-                else:
-                    logger.warning(f"⚠️ خطأ HTTP {status} في {endpoint} - المحاولة {attempt}/{MAX_RETRIES}")
+        for endpoint_idx in range(len(self._endpoints)):
+            for attempt in range(1, MAX_RETRIES + 1):
+                try:
+                    response = self.session.get(url, params=params, timeout=REQUEST_TIMEOUT)
+                    response.raise_for_status()
+                    return response.json()
+                except requests.exceptions.HTTPError as e:
+                    status = e.response.status_code
+                    if status == 429:
+                        # تجاوز حد معدل الطلبات - انتظار طويل
+                        wait = RETRY_DELAY * 3
+                        logger.warning(f"⚠️ تجاوز حد Rate Limit، انتظار {wait}s...")
+                        time.sleep(wait)
+                    elif status == 451:
+                        # غير متاح لأسباب قانونية - تخطي فوراً
+                        logger.warning(f"⚠️ HTTP 451 من {url}، تخطي...")
+                        break  # keluar dari retry loop
+                    else:
+                        logger.warning(f"⚠️ خطأ HTTP {status} في {endpoint} - المحاولة {attempt}/{MAX_RETRIES}")
+                        if attempt < MAX_RETRIES:
+                            time.sleep(RETRY_DELAY)
+                except requests.exceptions.RequestException as e:
+                    logger.warning(f"⚠️ خطأ: {e} - المحاولة {attempt}/{MAX_RETRIES}")
                     if attempt < MAX_RETRIES:
                         time.sleep(RETRY_DELAY)
-            except requests.exceptions.RequestException as e:
-                logger.warning(f"⚠️ خطأ في الطلب {endpoint}: {e} - المحاولة {attempt}/{MAX_RETRIES}")
-                if attempt < MAX_RETRIES:
-                    time.sleep(RETRY_DELAY)
+            else:
+                continue  # semua retry gagal, coba endpoint lain
+
+            # التبديل لنقطة الوصول التالية
+            if not endpoint.startswith("/coins"):
+                if self._rotate_endpoint():
+                    url = f"{self.base_url}{endpoint}"
+                    continue
+            break  # لم تعد هناك نقاط وصول متاحة
+
+        return None
+
+    def _safe_request_list(self, endpoint: str, params: Optional[Dict] = None) -> Optional[List]:
+        """
+        تنفيذ طلب HTTP آمن لبيانات القائمة مع إعادة المحاولة.
+        على 451 (geo-block) يرجع None فوراً لتسريع التبديل للمصادر البديلة.
+        """
+        url = f"{self.base_url}{endpoint}"
+
+        for endpoint_idx in range(len(self._endpoints)):
+            for attempt in range(1, MAX_RETRIES + 1):
+                try:
+                    response = self.session.get(url, params=params, timeout=REQUEST_TIMEOUT)
+                    response.raise_for_status()
+                    return response.json()
+                except requests.exceptions.HTTPError as e:
+                    status = e.response.status_code
+                    if status == 429:
+                        wait = RETRY_DELAY * 3
+                        logger.warning(f"⚠️ تجاوز حد Rate Limit، انتظار {wait}s...")
+                        time.sleep(wait)
+                    elif status == 451:
+                        logger.warning(f"⚠️ HTTP 451، تخطي...")
+                        break  # تخطي فوراً
+                    else:
+                        logger.warning(f"⚠️ خطأ HTTP {status} - المحاولة {attempt}/{MAX_RETRIES}")
+                        if attempt < MAX_RETRIES:
+                            time.sleep(RETRY_DELAY)
+                except requests.exceptions.RequestException as e:
+                    logger.warning(f"⚠️ خطأ: {e} - المحاولة {attempt}/{MAX_RETRIES}")
+                    if attempt < MAX_RETRIES:
+                        time.sleep(RETRY_DELAY)
+            else:
+                continue
+
+            if self._rotate_endpoint():
+                url = f"{self.base_url}{endpoint}"
+                continue
+            break
+
         return None
 
     def _safe_request_list(self, endpoint: str, params: Optional[Dict] = None) -> Optional[List]:
@@ -179,20 +301,24 @@ class BinanceSpotScanner:
     def get_usdt_pairs(self) -> List[Dict[str, Any]]:
         """
         جلب جميع أزواج USDT النشطة من Binance مع معلومات الحجم.
-        في حال تعذر الوصول إلى Binance (مثل HTTP 451)، يتم استخدام CoinGecko كبديل.
+        يحاول جميع نقاط الوصول (Binance global + regional) ثم CoinGecko كبديل.
 
         Returns:
             قائمة القواميس تحتوي على اسم الزوج والحجم وغيرها
         """
-        logger.info("🔍 جاري جلب جميع أزواج USDT من Binance...")
+        logger.info("🔍 جاري جلب جميع أزواج USDT من Binance (مع نقاط وصول متعددة)...")
 
-        # محاولة جلب البيانات من Binance
-        data = self._safe_request("/ticker/24hr")
-
-        if data:
-            pairs = self._parse_binance_ticker(data)
-            if pairs:
-                return pairs
+        # محاولة Binance مع نقاط الوصول المتعددة
+        for i in range(len(self._endpoints)):
+            logger.info(f"🔗 محاولة نقطة الوصول {i+1}/{len(self._endpoints)}: {self._endpoints[i]}")
+            data = self._safe_request("/ticker/24hr")
+            if data:
+                pairs = self._parse_binance_ticker(data)
+                if pairs:
+                    return pairs
+            # التبديل لنقطة الوصول التالية
+            if i < len(self._endpoints) - 1:
+                self._rotate_endpoint()
 
         # ─────────────────────────────────────────────────────────────────────────
         # Fallback: استخدام CoinGecko API
@@ -261,7 +387,7 @@ class BinanceSpotScanner:
         data = self._safe_request("/coins/markets", params)
 
         if not data:
-            logger.error("❌ فشل في جلب البيانات من CoinGecko أيضاً!")
+            logger.error("❌ فشل في جلب البيانات من CoinGecko!")
             return []
 
         pairs = []
@@ -296,6 +422,99 @@ class BinanceSpotScanner:
         logger.info(f"✅ تم العثور على {len(pairs)} عملة نشطة من CoinGecko")
         return pairs
 
+    def _get_histohour_from_cryptocompare(self, symbol: str) -> Optional[List]:
+        """
+        جلب بيانات OHLCV كل ساعة من CryptoCompare API كبديل.
+        ملاحظة: يتطلب مفتاح API للوصول لمعظم نقاط النهاية.
+
+        Args:
+            symbol: رمز العملة بدون USDT (مثل 'BTC')
+
+        Returns:
+            قائمة الشموع أو None في حالة الفشل
+        """
+        url = f"{CRYPTOCOMPARE_API}/v2/histohour"
+        params = {
+            "fsym":  symbol.upper(),
+            "tsym":  "USDT",
+            "limit": 200,
+            "aggregate": 1,
+        }
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                response = self.session.get(url, params=params, timeout=REQUEST_TIMEOUT)
+                response.raise_for_status()
+                result = response.json()
+                if result.get("Response") == "Success":
+                    data = result.get("Data", {}).get("Data", [])
+                    # تحويل تنسيق CryptoCompare إلى تنسيق مشابه لـ Binance klines
+                    # [open_time, open, high, low, close, volume]
+                    klines = []
+                    for candle in data:
+                        klines.append([
+                            candle.get("time", 0),
+                            candle.get("open", 0),
+                            candle.get("high", 0),
+                            candle.get("low", 0),
+                            candle.get("close", 0),
+                            candle.get("volumefrom", 0),
+                        ])
+                    return klines
+                return None
+            except Exception as e:
+                logger.warning(f"⚠️ خطأ CryptoCompare {symbol}: {e} - المحاولة {attempt}/{MAX_RETRIES}")
+                if attempt < MAX_RETRIES:
+                    time.sleep(RETRY_DELAY)
+        return None
+
+    def _get_klines_from_yfinance(self, symbol: str) -> Optional[List[List]]:
+        """
+        جلب بيانات OHLCV كل ساعة من Yahoo Finance كبديل.
+
+        Args:
+            symbol: رمز العملة بدون USDT (مثل 'BTC')
+
+        Returns:
+            قائمة الشموع بصيغة Binance klines أو None
+        """
+        try:
+            import yfinance as yf
+        except ImportError:
+            logger.warning("⚠️ yfinance غير مثبت")
+            return None
+
+        yf_symbol = f"{symbol.upper()}-USD"
+
+        try:
+            ticker = yf.Ticker(yf_symbol)
+            # جلب بيانات 15 يوم بأطار ساعة للحصول على 350+ شمعة
+            hist = ticker.history(period="15d", interval="1h", auto_adjust=True)
+
+            if hist.empty or len(hist) < 50:
+                logger.warning(f"⚠️ Yahoo Finance: لا توجد بيانات كافية لـ {yf_symbol}")
+                return None
+
+            # تحويل إلى تنسيق Binance klines
+            # [open_time, open, high, low, close, volume]
+            klines = []
+            for dt, row in hist.iterrows():
+                timestamp = int(dt.timestamp())
+                klines.append([
+                    timestamp,           # open_time
+                    float(row['Open']), # open
+                    float(row['High']), # high
+                    float(row['Low']),  # low
+                    float(row['Close']),# close
+                    float(row['Volume']),# volume
+                ])
+
+            logger.info(f"✅ Yahoo Finance: تم جلب {len(klines)} شمعة لـ {yf_symbol}")
+            return klines
+
+        except Exception as e:
+            logger.warning(f"⚠️ خطأ Yahoo Finance {yf_symbol}: {e}")
+            return None
+
     # ─────────────────────────────────────────────────────────────────────────
     # جلب بيانات الشموع (Klines)
     # ─────────────────────────────────────────────────────────────────────────
@@ -303,6 +522,7 @@ class BinanceSpotScanner:
     def get_klines(self, symbol: str, interval: str = "1h", limit: int = 250) -> Optional[List[List]]:
         """
         جلب بيانات الشموع (OHLCV) لزوج محدد.
+        يحاول: Binance → Yahoo Finance كبديل.
 
         Args:
             symbol: رمز العملة (مثل 'BTCUSDT')
@@ -314,8 +534,16 @@ class BinanceSpotScanner:
         """
         params = {"symbol": symbol, "interval": interval, "limit": limit}
         data = self._safe_request_list("/klines", params)
-        time.sleep(RATE_LIMIT_DELAY)  # احترام حد المعدل
-        return data
+
+        if data is not None:
+            time.sleep(RATE_LIMIT_DELAY)
+            return data
+
+        # ─────────────────────────────────────────────────────────────────────────
+        # Fallback: Yahoo Finance
+        # ─────────────────────────────────────────────────────────────────────────
+        base = symbol.replace("USDT", "").upper()
+        return self._get_klines_from_yfinance(base)
 
     # ─────────────────────────────────────────────────────────────────────────
     # ─────────────────────────────────────────────────────────────────────────
@@ -442,21 +670,33 @@ class BinanceSpotScanner:
         if len(highs) < period + 1:
             return [None] * len(highs)
 
-        tr_list = [highs[i] - lows[i] for i in range(len(highs))]
-        for i in range(1, len(tr_list)):
-            hl = abs(highs[i] - closes[i - 1])
-            ll = abs(lows[i] - closes[i - 1])
-            tr_list[i] = max(tr_list[i], hl, ll)
+        tr_list = []
+        for i in range(len(highs)):
+            if highs[i] is None or lows[i] is None or closes[i] is None:
+                tr_list.append(None)
+                continue
+            tr = highs[i] - lows[i]
+            if i > 0 and closes[i - 1] is not None:
+                hl = abs(highs[i] - closes[i - 1])
+                ll = abs(lows[i] - closes[i - 1])
+                tr = max(tr, hl, ll)
+            tr_list.append(tr)
 
         result: List[Optional[float]] = [None] * period
         # أول ATR هو SMA للشموع الأولى
-        first_atr = sum(tr_list[:period]) / period
+        valid_tr = [v for v in tr_list[:period] if v is not None]
+        if not valid_tr:
+            return [None] * len(tr_list)
+        first_atr = sum(valid_tr) / len(valid_tr)
         result.append(first_atr)
 
         # Wilder's smoothing (EMA with alpha = 1/period)
         for i in range(period, len(tr_list)):
-            atr = (result[-1] * (period - 1) + tr_list[i]) / period
-            result.append(atr)
+            if tr_list[i] is None or result[-1] is None:
+                result.append(None)
+            else:
+                atr = (result[-1] * (period - 1) + tr_list[i]) / period
+                result.append(atr)
 
         return result
 
@@ -502,26 +742,28 @@ class BinanceSpotScanner:
             if i == 0:
                 direction = 1  # افتراضي صاعد
             else:
-                prev_close = closes[i - 1]
                 prev_result = result[i - 1]
                 prev_direction = prev_result["direction"]
-                prev_upper = prev_result["upper_band"]
-                prev_lower = prev_result["lower_band"]
+                prev_upper = prev_result.get("upper_band")
+                prev_lower = prev_result.get("lower_band")
 
-                if prev_direction == -1:  # كان هابطاً
+                if prev_direction == -1 and prev_upper is not None:  # كان هابطاً
                     # الباندات قد ترتفع فقط
-                    upper_band = min(upper_band, prev_upper) if prev_upper else upper_band
+                    upper_band = min(upper_band, prev_upper)
                     if closes[i] > prev_upper:
                         direction = 1
                     else:
                         direction = -1
-                else:  # كان صاعداً
+                elif prev_direction == 1 and prev_lower is not None:  # كان صاعداً
                     # الباندات قد تنخفض فقط
-                    lower_band = max(lower_band, prev_lower) if prev_lower else lower_band
+                    lower_band = max(lower_band, prev_lower)
                     if closes[i] < prev_lower:
                         direction = -1
                     else:
                         direction = 1
+                else:
+                    # حالة انتقالية أو غير محددة - تعيين الاتجاه الجديد
+                    direction = 1 if closes[i] > upper_band else (-1 if closes[i] < lower_band else prev_direction)
 
             result.append({
                 "direction":   direction,
