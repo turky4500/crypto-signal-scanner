@@ -48,6 +48,11 @@ MAX_RETRIES           = 3              # عدد محاولات إعادة الط
 RETRY_DELAY           = 5              # تأخير بين المحاولات
 
 # ─────────────────────────────────────────────────────────────────────────────
+# CoinGecko API (fallback when Binance is geo-blocked)
+# ─────────────────────────────────────────────────────────────────────────────
+COINGECKO_API_BASE = "https://api.coingecko.com/api/v3"
+
+# ─────────────────────────────────────────────────────────────────────────────
 # إعدادات المؤشرات الفنية
 # ─────────────────────────────────────────────────────────────────────────────
 INDICATOR_CONFIG = {
@@ -96,13 +101,18 @@ class BinanceSpotScanner:
         تنفيذ طلب HTTP آمن مع إعادة المحاولة ومعالجة الأخطاء.
 
         Args:
-            endpoint: مسار API (مثل '/ticker/24hr')
+            endpoint: مسار API (مثل '/ticker/24hr' أو '/coins/markets')
             params: معاملات الاستعلام الاختيارية
 
         Returns:
             بيانات الاستجابة كقاموس أو None في حالة الفشل
         """
-        url = f"{self.base_url}{endpoint}"
+        # تحديد الـ base URL بناءً على نوع الـ endpoint
+        if endpoint.startswith("/coins"):
+            url = f"{COINGECKO_API_BASE}{endpoint}"
+        else:
+            url = f"{self.base_url}{endpoint}"
+
         for attempt in range(1, MAX_RETRIES + 1):
             try:
                 response = self.session.get(url, params=params, timeout=REQUEST_TIMEOUT)
@@ -115,6 +125,10 @@ class BinanceSpotScanner:
                     wait = RETRY_DELAY * 3
                     logger.warning(f"⚠️ تجاوز حد Rate Limit، انتظار {wait}s قبل إعادة المحاولة...")
                     time.sleep(wait)
+                elif status == 451:
+                    # غير متاح لأسباب قانونية (geo-block)
+                    logger.warning(f"⚠️ Binance غير متاح من هذا الموقع (HTTP 451)، سيتم استخدام بديل...")
+                    return None
                 else:
                     logger.warning(f"⚠️ خطأ HTTP {status} في {endpoint} - المحاولة {attempt}/{MAX_RETRIES}")
                     if attempt < MAX_RETRIES:
@@ -165,17 +179,29 @@ class BinanceSpotScanner:
     def get_usdt_pairs(self) -> List[Dict[str, Any]]:
         """
         جلب جميع أزواج USDT النشطة من Binance مع معلومات الحجم.
+        في حال تعذر الوصول إلى Binance (مثل HTTP 451)، يتم استخدام CoinGecko كبديل.
 
         Returns:
             قائمة القواميس تحتوي على اسم الزوج والحجم وغيرها
         """
         logger.info("🔍 جاري جلب جميع أزواج USDT من Binance...")
+
+        # محاولة جلب البيانات من Binance
         data = self._safe_request("/ticker/24hr")
 
-        if not data:
-            logger.error("❌ فشل في جلب بيانات الأزواج!")
-            return []
+        if data:
+            pairs = self._parse_binance_ticker(data)
+            if pairs:
+                return pairs
 
+        # ─────────────────────────────────────────────────────────────────────────
+        # Fallback: استخدام CoinGecko API
+        # ─────────────────────────────────────────────────────────────────────────
+        logger.warning("⚠️ تعذر الوصول إلى Binance، جاري استخدام CoinGecko كبديل...")
+        return self._get_pairs_from_coingecko()
+
+    def _parse_binance_ticker(self, data: List) -> List[Dict[str, Any]]:
+        """تحليل بيانات Binance ticker."""
         pairs = []
         for item in data:
             # تصفية: فقط أزواج USDT المنتهية بـ USDT
@@ -202,10 +228,10 @@ class BinanceSpotScanner:
             pairs.append({
                 "symbol":      item["symbol"],
                 "price":       float(item.get("lastPrice", 0)),
-                "volume_24h":   volume_24h,
+                "volume_24h":  volume_24h,
                 "price_change": float(item.get("priceChangePercent", 0)),
-                "high_24h":     float(item.get("highPrice", 0)),
-                "low_24h":      float(item.get("lowPrice", 0)),
+                "high_24h":    float(item.get("highPrice", 0)),
+                "low_24h":     float(item.get("lowPrice", 0)),
             })
 
         # ترتيب حسب الحجم (الأكبر أولاً)
@@ -214,7 +240,60 @@ class BinanceSpotScanner:
         # تحديد الحد الأقصى
         pairs = pairs[:MAX_PAIRS]
 
-        logger.info(f"✅ تم العثور على {len(pairs)} زوج USDT نشط (حجم > {MIN_VOLUME_USDT:,} USDT)")
+        logger.info(f"✅ تم العثور على {len(pairs)} زوج USDT نشط من Binance")
+        return pairs
+
+    def _get_pairs_from_coingecko(self) -> List[Dict[str, Any]]:
+        """
+        جلب أزواج العملات من CoinGecko API كبديل لـ Binance.
+        CoinGecko قد يكون متاحاً من مناطق محظورة.
+        """
+        logger.info("🔍 جاري جلب بيانات السوق من CoinGecko...")
+        url = f"{COINGECKO_API_BASE}/coins/markets"
+        params = {
+            "vs_currency":    "usd",
+            "order":          "volume_desc",
+            "per_page":       str(MAX_PAIRS),
+            "page":           "1",
+            "sparkline":      "false",
+            "price_change_percentage": "24h",
+        }
+        data = self._safe_request("/coins/markets", params)
+
+        if not data:
+            logger.error("❌ فشل في جلب البيانات من CoinGecko أيضاً!")
+            return []
+
+        pairs = []
+        for item in data:
+            try:
+                volume_usd = float(item.get("total_volume", 0) or 0)
+                price_change = float(item.get("price_change_percentage_24h", 0) or 0)
+            except (ValueError, TypeError):
+                continue
+
+            # تصفية: الحجم الأدنى
+            if volume_usd < MIN_VOLUME_USDT:
+                continue
+
+            symbol = (item.get("symbol", "") or "").upper()
+            # CoinGecko uses lowercase symbols; convert to Binance format
+            pair_symbol = f"{symbol}USDT"
+
+            pairs.append({
+                "symbol":      pair_symbol,
+                "baseAsset":   symbol,
+                "price":       float(item.get("current_price", 0) or 0),
+                "volume_24h":  volume_usd,
+                "price_change": price_change,
+                "high_24h":    float(item.get("high_24h", 0) or 0),
+                "low_24h":     float(item.get("low_24h", 0) or 0),
+                "source":      "coingecko",
+                "coin_id":     item.get("id", ""),
+            })
+
+        pairs.sort(key=lambda x: x["volume_24h"], reverse=True)
+        logger.info(f"✅ تم العثور على {len(pairs)} عملة نشطة من CoinGecko")
         return pairs
 
     # ─────────────────────────────────────────────────────────────────────────
