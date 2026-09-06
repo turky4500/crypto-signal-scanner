@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-06T18:40:27.993065+00:00",
+  "timestamp": "2026-09-06T20:09:45.115799+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 5,
-    "errors": 15,
-    "scan_duration": 74.600283,
-    "scan_start": "2026-09-06T18:40:27.993065+00:00",
-    "scan_end": "2026-09-06T18:41:42.593348+00:00",
+    "signals_found": 6,
+    "errors": 16,
+    "scan_duration": 70.662372,
+    "scan_start": "2026-09-06T20:09:45.115799+00:00",
+    "scan_end": "2026-09-06T20:10:55.778171+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 5,
+      "A": 6,
       "B": 0,
       "C": 0
     }
@@ -19,128 +19,153 @@
     {
       "symbol": "DASHUSDT",
       "baseAsset": "DASH",
-      "price": 71.19999695,
-      "price_str": "71.2000",
-      "volume_24h": 418817913.0,
-      "volume_24h_str": "418.82M",
-      "price_change_24h": 5.13249,
+      "price": 71.18000031,
+      "price_str": "71.1800",
+      "volume_24h": 429354178.0,
+      "volume_24h_str": "429.35M",
+      "price_change_24h": 5.53187,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 57.18,
+      "rsi": 57.17,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 68.79633021,
-      "ema_50": 65.48329383,
-      "ema_200": 51.67559835,
+      "ema_20": 69.20806912,
+      "ema_50": 65.91259568,
+      "ema_200": 52.05933806,
       "supertrend_dir": 1,
-      "volume_ratio": 4.24,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": -0.26664137,
-      "timestamp": "2026-09-06T18:40:27.993065+00:00"
+      "volume_ratio": 0.51,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.01969799,
+      "timestamp": "2026-09-06T20:09:45.115799+00:00"
+    },
+    {
+      "symbol": "RAYUSDT",
+      "baseAsset": "RAY",
+      "price": 1.25279999,
+      "price_str": "1.2528",
+      "volume_24h": 349621047.0,
+      "volume_24h_str": "349.62M",
+      "price_change_24h": 42.16959,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 59.8,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 1.20764103,
+      "ema_50": 1.0570913,
+      "ema_200": 0.88734016,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.13,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.0042877,
+      "timestamp": "2026-09-06T20:09:45.115799+00:00"
     },
     {
       "symbol": "PROMUSDT",
       "baseAsset": "PROM",
-      "price": 5.42375135,
-      "price_str": "5.4238",
-      "volume_24h": 220113596.0,
-      "volume_24h_str": "220.11M",
-      "price_change_24h": 3.75174,
+      "price": 5.50366735,
+      "price_str": "5.5037",
+      "volume_24h": 222072953.0,
+      "volume_24h_str": "222.07M",
+      "price_change_24h": 6.27449,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 55.27,
+      "rsi": 59.65,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 5.37026906,
-      "ema_50": 5.25906909,
-      "ema_200": 5.39232561,
+      "ema_20": 5.39200772,
+      "ema_50": 5.27672936,
+      "ema_200": 5.39393966,
       "supertrend_dir": 1,
-      "volume_ratio": 0.01,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00072359,
-      "timestamp": "2026-09-06T18:40:27.993065+00:00"
+      "macd_hist": 0.00083061,
+      "timestamp": "2026-09-06T20:09:45.115799+00:00"
     },
     {
       "symbol": "JUPUSDT",
       "baseAsset": "JUP",
       "price": 0.00033295,
       "price_str": "0.00033295",
-      "volume_24h": 182493167.0,
-      "volume_24h_str": "182.49M",
-      "price_change_24h": 21.18403,
+      "volume_24h": 182966636.0,
+      "volume_24h_str": "182.97M",
+      "price_change_24h": 19.17256,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 59.62,
+      "rsi": 59.63,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.0003035,
-      "ema_50": 0.0002963,
-      "ema_200": 0.00033037,
+      "ema_20": 0.00030884,
+      "ema_50": 0.00029911,
+      "ema_200": 0.00033042,
       "supertrend_dir": 1,
       "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 7.5e-06,
-      "timestamp": "2026-09-06T18:40:27.993065+00:00"
-    },
-    {
-      "symbol": "FLOCKUSDT",
-      "baseAsset": "FLOCK",
-      "price": 0.073495,
-      "price_str": "0.073495",
-      "volume_24h": 178354577.0,
-      "volume_24h_str": "178.35M",
-      "price_change_24h": 23.29941,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 59.66,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.07090606,
-      "ema_50": 0.06304166,
-      "ema_200": 0.04615159,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.19,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00090619,
-      "timestamp": "2026-09-06T18:40:27.993065+00:00"
+      "macd_hist": 4.38e-06,
+      "timestamp": "2026-09-06T20:09:45.115799+00:00"
     },
     {
       "symbol": "KIIUSDT",
       "baseAsset": "KII",
-      "price": 0.06410217,
-      "price_str": "0.064102",
-      "volume_24h": 175072981.0,
-      "volume_24h_str": "175.07M",
-      "price_change_24h": 1.13824,
+      "price": 0.06410319,
+      "price_str": "0.064103",
+      "volume_24h": 175265620.0,
+      "volume_24h_str": "175.27M",
+      "price_change_24h": 0.7544,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 50.9,
+      "rsi": 50.75,
       "rsi_label": "محايد",
-      "ema_20": 0.06417139,
-      "ema_50": 0.06359809,
-      "ema_200": 0.06066434,
+      "ema_20": 0.06416998,
+      "ema_50": 0.06364158,
+      "ema_200": 0.06073995,
       "supertrend_dir": 1,
-      "volume_ratio": 0.4,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -9.839e-05,
-      "timestamp": "2026-09-06T18:40:27.993065+00:00"
+      "macd_hist": -9.885e-05,
+      "timestamp": "2026-09-06T20:09:45.115799+00:00"
+    },
+    {
+      "symbol": "FLOCKUSDT",
+      "baseAsset": "FLOCK",
+      "price": 0.072481,
+      "price_str": "0.072481",
+      "volume_24h": 158708503.0,
+      "volume_24h_str": "158.71M",
+      "price_change_24h": 17.18071,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 57.4,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.07111569,
+      "ema_50": 0.06373048,
+      "ema_200": 0.04666431,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.0,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.00100356,
+      "timestamp": "2026-09-06T20:09:45.115799+00:00"
     }
   ],
-  "next_update": "2026-09-06T19:05:00+00:00"
+  "next_update": "2026-09-06T21:05:00+00:00"
 }
