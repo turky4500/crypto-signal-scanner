@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ماسح إشارات العملات المشفرة - تحليل فني آلي لجميع أزواج USDT على بينانس">
+    <meta name="theme-color" content="#0a0e17">
+
+    <title>ماسح الإشارات | Crypto Signal Scanner</title>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         Google Fonts - خط كايرو العربي
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         Tailwind CSS CDN
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark': {
+                            50:  '#1a1f2e',
+                            100: '#141824',
+                            200: '#0f1320',
+                            300: '#0a0e17',
+                            400: '#080b12',
+                            500: '#060810',
+                        },
+                        'accent': {
+                            green: '#00d67d',
+                            red:   '#ff4757',
+                            blue:  '#3b82f6',
+                            gold:  '#f5c518',
+                            purple:'#8b5cf6',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow':  'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in':     'fadeIn 0.5s ease-out',
+                        'slide-up':    'slideUp 0.5s ease-out',
+                        'glow':        'glow 2s ease-in-out infinite alternate',
+                        'countdown':   'countdown linear',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%':   { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%':   { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        glow: {
+                            '0%':   { boxShadow: '0 0 5px rgba(0, 214, 125, 0.3)' },
+                            '100%': { boxShadow: '0 0 20px rgba(0, 214, 125, 0.8)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CSS مخصص إضافي
+    ═══════════════════════════════════════════════════════════════════════════ -->
+    <style>
+        /* ────────────────────────────────────────────────────────────────────
+           إعادة تعيين اتجاه الصفحة والخط الأساسي
+        ───────────────────────────────────────────────────────────────────── */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            direction: rtl;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background-color: #0a0e17;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           شريط التمرير المخصص
+        ───────────────────────────────────────────────────────────────────── */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1f2e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           الخلفية المتحركة (Animated Background)
+        ───────────────────────────────────────────────────────────────────── */
+        .bg-grid {
+            background-image:
+                linear-gradient(rgba(0, 214, 125, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 214, 125, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           تأثير التوهج (Glow Effects)
+        ───────────────────────────────────────────────────────────────────── */
+        .glow-green {
+            box-shadow: 0 0 10px rgba(0, 214, 125, 0.3), 0 0 30px rgba(0, 214, 125, 0.1);
+        }
+        .glow-card {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           شارة الاستراتيجية
+        ───────────────────────────────────────────────────────────────────── */
+        .badge-A {
+            background: linear-gradient(135deg, #00d67d22, #00d67d11);
+            border: 1px solid #00d67d55;
+            color: #00d67d;
+        }
+        .badge-B {
+            background: linear-gradient(135deg, #3b82f622, #3b82f611);
+            border: 1px solid #3b82f655;
+            color: #60a5fa;
+        }
+        .badge-C {
+            background: linear-gradient(135deg, #8b5cf622, #8b5cf611);
+            border: 1px solid #8b5cf655;
+            color: #a78bfa;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           حالة RSI الملونة
+        ───────────────────────────────────────────────────────────────────── */
+        .rsi-low    { color: #00d67d; }     /* < 45 */
+        .rsi-neutral { color: #f5c518; }    /* 45-65 */
+        .rsi-high   { color: #ff4757; }     /* > 65 */
+
+        /* ────────────────────────────────────────────────────────────────────
+           تأثير النبض للتحديث
+        ───────────────────────────────────────────────────────────────────── */
+        .pulse-dot {
+            animation: pulse-dot-anim 2s infinite;
+        }
+        @keyframes pulse-dot-anim {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           شريط العد التنازلي
+        ───────────────────────────────────────────────────────────────────── */
+        .countdown-bar {
+            animation: countdown-grow linear forwards;
+            transform-origin: right;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           تأثير الهوفر للبطاقات
+        ───────────────────────────────────────────────────────────────────── */
+        .signal-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .signal-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 214, 125, 0.15);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           تأثير التدرج للبطاقات
+        ───────────────────────────────────────────────────────────────────── */
+        .card-gradient {
+            background: linear-gradient(145deg, #141824, #0f1320);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           زر التصفية النشط
+        ───────────────────────────────────────────────────────────────────── */
+        .filter-btn.active {
+            background: linear-gradient(135deg, #00d67d22, #00d67d11);
+            border-color: #00d67d;
+            color: #00d67d;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           شريط التقدم للإحصائيات
+        ───────────────────────────────────────────────────────────────────── */
+        .stat-bar {
+            background: linear-gradient(90deg, #00d67d, #00a855);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           تأثير التوهج على العنوان
+        ───────────────────────────────────────────────────────────────────── */
+        .hero-glow {
+            text-shadow: 0 0 40px rgba(0, 214, 125, 0.4);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           شارة حالة الحجم
+        ───────────────────────────────────────────────────────────────────── */
+        .vol-high    { color: #00d67d; }
+        .vol-medium  { color: #f5c518; }
+        .vol-low     { color: #ff4757; }
+
+        /* ────────────────────────────────────────────────────────────────────
+           الجدول المتجاوب
+        ───────────────────────────────────────────────────────────────────── */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           أيقونة العملة
+        ───────────────────────────────────────────────────────────────────── */
+        .coin-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           تأثير التحميل
+        ───────────────────────────────────────────────────────────────────── */
+        .skeleton {
+            background: linear-gradient(90deg, #1a1f2e 25%, #252d42 50%, #1a1f2e 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0%   { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           النافذة المنبثقة للإحصائيات
+        ───────────────────────────────────────────────────────────────────── */
+        .modal-backdrop {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           الشعار المتحرك
+        ───────────────────────────────────────────────────────────────────── */
+        .logo-spin {
+            animation: logo-spin 8s linear infinite;
+        }
+        @keyframes logo-spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           فاصل متوهج
+        ───────────────────────────────────────────────────────────────────── */
+        .divider-glow {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00d67d55, transparent);
+        }
+
+        /* ────────────────────────────────────────────────────────────────────
+           RTL: ضمان اتجاه النص الصحيح
+        ───────────────────────────────────────────────────────────────────── */
+        [dir="rtl"] input::placeholder,
+        [dir="rtl"] textarea::placeholder {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-300 text-gray-200 font-cairo">
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         خلفية الصفحة المتحركة
+    ════════════════════════════════════════════════════════════════════ -->
+    <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent-green/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         الحاوية الرئيسية
+    ════════════════════════════════════════════════════════════════════ -->
+    <div class="relative z-10 min-h-screen">
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             الشريط العلوي (Header)
+        ═══════════════════════════════════════════════════════════════ -->
+        <header class="sticky top-0 z-50 bg-dark-300/90 backdrop-blur-xl border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+
+                <!-- الصف الأول: الشعار + العنوان -->
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-3">
+                        <!-- الشعار -->
+                        <div class="relative">
+                            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-accent-green to-emerald-600 flex items-center justify-center glow-green">
+                                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 3v18h18"/>
+                                    <path d="M7 16l4-8 4 5 5-9"/>
+                                </svg>
+                            </div>
+                            <div class="absolute -top-1 -left-1 w-3 h-3 bg-accent-green rounded-full pulse-dot"></div>
+                        </div>
+
+                        <div>
+                            <h1 class="text-xl sm:text-2xl font-bold text-white hero-glow">
+                                ماسح الإشارات 🚀
+                            </h1>
+                            <p class="text-xs text-gray-500 font-tajawal">
+                                Crypto Signal Scanner v1.0
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- حالة الاتصال والتحديث -->
+                    <div class="flex items-center gap-3">
+                        <!-- مؤشر الاتصال -->
+                        <div id="connectionStatus" class="flex items-center gap-1.5 text-xs">
+                            <span class="w-2 h-2 rounded-full bg-accent-green pulse-dot"></span>
+                            <span class="text-gray-400 hidden sm:inline">متصل</span>
+                        </div>
+
+                        <!-- زر التحديث اليدوي -->
+                        <button onclick="manualRefresh()" id="refreshBtn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs transition-all duration-200 active:scale-95">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                            </svg>
+                            <span class="hidden sm:inline">تحديث</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- شريط العد التنازلي -->
+                <div class="h-1 bg-dark-100 rounded-full overflow-hidden">
+                    <div id="countdownBar" class="h-full bg-gradient-to-l from-accent-green to-emerald-400 countdown-bar rounded-full" style="width: 100%"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             المحتوى الرئيسي
+        ═══════════════════════════════════════════════════════════════ -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+            <!-- ────────────────────────────────────────────────────────────
+                 بطاقات الإحصائيات السريعة
+            ───────────────────────────────────────────────────────────── -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
+                <!-- بطاقة: آخر تحديث -->
+                <div class="card-gradient rounded-2xl p-4 glow-card">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-400">آخر تحديث</span>
+                    </div>
+                    <p id="lastUpdate" class="text-sm font-semibold text-white font-mono">--:--:--</p>
+                    <p id="timeAgo" class="text-xs text-gray-500 mt-1">جاري التحميل...</p>
+                </div>
+
+                <!-- بطاقة: إجمالي العملات المفحوصة -->
+                <div class="card-gradient rounded-2xl p-4 glow-card">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-400">العملات المفحوصة</span>
+                    </div>
+                    <p id="totalScanned" class="text-2xl font-bold text-white">0</p>
+                    <p class="text-xs text-gray-500 mt-1">USDT pairs</p>
+                </div>
+
+                <!-- بطاقة: الفرص المتاحة -->
+                <div class="card-gradient rounded-2xl p-4 glow-card border border-accent-green/20">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-8 h-8 rounded-lg bg-accent-green/10 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-400">فرص الشراء</span>
+                    </div>
+                    <p id="signalsCount" class="text-2xl font-bold text-accent-green">0</p>
+                    <p class="text-xs text-gray-500 mt-1">إشارة نشطة</p>
+                </div>
+
+                <!-- بطاقة: العد التنازلي -->
+                <div class="card-gradient rounded-2xl p-4 glow-card">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l2 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-400">التحديث التالي</span>
+                    </div>
+                    <p id="countdown" class="text-2xl font-bold text-white font-mono">--:--</p>
+                    <p class="text-xs text-gray-500 mt-1">تحديث تلقائي كل ساعة</p>
+                </div>
+            </div>
+
+            <!-- ────────────────────────────────────────────────────────────
+                 توزيع الإشارات حسب الاستراتيجية
+            ───────────────────────────────────────────────────────────── -->
+            <div class="grid grid-cols-3 gap-3 mb-6">
+                <div class="card-gradient rounded-xl p-3 text-center">
+                    <span class="badge-A inline-block px-3 py-1 rounded-full text-xs font-bold mb-1">استراتيجية A</span>
+                    <p class="text-lg font-bold text-accent-green"><span id="countA">0</span></p>
+                    <p class="text-xs text-gray-500">استمرار الاتجاه</p>
+                </div>
+                <div class="card-gradient rounded-xl p-3 text-center">
+                    <span class="badge-B inline-block px-3 py-1 rounded-full text-xs font-bold mb-1">استراتيجية B</span>
+                    <p class="text-lg font-bold text-blue-400"><span id="countB">0</span></p>
+                    <p class="text-xs text-gray-500">تقاطع الزخم</p>
+                </div>
+                <div class="card-gradient rounded-xl p-3 text-center">
+                    <span class="badge-C inline-block px-3 py-1 rounded-full text-xs font-bold mb-1">استراتيجية C</span>
+                    <p class="text-lg font-bold text-purple-400"><span id="countC">0</span></p>
+                    <p class="text-xs text-gray-500">انعكاس MACD</p>
+                </div>
+            </div>
+
+            <!-- ────────────────────────────────────────────────────────────
+                 أدوات التصفية والبحث
+            ───────────────────────────────────────────────────────────── -->
+            <div class="card-gradient rounded-2xl p-4 mb-6 glow-card">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <!-- البحث -->
+                    <div class="relative flex-1">
+                        <div class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="ابحث عن رمز العملة..."
+                            oninput="filterSignals()"
+                            class="w-full pr-10 pl-4 py-2.5 bg-dark-200 border border-white/10 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-accent-green/50 focus:ring-1 focus:ring-accent-green/30 transition-all"
+                        >
+                    </div>
+
+                    <!-- أزرار التصفية -->
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="setFilter('all')" id="filterAll" class="filter-btn active px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-white/5 hover:bg-white/10 transition-all">
+                            كل الاستراتيجيات
+                        </button>
+                        <button onclick="setFilter('A')" id="filterA" class="filter-btn px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-white/5 hover:bg-white/10 transition-all">
+                            استمرار الاتجاه
+                        </button>
+                        <button onclick="setFilter('B')" id="filterB" class="filter-btn px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-white/5 hover:bg-white/10 transition-all">
+                            تقاطع الزخم
+                        </button>
+                        <button onclick="setFilter('C')" id="filterC" class="filter-btn px-4 py-2.5 rounded-xl text-xs font-semibold border border-white/10 bg-white/5 hover:bg-white/10 transition-all">
+                            انعكاس MACD
+                        </button>
+                    </div>
+                </div>
+
+                <!-- إحصائيات التصفية -->
+                <div class="mt-3 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-gray-500">
+                    <span>عرض <span id="filteredCount" class="text-accent-green font-bold">0</span> من <span id="totalSignals">0</span> إشارة</span>
+                    <div class="flex items-center gap-1">
+                        <span>الترتيب حسب:</span>
+                        <select id="sortSelect" onchange="sortSignals()" class="bg-transparent text-gray-400 border-none focus:outline-none cursor-pointer">
+                            <option value="volume">حجم التداول</option>
+                            <option value="price">السعر</option>
+                            <option value="rsi">RSI</option>
+                            <option value="time">وقت المسح</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 منطقة المحتوى: الإشارات أو حالة فارغة
+            ═══════════════════════════════════════════════════════════ -->
+
+            <!-- حالة التحميل -->
+            <div id="loadingState" class="hidden">
+                <div class="space-y-3">
+                    <!-- بطاقة تحميل 1 -->
+                    <div class="card-gradient rounded-2xl p-5 glow-card">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-full skeleton"></div>
+                            <div class="flex-1 space-y-2">
+                                <div class="h-4 w-24 skeleton rounded"></div>
+                                <div class="h-3 w-16 skeleton rounded"></div>
+                            </div>
+                            <div class="space-y-2 text-left">
+                                <div class="h-5 w-20 skeleton rounded"></div>
+                                <div class="h-3 w-16 skeleton rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- بطاقة تحميل 2 -->
+                    <div class="card-gradient rounded-2xl p-5 glow-card">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-full skeleton"></div>
+                            <div class="flex-1 space-y-2">
+                                <div class="h-4 w-24 skeleton rounded"></div>
+                                <div class="h-3 w-16 skeleton rounded"></div>
+                            </div>
+                            <div class="space-y-2 text-left">
+                                <div class="h-5 w-20 skeleton rounded"></div>
+                                <div class="h-3 w-16 skeleton rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- حالة فارغة -->
+            <div id="emptyState" class="hidden">
+                <div class="card-gradient rounded-2xl p-12 text-center glow-card">
+                    <!-- أيقونة -->
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-dark-100 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-400 mb-2">لا توجد إشارات دخول متحققة حالياً</h3>
+                    <p class="text-sm text-gray-600 mb-4">جاري مراقبة السوق وتحليل البيانات...</p>
+                    <div class="flex items-center justify-center gap-2 text-xs text-gray-600">
+                        <span class="w-2 h-2 rounded-full bg-gray-600 animate-pulse"></span>
+                        <span>المراقبة جارية على مدار الساعة</span>
+                    </div>
+
+                    <!-- توزيع الإشارات الفارغة -->
+                    <div class="grid grid-cols-3 gap-3 mt-8 max-w-md mx-auto">
+                        <div class="bg-dark-200 rounded-lg p-3">
+                            <p class="text-lg font-bold text-accent-green/40">0</p>
+                            <p class="text-xs text-gray-600">استمرار الاتجاه</p>
+                        </div>
+                        <div class="bg-dark-200 rounded-lg p-3">
+                            <p class="text-lg font-bold text-blue-400/40">0</p>
+                            <p class="text-xs text-gray-600">تقاطع الزخم</p>
+                        </div>
+                        <div class="bg-dark-200 rounded-lg p-3">
+                            <p class="text-lg font-bold text-purple-400/40">0</p>
+                            <p class="text-xs text-gray-600">انعكاس MACD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- حالة الخطأ -->
+            <div id="errorState" class="hidden">
+                <div class="card-gradient rounded-2xl p-8 text-center glow-card border border-red-500/20">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-red-400 mb-2">حدث خطأ في تحميل البيانات</h3>
+                    <p id="errorMessage" class="text-sm text-gray-500 mb-4">تعذر الاتصال بالخادم</p>
+                    <button onclick="loadData()" class="px-4 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg text-sm transition-all">
+                        إعادة المحاولة
+                    </button>
+                </div>
+            </div>
+
+            <!-- حاوية بطاقات الإشارات -->
+            <div id="signalsContainer" class="space-y-3">
+                <!-- سيتم ملؤها بـ JavaScript -->
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 تذييل الصفحة
+            ═══════════════════════════════════════════════════════════ -->
+            <div class="mt-8 mb-4">
+                <div class="divider-glow"></div>
+            </div>
+            <footer class="text-center pb-8 space-y-2">
+                <div class="flex items-center justify-center gap-2 text-xs text-gray-600">
+                    <span>🤖</span>
+                    <span>الماسح يعمل تلقائياً كل ساعة عبر GitHub Actions</span>
+                </div>
+                <div class="flex items-center justify-center gap-4 text-xs text-gray-700">
+                    <span>📊 الإطار الزمني: 1 ساعة (1H)</span>
+                    <span>•</span>
+                    <span>📈 الحد الأدنى للحجم: 1,000,000 USDT</span>
+                    <span>•</span>
+                    <span>🔗 البيانات: Binance Public API</span>
+                </div>
+                <p class="text-xs text-gray-800 mt-3">
+                    ⚠️ هذه البيانات للأغراض التعليمية فقط وليست نصيحة مالية
+                </p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         Modal: تفاصيل الإشارة
+    ═══════════════════════════════════════════════════════════════════ -->
+    <div id="signalModal" class="fixed inset-0 z-[100] hidden">
+        <div class="modal-backdrop absolute inset-0 bg-black/60" onclick="closeModal()"></div>
+        <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+            <div class="card-gradient rounded-2xl p-6 w-full max-w-md glow-card animate-fade-in" dir="ltr">
+                <div class="flex items-center justify-between mb-4" dir="rtl">
+                    <h3 class="text-lg font-bold text-white">تفاصيل الإشارة</h3>
+                    <button onclick="closeModal()" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="modalContent" class="space-y-3">
+                    <!-- سيتم ملؤها بـ JavaScript -->
+                </div>
+                <div class="mt-4 pt-4 border-t border-white/5">
+                    <a id="modalTradingView" href="#" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center justify-center gap-2 w-full py-2.5 bg-accent-green/10 hover:bg-accent-green/20 text-accent-green rounded-xl text-sm font-semibold transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                        فتح الشارت في TradingView
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         JavaScript - المنطق الرئيسي
+    ═══════════════════════════════════════════════════════════════════ -->
+    <script>
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                     ثوابت ومتغيرات عامة
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    let signalsData   = { signals: [], stats: {}, timestamp: '' };
+    let filteredData  = [];
+    let currentFilter = 'all';
+    let currentSort   = 'volume';
+    let countdownSeconds = 3600;  // ثانية واحدة = ساعة
+    let countdownTimer    = null;
+    let lastUpdateTime    = null;
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                     تحميل البيانات من signals.json
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * تحميل بيانات الإشارات من ملف JSON
+     */
+    async function loadData() {
+        showLoading();
+
+        try {
+            const response = await fetch('signals.json?t=' + Date.now(), {
+                cache: 'no-cache',
+                headers: { 'Cache-Control': 'no-cache' }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            signalsData = data;
+            lastUpdateTime = new Date(data.timestamp || Date.now());
+
+            // تحديث واجهة المستخدم
+            updateStats(data.stats);
+            updateSignals(data.signals);
+            applyFilterSort();
+
+            // تشغيل العداد التنازلي
+            startCountdown();
+
+            // تحديث العداد كل ثانية
+            updateTimeAgo();
+
+            // تحديث حالة الاتصال
+            document.getElementById('connectionStatus').innerHTML = `
+                <span class="w-2 h-2 rounded-full bg-accent-green pulse-dot"></span>
+                <span class="text-gray-400 hidden sm:inline">متصل</span>
+            `;
+
+        } catch (error) {
+            console.error('❌ خطأ في تحميل البيانات:', error);
+            showError(error.message || 'تعذر تحميل البيانات');
+        }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                    تحديث الإحصائيات
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * تحديث بطاقات الإحصائيات في الصفحة
+     */
+    function updateStats(stats) {
+        if (!stats) return;
+
+        document.getElementById('totalScanned').textContent =
+            (stats.total_scanned || 0).toLocaleString('ar-SA');
+        document.getElementById('signalsCount').textContent =
+            (stats.signals_found || 0).toLocaleString('ar-SA');
+
+        // توزيع الاستراتيجيات
+        const strategies = stats.strategies || {};
+        document.getElementById('countA').textContent = strategies.A || 0;
+        document.getElementById('countB').textContent = strategies.B || 0;
+        document.getElementById('countC').textContent = strategies.C || 0;
+
+        // وقت التحديث
+        const timestamp = signalsData.timestamp || new Date().toISOString();
+        const date = new Date(timestamp);
+        document.getElementById('lastUpdate').textContent =
+            date.toLocaleTimeString('ar-SA', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+
+        // حساب وقت التحديث التالي
+        const nextUpdate = calculateNextUpdate(date);
+        countdownSeconds = Math.max(0, Math.floor((nextUpdate - new Date()) / 1000));
+    }
+
+    /**
+     * حساب وقت التحديث التالي
+     */
+    function calculateNextUpdate(lastUpdate) {
+        const next = new Date(lastUpdate);
+        next.setMinutes(5, 0, 0); // الدقيقة 5 من كل ساعة
+        if (next <= lastUpdate) {
+            next.setHours(next.getHours() + 1);
+        }
+        return next;
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                    تحديث الإشارات
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * تحديث قائمة الإشارات
+     */
+    function updateSignals(signals) {
+        const container = document.getElementById('signalsContainer');
+        container.innerHTML = '';
+
+        if (!signals || signals.length === 0) {
+            showEmpty();
+            return;
+        }
+
+        document.getElementById('emptyState').classList.add('hidden');
+        document.getElementById('loadingState').classList.add('hidden');
+        document.getElementById('signalsContainer').classList.remove('hidden');
+
+        // تخزين البيانات للتصفية
+        filteredData = [...signals];
+        document.getElementById('totalSignals').textContent = signals.length;
+
+        renderSignals(filteredData);
+    }
+
+    /**
+     * عرض بطاقات الإشارات
+     */
+    function renderSignals(signals) {
+        const container = document.getElementById('signalsContainer');
+        container.innerHTML = '';
+
+        signals.forEach((signal, index) => {
+            const card = createSignalCard(signal, index);
+            container.appendChild(card);
+        });
+
+        document.getElementById('filteredCount').textContent = signals.length;
+    }
+
+    /**
+     * إنشاء بطاقة إشارة واحدة
+     */
+    function createSignalCard(signal, index) {
+        const div = document.createElement('div');
+        div.className = 'signal-card card-gradient rounded-2xl p-4 sm:p-5 glow-card animate-slide-up';
+        div.style.animationDelay = `${index * 50}ms`;
+        div.onclick = () => openModal(signal);
+
+        const baseAsset = signal.baseAsset || signal.symbol?.replace('USDT', '') || '?';
+        const priceChange = signal.price_change_24h || 0;
+        const priceChangeClass = priceChange >= 0 ? 'text-accent-green' : 'text-accent-red';
+        const priceChangeSign = priceChange >= 0 ? '+' : '';
+
+        // ألوان استراتيجية SuperTrend
+        const stColor = signal.supertrend_dir === 1 ? 'text-accent-green' : 'text-accent-red';
+        const stLabel = signal.supertrend_dir === 1 ? 'صاعد ↑' : 'هابط ↓';
+
+        // لون RSI
+        const rsi = signal.rsi;
+        let rsiColor = 'text-gray-400';
+        if (rsi !== null && rsi !== undefined) {
+            if (rsi < 45) rsiColor = 'text-accent-green';
+            else if (rsi <= 65) rsiColor = 'text-yellow-400';
+            else rsiColor = 'text-accent-red';
+        }
+
+        // لون الحجم
+        let volColor = 'text-gray-400';
+        if (signal.volume_ratio !== undefined) {
+            if (signal.volume_ratio >= 2) volColor = 'text-accent-green';
+            else if (signal.volume_ratio >= 1.5) volColor = 'text-yellow-400';
+            else volColor = 'text-gray-500';
+        }
+
+        // أوسمة الاستراتيجيات
+        const strategyBadges = signal.strategies.map(s => {
+            const badgeClass = s === 'A' ? 'badge-A' : s === 'B' ? 'badge-B' : 'badge-C';
+            const label = s === 'A' ? 'اتجاه' : s === 'B' ? 'زخم' : 'MACD';
+            return `<span class="${badgeClass} inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold">
+                ${label}
+            </span>`;
+        }).join('');
+
+        // أيقونة العملة
+        const iconColors = [
+            'from-amber-500 to-orange-600',
+            'from-blue-500 to-indigo-600',
+            'from-emerald-500 to-teal-600',
+            'from-purple-500 to-pink-600',
+            'from-cyan-500 to-blue-600',
+            'from-rose-500 to-red-600',
+            'from-lime-500 to-green-600',
+            'from-fuchsia-500 to-purple-600',
+        ];
+        const iconColor = iconColors[index % iconColors.length];
+
+        div.innerHTML = `
+            <div class="flex items-center gap-3 sm:gap-4">
+                <!-- أيقونة العملة -->
+                <div class="coin-icon bg-gradient-to-br ${iconColor} text-white shadow-lg flex-shrink-0">
+                    ${baseAsset.substring(0, 2)}
+                </div>
+
+                <!-- معلومات العملة -->
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="font-bold text-white text-sm sm:text-base">${baseAsset}<span class="text-gray-500 font-normal">/USDT</span></span>
+                        ${strategyBadges}
+                    </div>
+                    <div class="flex items-center gap-3 mt-1 text-xs text-gray-500">
+                        <span>RSI: <span class="${rsiColor} font-semibold">${rsi !== null ? rsi : 'N/A'}</span></span>
+                        <span class="hidden sm:inline">•</span>
+                        <span class="hidden sm:inline">حجم: <span class="${volColor} font-semibold">${signal.volume_ratio || 0}x</span></span>
+                        <span class="hidden sm:inline">•</span>
+                        <span class="hidden sm:inline">ST: <span class="${stColor} font-semibold">${stLabel}</span></span>
+                    </div>
+                </div>
+
+                <!-- السعر والمعلومات -->
+                <div class="text-left flex-shrink-0">
+                    <p class="text-sm sm:text-base font-bold text-white font-mono">$${signal.price_str || signal.price}</p>
+                    <p class="text-xs ${priceChangeClass} font-mono">
+                        ${priceChangeSign}${priceChange.toFixed(2)}%
+                    </p>
+                    <p class="text-xs text-gray-600 mt-0.5">حجم: ${signal.volume_24h_str || 'N/A'}</p>
+                </div>
+
+                <!-- زر فتح الشارت -->
+                <a href="https://www.tradingview.com/chart/?symbol=BINANCE:${signal.symbol}&interval=60"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onclick="event.stopPropagation()"
+                   class="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-accent-green/10 hover:bg-accent-green/20 border border-accent-green/20 hover:border-accent-green/40 flex items-center justify-center transition-all group">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-accent-green group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- معلومات إضافية للشاشات الكبيرة -->
+            <div class="hidden lg:grid grid-cols-4 gap-3 mt-3 pt-3 border-t border-white/5 text-xs">
+                <div class="text-center">
+                    <span class="text-gray-600">EMA 20</span>
+                    <p class="text-gray-300 font-mono mt-0.5">${signal.ema_20 ? '$' + formatSmallNumber(signal.ema_20) : 'N/A'}</p>
+                </div>
+                <div class="text-center">
+                    <span class="text-gray-600">EMA 50</span>
+                    <p class="text-gray-300 font-mono mt-0.5">${signal.ema_50 ? '$' + formatSmallNumber(signal.ema_50) : 'N/A'}</p>
+                </div>
+                <div class="text-center">
+                    <span class="text-gray-600">EMA 200</span>
+                    <p class="text-gray-300 font-mono mt-0.5">${signal.ema_200 ? '$' + formatSmallNumber(signal.ema_200) : 'N/A'}</p>
+                </div>
+                <div class="text-center">
+                    <span class="text-gray-600">MACD Hist</span>
+                    <p class="text-gray-300 font-mono mt-0.5">${signal.macd_hist ? signal.macd_hist.toExponential(2) : 'N/A'}</p>
+                </div>
+            </div>
+        `;
+
+        return div;
+    }
+
+    /**
+     * تنسيق الأرقام الصغيرة
+     */
+    function formatSmallNumber(num) {
+        if (num >= 1000) return num.toLocaleString('ar-SA', { maximumFractionDigits: 2 });
+        if (num >= 1) return num.toFixed(4);
+        return num.toFixed(6);
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                       التصفية والترتيب
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * تطبيق التصفية والترتيب
+     */
+    function applyFilterSort() {
+        let data = [...signalsData.signals];
+
+        // التصفية حسب الاستراتيجية
+        if (currentFilter !== 'all') {
+            data = data.filter(s => s.strategies && s.strategies.includes(currentFilter));
+        }
+
+        // البحث
+        const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+        if (searchTerm) {
+            data = data.filter(s => {
+                const base = (s.baseAsset || s.symbol || '').toLowerCase();
+                const labels = (s.strategy_labels || []).join(' ').toLowerCase();
+                return base.includes(searchTerm) || labels.includes(searchTerm);
+            });
+        }
+
+        // الترتيب
+        data.sort((a, b) => {
+            switch (currentSort) {
+                case 'volume':
+                    return (b.volume_24h || 0) - (a.volume_24h || 0);
+                case 'price':
+                    return (b.price || 0) - (a.price || 0);
+                case 'rsi':
+                    return (a.rsi || 50) - (b.rsi || 50); // أقرب للمركز أفضل
+                default:
+                    return 0;
+            }
+        });
+
+        filteredData = data;
+        renderSignals(filteredData);
+    }
+
+    /**
+     * تحديد فلتر الاستراتيجية
+     */
+    function setFilter(filter) {
+        currentFilter = filter;
+
+        // تحديث أزرار الفلتر
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        const btn = document.getElementById('filter' + filter.toUpperCase());
+        if (btn) btn.classList.add('active');
+
+        applyFilterSort();
+    }
+
+    /**
+     * تصفية الإشارات (من حدث البحث)
+     */
+    function filterSignals() {
+        applyFilterSort();
+    }
+
+    /**
+     * ترتيب الإشارات
+     */
+    function sortSignals() {
+        currentSort = document.getElementById('sortSelect').value;
+        applyFilterSort();
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                       حالات الواجهة
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    function showLoading() {
+        document.getElementById('loadingState').classList.remove('hidden');
+        document.getElementById('emptyState').classList.add('hidden');
+        document.getElementById('errorState').classList.add('hidden');
+        document.getElementById('signalsContainer').classList.add('hidden');
+    }
+
+    function showEmpty() {
+        document.getElementById('loadingState').classList.add('hidden');
+        document.getElementById('emptyState').classList.remove('hidden');
+        document.getElementById('errorState').classList.add('hidden');
+        document.getElementById('signalsContainer').classList.add('hidden');
+        document.getElementById('filteredCount').textContent = '0';
+        document.getElementById('totalSignals').textContent = '0';
+    }
+
+    function showError(message) {
+        document.getElementById('loadingState').classList.add('hidden');
+        document.getElementById('emptyState').classList.add('hidden');
+        document.getElementById('errorState').classList.remove('hidden');
+        document.getElementById('signalsContainer').classList.add('hidden');
+        document.getElementById('errorMessage').textContent = message;
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                       النافذة المنبثقة
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * فتح نافذة تفاصيل الإشارة
+     */
+    function openModal(signal) {
+        const modal = document.getElementById('signalModal');
+        const content = document.getElementById('modalContent');
+
+        const baseAsset = signal.baseAsset || signal.symbol?.replace('USDT', '') || '?';
+        const priceChange = signal.price_change_24h || 0;
+        const priceChangeClass = priceChange >= 0 ? 'text-accent-green' : 'text-accent-red';
+        const priceChangeSign = priceChange >= 0 ? '+' : '';
+
+        const strategyLabels = {
+            'A': 'استمرار الاتجاه الصاعد',
+            'B': 'تقاطع الزخم الصاعد',
+            'C': 'انعكاس MACD الصاعد',
+        };
+
+        content.innerHTML = `
+            <!-- عنوان العملة -->
+            <div class="flex items-center gap-3 mb-4" dir="rtl">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-green to-emerald-600 flex items-center justify-center text-white font-bold text-lg">
+                    ${baseAsset.substring(0, 2)}
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white">${baseAsset}/USDT</h4>
+                    <p class="text-sm ${priceChangeClass}">${priceChangeSign}${priceChange.toFixed(2)}% خلال 24 ساعة</p>
+                </div>
+            </div>
+
+            <!-- السعر -->
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-dark-200 rounded-xl p-3">
+                    <span class="text-xs text-gray-500">السعر الحالي</span>
+                    <p class="text-lg font-bold text-white font-mono mt-1">$${signal.price_str || signal.price}</p>
+                </div>
+                <div class="bg-dark-200 rounded-xl p-3">
+                    <span class="text-xs text-gray-500">حجم 24h</span>
+                    <p class="text-lg font-bold text-white mt-1">${signal.volume_24h_str || 'N/A'}</p>
+                </div>
+            </div>
+
+            <!-- الاستراتيجيات -->
+            <div class="mt-3" dir="rtl">
+                <span class="text-xs text-gray-500">الاستراتيجيات المتحققة:</span>
+                <div class="flex flex-wrap gap-2 mt-1">
+                    ${signal.strategies.map(s => {
+                        const label = strategyLabels[s] || s;
+                        const cls = s === 'A' ? 'badge-A' : s === 'B' ? 'badge-B' : 'badge-C';
+                        return `<span class="${cls} px-3 py-1 rounded-full text-xs font-bold">${label}</span>`;
+                    }).join('')}
+                </div>
+            </div>
+
+            <!-- المؤشرات الفنية -->
+            <div class="mt-3 bg-dark-200 rounded-xl p-4" dir="rtl">
+                <h5 class="text-sm font-bold text-gray-400 mb-3">📊 المؤشرات الفنية (1H)</h5>
+                <div class="grid grid-cols-2 gap-3 text-sm">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">RSI (14)</span>
+                        <span class="font-mono font-bold ${signal.rsi < 45 ? 'text-accent-green' : signal.rsi <= 65 ? 'text-yellow-400' : 'text-accent-red'}">
+                            ${signal.rsi !== null ? signal.rsi : 'N/A'}
+                        </span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">حجم/SMA</span>
+                        <span class="font-mono font-bold ${signal.volume_ratio >= 2 ? 'text-accent-green' : signal.volume_ratio >= 1.5 ? 'text-yellow-400' : 'text-gray-400'}">
+                            ${signal.volume_ratio || 0}x
+                        </span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">EMA 20</span>
+                        <span class="font-mono text-gray-300">${signal.ema_20 ? '$' + formatSmallNumber(signal.ema_20) : 'N/A'}</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">EMA 50</span>
+                        <span class="font-mono text-gray-300">${signal.ema_50 ? '$' + formatSmallNumber(signal.ema_50) : 'N/A'}</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">EMA 200</span>
+                        <span class="font-mono text-gray-300">${signal.ema_200 ? '$' + formatSmallNumber(signal.ema_200) : 'N/A'}</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">MACD Hist</span>
+                        <span class="font-mono text-gray-300">${signal.macd_hist !== null ? signal.macd_hist.toExponential(2) : 'N/A'}</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">SuperTrend</span>
+                        <span class="font-mono font-bold ${signal.supertrend_dir === 1 ? 'text-accent-green' : 'text-accent-red'}">
+                            ${signal.supertrend_dir === 1 ? 'صاعد ↑' : 'هابط ↓'}
+                        </span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">RSI Label</span>
+                        <span class="text-gray-300">${signal.rsi_label || 'N/A'}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // تحديث رابط TradingView
+        const tvLink = document.getElementById('modalTradingView');
+        tvLink.href = `https://www.tradingview.com/chart/?symbol=BINANCE:${signal.symbol}&interval=60`;
+
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    /**
+     * إغلاق النافذة المنبثقة
+     */
+    function closeModal() {
+        document.getElementById('signalModal').classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    // إغلاق بـ Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                      العد التنازلي والتحديث
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    /**
+     * بدء العد التنازلي للتحديث التالي
+     */
+    function startCountdown() {
+        if (countdownTimer) clearInterval(countdownTimer);
+
+        // حساب الثواني المتبقية
+        const now = new Date();
+        const nextUpdate = calculateNextUpdate(lastUpdateTime || now);
+        countdownSeconds = Math.max(60, Math.floor((nextUpdate - now) / 1000));
+
+        updateCountdownDisplay();
+
+        countdownTimer = setInterval(() => {
+            countdownSeconds--;
+            if (countdownSeconds <= 0) {
+                // إعادة تحميل البيانات
+                loadData();
+                countdownSeconds = 3600;
+            }
+            updateCountdownDisplay();
+        }, 1000);
+    }
+
+    /**
+     * تحديث عرض العد التنازلي
+     */
+    function updateCountdownDisplay() {
+        const minutes = Math.floor(countdownSeconds / 60);
+        const seconds = countdownSeconds % 60;
+        document.getElementById('countdown').textContent =
+            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        // تحديث شريط التقدم
+        const percent = (countdownSeconds / 3600) * 100;
+        const bar = document.getElementById('countdownBar');
+        bar.style.width = `${percent}%`;
+    }
+
+    /**
+     * تحديث وصف "منذ X دقيقة"
+     */
+    function updateTimeAgo() {
+        setInterval(() => {
+            if (!lastUpdateTime) return;
+            const diff = Math.floor((new Date() - lastUpdateTime) / 1000);
+            let text = '';
+            if (diff < 60) text = `منذ ${diff} ثانية`;
+            else if (diff < 3600) text = `منذ ${Math.floor(diff / 60)} دقيقة`;
+            else text = `منذ ${Math.floor(diff / 3600)} ساعة`;
+            document.getElementById('timeAgo').textContent = text;
+        }, 1000);
+    }
+
+    /**
+     * التحديث اليدوي
+     */
+    function manualRefresh() {
+        const btn = document.getElementById('refreshBtn');
+        btn.disabled = true;
+        btn.innerHTML = `
+            <svg class="w-3.5 h-3.5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            <span>جاري...</span>
+        `;
+
+        loadData().finally(() => {
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = `
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                    <span class="hidden sm:inline">تحديث</span>
+                `;
+            }, 1000);
+        });
+    }
+
+    // ─────────────────────────────────────────────────────────────────────
+    // ═══════════════════════════════════════════════════════════════════
+    //                      تشغيل التطبيق
+    // ═══════════════════════════════════════════════════════════════════
+    // ─────────────────────────────────────────────────────────────────────
+
+    // تحميل البيانات عند اكتمال تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', () => {
+        loadData();
+
+        // تحديث تلقائي كل 5 دقائق كاحتياطي
+        setInterval(() => {
+            loadData();
+        }, 5 * 60 * 1000);
+    });
+
+    // ─────────────────────────────────────────────────────────────────────
+    //                         نهاية JavaScript
+    // ─────────────────────────────────────────────────────────────────────
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         التهيئة النهائية
+    ═══════════════════════════════════════════════════════════════════ -->
+</body>
+</html>

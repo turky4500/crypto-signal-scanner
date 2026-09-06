@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-09-06T00:05:00+00:00",
+  "stats": {
+    "total_scanned": 150,
+    "signals_found": 0,
+    "errors": 0,
+    "scan_duration": 45.2,
+    "scan_start": "2026-09-06T00:05:00+00:00",
+    "scan_end": "2026-09-06T00:05:45+00:00",
+    "min_volume": 1000000,
+    "timeframe": "1H",
+    "strategies": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    }
+  },
+  "signals": [],
+  "next_update": "2026-09-06T01:05:00+00:00"
+}
