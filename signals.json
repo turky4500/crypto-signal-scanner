@@ -1,46 +1,20 @@
 {
-  "timestamp": "2026-09-07T17:31:52.520419+00:00",
+  "timestamp": "2026-09-07T21:16:55.675074+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
+    "signals_found": 0,
     "errors": 14,
-    "scan_duration": 66.054641,
-    "scan_start": "2026-09-07T17:31:52.520419+00:00",
-    "scan_end": "2026-09-07T17:32:58.575060+00:00",
+    "scan_duration": 65.935426,
+    "scan_start": "2026-09-07T21:16:55.675074+00:00",
+    "scan_end": "2026-09-07T21:18:01.610500+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 0,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "RAYUSDT",
-      "baseAsset": "RAY",
-      "price": 1.17900002,
-      "price_str": "1.1790",
-      "volume_24h": 143562594.0,
-      "volume_24h_str": "143.56M",
-      "price_change_24h": -15.48856,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 48.02,
-      "rsi_label": "محايد",
-      "ema_20": 1.1960868,
-      "ema_50": 1.1397645,
-      "ema_200": 0.93881897,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.01118957,
-      "timestamp": "2026-09-07T17:31:52.520419+00:00"
-    }
-  ],
-  "next_update": "2026-09-07T18:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-09-07T22:05:00+00:00"
 }
