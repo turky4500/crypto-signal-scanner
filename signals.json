@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-07T05:49:31.177053+00:00",
+  "timestamp": "2026-09-07T11:56:38.037112+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 3,
-    "errors": 14,
-    "scan_duration": 68.071938,
-    "scan_start": "2026-09-07T05:49:31.177053+00:00",
-    "scan_end": "2026-09-07T05:50:39.248991+00:00",
+    "errors": 15,
+    "scan_duration": 71.274654,
+    "scan_start": "2026-09-07T11:56:38.037112+00:00",
+    "scan_end": "2026-09-07T11:57:49.311766+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -19,78 +19,78 @@
     {
       "symbol": "ZECUSDT",
       "baseAsset": "ZEC",
-      "price": 1203.59997559,
-      "price_str": "1,203.60",
-      "volume_24h": 1739531707.0,
-      "volume_24h_str": "1.74B",
-      "price_change_24h": 3.1484,
+      "price": 1192.61999512,
+      "price_str": "1,192.62",
+      "volume_24h": 1565433138.0,
+      "volume_24h_str": "1.57B",
+      "price_change_24h": 0.86096,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 60.17,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1186.75169928,
-      "ema_50": 1126.68524845,
-      "ema_200": 950.91386041,
+      "rsi": 54.22,
+      "rsi_label": "محايد",
+      "ema_20": 1189.58098509,
+      "ema_50": 1140.78196899,
+      "ema_200": 964.99332088,
       "supertrend_dir": 1,
-      "volume_ratio": 0.44,
+      "volume_ratio": 0.21,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -8.03906904,
-      "timestamp": "2026-09-07T05:49:31.177053+00:00"
+      "macd_hist": -6.57605111,
+      "timestamp": "2026-09-07T11:56:38.037112+00:00"
     },
     {
       "symbol": "DASHUSDT",
       "baseAsset": "DASH",
-      "price": 69.13999939,
-      "price_str": "69.1400",
-      "volume_24h": 358588530.0,
-      "volume_24h_str": "358.59M",
-      "price_change_24h": -10.61391,
+      "price": 67.94000244,
+      "price_str": "67.9400",
+      "volume_24h": 276287517.0,
+      "volume_24h_str": "276.29M",
+      "price_change_24h": -0.13966,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 49.08,
+      "rsi": 46.47,
       "rsi_label": "محايد",
-      "ema_20": 69.75017592,
-      "ema_50": 67.20721733,
-      "ema_200": 52.36560226,
+      "ema_20": 68.84885482,
+      "ema_50": 67.3130067,
+      "ema_200": 53.25711233,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
+      "volume_ratio": 0.38,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.21641312,
-      "timestamp": "2026-09-07T05:49:31.177053+00:00"
+      "macd_hist": -0.31736199,
+      "timestamp": "2026-09-07T11:56:38.037112+00:00"
     },
     {
       "symbol": "RAYUSDT",
       "baseAsset": "RAY",
-      "price": 1.21080005,
-      "price_str": "1.2108",
-      "volume_24h": 258238301.0,
-      "volume_24h_str": "258.24M",
-      "price_change_24h": 6.99533,
+      "price": 1.17680001,
+      "price_str": "1.1768",
+      "volume_24h": 234924373.0,
+      "volume_24h_str": "234.92M",
+      "price_change_24h": 2.19343,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 51.99,
+      "rsi": 47.18,
       "rsi_label": "محايد",
-      "ema_20": 1.22230909,
-      "ema_50": 1.11080117,
-      "ema_200": 0.90707014,
+      "ema_20": 1.20997888,
+      "ema_50": 1.12883983,
+      "ema_200": 0.92387536,
       "supertrend_dir": 1,
-      "volume_ratio": 0.23,
+      "volume_ratio": 0.06,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.02452142,
-      "timestamp": "2026-09-07T05:49:31.177053+00:00"
+      "macd_hist": -0.01846958,
+      "timestamp": "2026-09-07T11:56:38.037112+00:00"
     }
   ],
-  "next_update": "2026-09-07T06:05:00+00:00"
+  "next_update": "2026-09-07T12:05:00+00:00"
 }
