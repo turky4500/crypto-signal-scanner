@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-08T00:03:37.022607+00:00",
+  "timestamp": "2026-09-08T04:23:18.729263+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 0,
-    "errors": 14,
-    "scan_duration": 75.6435,
-    "scan_start": "2026-09-08T00:03:37.022607+00:00",
-    "scan_end": "2026-09-08T00:04:52.666107+00:00",
+    "errors": 13,
+    "scan_duration": 63.254392,
+    "scan_start": "2026-09-08T04:23:18.729263+00:00",
+    "scan_end": "2026-09-08T04:24:21.983655+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -16,5 +16,5 @@
     }
   },
   "signals": [],
-  "next_update": "2026-09-08T00:05:00+00:00"
+  "next_update": "2026-09-08T05:05:00+00:00"
 }
