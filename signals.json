@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-08T18:23:47.218329+00:00",
+  "timestamp": "2026-09-08T21:40:58.050293+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
+    "signals_found": 1,
     "errors": 18,
-    "scan_duration": 79.404058,
-    "scan_start": "2026-09-08T18:23:47.218329+00:00",
-    "scan_end": "2026-09-08T18:25:06.622387+00:00",
+    "scan_duration": 84.951568,
+    "scan_start": "2026-09-08T21:40:58.050293+00:00",
+    "scan_end": "2026-09-08T21:42:23.001861+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 1,
       "B": 0,
       "C": 0
     }
@@ -19,53 +19,28 @@
     {
       "symbol": "ZECUSDT",
       "baseAsset": "ZEC",
-      "price": 1180.56005859,
-      "price_str": "1,180.56",
-      "volume_24h": 996404084.0,
-      "volume_24h_str": "996.40M",
-      "price_change_24h": 1.83677,
+      "price": 1167.56005859,
+      "price_str": "1,167.56",
+      "volume_24h": 992491598.0,
+      "volume_24h_str": "992.49M",
+      "price_change_24h": 1.78173,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 57.26,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1162.39217854,
-      "ema_50": 1151.83484061,
-      "ema_200": 1001.71633604,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.05,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 6.01110956,
-      "timestamp": "2026-09-08T18:23:47.218329+00:00"
-    },
-    {
-      "symbol": "FLOCKUSDT",
-      "baseAsset": "FLOCK",
-      "price": 0.064594,
-      "price_str": "0.064594",
-      "volume_24h": 138859891.0,
-      "volume_24h_str": "138.86M",
-      "price_change_24h": -4.91968,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 50.42,
+      "rsi": 52.89,
       "rsi_label": "محايد",
-      "ema_20": 0.06414335,
-      "ema_50": 0.06473295,
-      "ema_200": 0.05149859,
+      "ema_20": 1159.7794886,
+      "ema_50": 1151.76308997,
+      "ema_200": 1006.11694347,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00065451,
-      "timestamp": "2026-09-08T18:23:47.218329+00:00"
+      "volume_ratio": 2.01,
+      "volume_label": "حجم كبير 📈",
+      "macd_hist": 1.41219148,
+      "timestamp": "2026-09-08T21:40:58.050293+00:00"
     }
   ],
-  "next_update": "2026-09-08T19:05:00+00:00"
+  "next_update": "2026-09-08T22:05:00+00:00"
 }
