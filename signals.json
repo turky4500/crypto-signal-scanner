@@ -1,20 +1,46 @@
 {
-  "timestamp": "2026-09-08T09:26:03.639038+00:00",
+  "timestamp": "2026-09-08T14:14:37.387960+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 0,
-    "errors": 14,
-    "scan_duration": 66.950006,
-    "scan_start": "2026-09-08T09:26:03.639038+00:00",
-    "scan_end": "2026-09-08T09:27:10.589044+00:00",
+    "signals_found": 1,
+    "errors": 17,
+    "scan_duration": 76.229468,
+    "scan_start": "2026-09-08T14:14:37.387960+00:00",
+    "scan_end": "2026-09-08T14:15:53.617428+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 0,
+      "A": 1,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [],
-  "next_update": "2026-09-08T10:05:00+00:00"
+  "signals": [
+    {
+      "symbol": "FLOCKUSDT",
+      "baseAsset": "FLOCK",
+      "price": 0.069167,
+      "price_str": "0.069167",
+      "volume_24h": 167563769.0,
+      "volume_24h_str": "167.56M",
+      "price_change_24h": 6.08633,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 60.7,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.0638627,
+      "ema_50": 0.0647398,
+      "ema_200": 0.05096061,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.97,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 0.00112006,
+      "timestamp": "2026-09-08T14:14:37.387960+00:00"
+    }
+  ],
+  "next_update": "2026-09-08T15:05:00+00:00"
 }
