@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-09T03:47:18.014498+00:00",
+  "timestamp": "2026-09-09T08:48:51.107801+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 2,
     "errors": 17,
-    "scan_duration": 75.655092,
-    "scan_start": "2026-09-09T03:47:18.014498+00:00",
-    "scan_end": "2026-09-09T03:48:33.669590+00:00",
+    "scan_duration": 74.797538,
+    "scan_start": "2026-09-09T08:48:51.107801+00:00",
+    "scan_end": "2026-09-09T08:50:05.905339+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -17,55 +17,55 @@
   },
   "signals": [
     {
-      "symbol": "ZECUSDT",
-      "baseAsset": "ZEC",
-      "price": 1188.72998047,
-      "price_str": "1,188.73",
-      "volume_24h": 893041448.0,
-      "volume_24h_str": "893.04M",
-      "price_change_24h": 4.65334,
+      "symbol": "DASHUSDT",
+      "baseAsset": "DASH",
+      "price": 66.18000031,
+      "price_str": "66.1800",
+      "volume_24h": 175531990.0,
+      "volume_24h_str": "175.53M",
+      "price_change_24h": 5.54393,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 58.59,
+      "rsi": 63.11,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1170.433822,
-      "ema_50": 1158.43656694,
-      "ema_200": 1008.44995219,
+      "ema_20": 63.7245852,
+      "ema_50": 64.13128239,
+      "ema_200": 56.36773333,
       "supertrend_dir": 1,
-      "volume_ratio": 0.05,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 2.60962428,
-      "timestamp": "2026-09-09T03:47:18.014498+00:00"
+      "volume_ratio": 1.08,
+      "volume_label": "حجم عادي",
+      "macd_hist": 0.50921762,
+      "timestamp": "2026-09-09T08:48:51.107801+00:00"
     },
     {
-      "symbol": "SOPHUSDT",
-      "baseAsset": "SOPH",
-      "price": 0.00089746,
-      "price_str": "0.00089746",
-      "volume_24h": 143205267.0,
-      "volume_24h_str": "143.21M",
-      "price_change_24h": -32.3274,
+      "symbol": "RAYUSDT",
+      "baseAsset": "RAY",
+      "price": 1.30120003,
+      "price_str": "1.3012",
+      "volume_24h": 143795720.0,
+      "volume_24h_str": "143.80M",
+      "price_change_24h": 20.77929,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 55.5,
+      "rsi": 61.14,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.00088573,
-      "ema_50": 0.00088192,
-      "ema_200": 0.00088293,
+      "ema_20": 1.2285223,
+      "ema_50": 1.18256752,
+      "ema_200": 0.98014863,
       "supertrend_dir": 1,
-      "volume_ratio": 0.28,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 9.9e-07,
-      "timestamp": "2026-09-09T03:47:18.014498+00:00"
+      "volume_ratio": 1.25,
+      "volume_label": "حجم عادي",
+      "macd_hist": 0.01637686,
+      "timestamp": "2026-09-09T08:48:51.107801+00:00"
     }
   ],
-  "next_update": "2026-09-09T04:05:00+00:00"
+  "next_update": "2026-09-09T09:05:00+00:00"
 }
