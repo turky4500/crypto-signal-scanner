@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-08T23:55:59.026452+00:00",
+  "timestamp": "2026-09-09T03:47:18.014498+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
+    "signals_found": 2,
     "errors": 17,
-    "scan_duration": 73.910994,
-    "scan_start": "2026-09-08T23:55:59.026452+00:00",
-    "scan_end": "2026-09-08T23:57:12.937446+00:00",
+    "scan_duration": 75.655092,
+    "scan_start": "2026-09-09T03:47:18.014498+00:00",
+    "scan_end": "2026-09-09T03:48:33.669590+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 2,
       "B": 0,
       "C": 0
     }
@@ -19,28 +19,53 @@
     {
       "symbol": "ZECUSDT",
       "baseAsset": "ZEC",
-      "price": 1177.90002441,
-      "price_str": "1,177.90",
-      "volume_24h": 1003447630.0,
-      "volume_24h_str": "1.00B",
-      "price_change_24h": 3.42118,
+      "price": 1188.72998047,
+      "price_str": "1,188.73",
+      "volume_24h": 893041448.0,
+      "volume_24h_str": "893.04M",
+      "price_change_24h": 4.65334,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 55.99,
+      "rsi": 58.59,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1162.88979222,
-      "ema_50": 1153.69606572,
-      "ema_200": 1009.50101813,
+      "ema_20": 1170.433822,
+      "ema_50": 1158.43656694,
+      "ema_200": 1008.44995219,
       "supertrend_dir": 1,
-      "volume_ratio": 0.49,
+      "volume_ratio": 0.05,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 2.20322326,
-      "timestamp": "2026-09-08T23:55:59.026452+00:00"
+      "macd_hist": 2.60962428,
+      "timestamp": "2026-09-09T03:47:18.014498+00:00"
+    },
+    {
+      "symbol": "SOPHUSDT",
+      "baseAsset": "SOPH",
+      "price": 0.00089746,
+      "price_str": "0.00089746",
+      "volume_24h": 143205267.0,
+      "volume_24h_str": "143.21M",
+      "price_change_24h": -32.3274,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 55.5,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.00088573,
+      "ema_50": 0.00088192,
+      "ema_200": 0.00088293,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.28,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 9.9e-07,
+      "timestamp": "2026-09-09T03:47:18.014498+00:00"
     }
   ],
-  "next_update": "2026-09-09T00:05:00+00:00"
+  "next_update": "2026-09-09T04:05:00+00:00"
 }
