@@ -1,96 +1,46 @@
 {
-  "timestamp": "2026-09-09T17:41:01.387003+00:00",
+  "timestamp": "2026-09-09T20:40:30.667330+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 3,
+    "signals_found": 1,
     "errors": 15,
-    "scan_duration": 71.392903,
-    "scan_start": "2026-09-09T17:41:01.387003+00:00",
-    "scan_end": "2026-09-09T17:42:12.779906+00:00",
+    "scan_duration": 68.060819,
+    "scan_start": "2026-09-09T20:40:30.667330+00:00",
+    "scan_end": "2026-09-09T20:41:38.728149+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
-      "B": 1,
+      "A": 1,
+      "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "USDCUSDT",
-      "baseAsset": "USDC",
-      "price": 0.99996352,
-      "price_str": "0.999964",
-      "volume_24h": 15163304221.0,
-      "volume_24h_str": "15.16B",
-      "price_change_24h": -0.00383,
-      "strategies": [
-        "B"
-      ],
-      "strategy_labels": [
-        "تقاطع الزخم"
-      ],
-      "rsi": 52.84,
-      "rsi_label": "محايد",
-      "ema_20": 0.99992354,
-      "ema_50": 0.99992264,
-      "ema_200": 0.99991463,
-      "supertrend_dir": 0,
-      "volume_ratio": 1.81,
-      "volume_label": "حجم فوق المتوسط 📊",
-      "macd_hist": -2.29e-06,
-      "timestamp": "2026-09-09T17:41:01.387003+00:00"
-    },
-    {
-      "symbol": "RAYUSDT",
-      "baseAsset": "RAY",
-      "price": 1.36450005,
-      "price_str": "1.3645",
-      "volume_24h": 189296805.0,
-      "volume_24h_str": "189.30M",
-      "price_change_24h": 21.63589,
+      "symbol": "ZECUSDT",
+      "baseAsset": "ZEC",
+      "price": 1250.64001465,
+      "price_str": "1,250.64",
+      "volume_24h": 1706858298.0,
+      "volume_24h_str": "1.71B",
+      "price_change_24h": 8.25268,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 59.45,
+      "rsi": 55.87,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1.29958909,
-      "ema_50": 1.2314394,
-      "ema_200": 1.01130305,
+      "ema_20": 1243.92616747,
+      "ema_50": 1207.50766682,
+      "ema_200": 1047.18951915,
       "supertrend_dir": 1,
-      "volume_ratio": 0.49,
+      "volume_ratio": 0.76,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00401212,
-      "timestamp": "2026-09-09T17:41:01.387003+00:00"
-    },
-    {
-      "symbol": "DASHUSDT",
-      "baseAsset": "DASH",
-      "price": 64.54000092,
-      "price_str": "64.5400",
-      "volume_24h": 181999251.0,
-      "volume_24h_str": "182.00M",
-      "price_change_24h": 2.73077,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 52.9,
-      "rsi_label": "محايد",
-      "ema_20": 64.026309,
-      "ema_50": 64.1748813,
-      "ema_200": 57.0511811,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.63,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00809664,
-      "timestamp": "2026-09-09T17:41:01.387003+00:00"
+      "macd_hist": -2.89710639,
+      "timestamp": "2026-09-09T20:40:30.667330+00:00"
     }
   ],
-  "next_update": "2026-09-09T18:05:00+00:00"
+  "next_update": "2026-09-09T21:05:00+00:00"
 }
