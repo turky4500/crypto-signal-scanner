@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-11T13:22:37.942033+00:00",
+  "timestamp": "2026-09-11T17:37:46.329883+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 3,
-    "errors": 17,
-    "scan_duration": 76.182427,
-    "scan_start": "2026-09-11T13:22:37.942033+00:00",
-    "scan_end": "2026-09-11T13:23:54.124460+00:00",
+    "errors": 19,
+    "scan_duration": 77.188157,
+    "scan_start": "2026-09-11T17:37:46.329883+00:00",
+    "scan_end": "2026-09-11T17:39:03.518040+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -17,80 +17,80 @@
   },
   "signals": [
     {
-      "symbol": "ZECUSDT",
-      "baseAsset": "ZEC",
-      "price": 1165.18994141,
-      "price_str": "1,165.19",
-      "volume_24h": 1678571639.0,
-      "volume_24h_str": "1.68B",
-      "price_change_24h": -0.89055,
+      "symbol": "ETHUSDT",
+      "baseAsset": "ETH",
+      "price": 2569.67993164,
+      "price_str": "2,569.68",
+      "volume_24h": 23847056793.0,
+      "volume_24h_str": "23.85B",
+      "price_change_24h": 4.21823,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 59.91,
+      "rsi": 63.52,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1123.94176605,
-      "ema_50": 1152.10141777,
-      "ema_200": 1080.36052696,
+      "ema_20": 2512.34208627,
+      "ema_50": 2488.97679923,
+      "ema_200": 2472.38416909,
       "supertrend_dir": 1,
-      "volume_ratio": 0.03,
+      "volume_ratio": 0.95,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 11.33634448,
-      "timestamp": "2026-09-11T13:22:37.942033+00:00"
+      "macd_hist": 12.54702778,
+      "timestamp": "2026-09-11T17:37:46.329883+00:00"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "baseAsset": "ZEC",
+      "price": 1176.35998535,
+      "price_str": "1,176.36",
+      "volume_24h": 1873592892.0,
+      "volume_24h_str": "1.87B",
+      "price_change_24h": 2.07228,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 56.39,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 1145.76589689,
+      "ema_50": 1157.99275153,
+      "ema_200": 1084.77527666,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.17,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 13.24889598,
+      "timestamp": "2026-09-11T17:37:46.329883+00:00"
     },
     {
       "symbol": "RAYUSDT",
       "baseAsset": "RAY",
-      "price": 1.60699999,
-      "price_str": "1.6070",
-      "volume_24h": 333694845.0,
-      "volume_24h_str": "333.69M",
-      "price_change_24h": 28.14846,
+      "price": 1.59800005,
+      "price_str": "1.5980",
+      "volume_24h": 315201414.0,
+      "volume_24h_str": "315.20M",
+      "price_change_24h": 21.87333,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 59.64,
+      "rsi": 55.4,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1.53616083,
-      "ema_50": 1.42928298,
-      "ema_200": 1.14309182,
+      "ema_20": 1.5692878,
+      "ema_50": 1.46029958,
+      "ema_200": 1.16258837,
       "supertrend_dir": 1,
-      "volume_ratio": 0.71,
+      "volume_ratio": 0.38,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00554372,
-      "timestamp": "2026-09-11T13:22:37.942033+00:00"
-    },
-    {
-      "symbol": "DEBITUSDT",
-      "baseAsset": "DEBIT",
-      "price": 2.06330013,
-      "price_str": "2.0633",
-      "volume_24h": 179694206.0,
-      "volume_24h_str": "179.69M",
-      "price_change_24h": -1.05426,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 51.54,
-      "rsi_label": "محايد",
-      "ema_20": 2.06188175,
-      "ema_50": 1.96393105,
-      "ema_200": 1.85031521,
-      "supertrend_dir": 1,
-      "volume_ratio": 1.59,
-      "volume_label": "حجم فوق المتوسط 📊",
-      "macd_hist": -0.01379864,
-      "timestamp": "2026-09-11T13:22:37.942033+00:00"
+      "macd_hist": -0.00696834,
+      "timestamp": "2026-09-11T17:37:46.329883+00:00"
     }
   ],
-  "next_update": "2026-09-11T14:05:00+00:00"
+  "next_update": "2026-09-11T18:05:00+00:00"
 }
