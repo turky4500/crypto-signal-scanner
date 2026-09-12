@@ -1,46 +1,20 @@
 {
-  "timestamp": "2026-09-12T16:50:16.452590+00:00",
+  "timestamp": "2026-09-12T19:01:54.022651+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
-    "errors": 16,
-    "scan_duration": 71.424459,
-    "scan_start": "2026-09-12T16:50:16.452590+00:00",
-    "scan_end": "2026-09-12T16:51:27.877049+00:00",
+    "signals_found": 0,
+    "errors": 15,
+    "scan_duration": 68.944454,
+    "scan_start": "2026-09-12T19:01:54.022651+00:00",
+    "scan_end": "2026-09-12T19:03:02.967105+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 0,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "ZECUSDT",
-      "baseAsset": "ZEC",
-      "price": 1140.80004883,
-      "price_str": "1,140.80",
-      "volume_24h": 1130016789.0,
-      "volume_24h_str": "1.13B",
-      "price_change_24h": -3.48852,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 46.59,
-      "rsi_label": "محايد",
-      "ema_20": 1147.26078308,
-      "ema_50": 1152.68655096,
-      "ema_200": 1114.88781877,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.82029106,
-      "timestamp": "2026-09-12T16:50:16.452590+00:00"
-    }
-  ],
-  "next_update": "2026-09-12T17:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-09-12T19:05:00+00:00"
 }
