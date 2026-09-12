@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-12T10:19:32.415573+00:00",
+  "timestamp": "2026-09-12T13:55:26.073810+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 14,
-    "scan_duration": 68.538352,
-    "scan_start": "2026-09-12T10:19:32.415573+00:00",
-    "scan_end": "2026-09-12T10:20:40.953925+00:00",
+    "signals_found": 1,
+    "errors": 16,
+    "scan_duration": 74.570452,
+    "scan_start": "2026-09-12T13:55:26.073810+00:00",
+    "scan_end": "2026-09-12T13:56:40.644262+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 1,
       "B": 0,
       "C": 0
     }
@@ -19,53 +19,28 @@
     {
       "symbol": "ZECUSDT",
       "baseAsset": "ZEC",
-      "price": 1152.34997559,
-      "price_str": "1,152.35",
-      "volume_24h": 1764213620.0,
-      "volume_24h_str": "1.76B",
-      "price_change_24h": 3.57244,
+      "price": 1151.29003906,
+      "price_str": "1,151.29",
+      "volume_24h": 1616730200.0,
+      "volume_24h_str": "1.62B",
+      "price_change_24h": -3.60497,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 51.56,
+      "rsi": 50.71,
       "rsi_label": "محايد",
-      "ema_20": 1147.87265112,
-      "ema_50": 1154.20109765,
-      "ema_200": 1112.88701506,
+      "ema_20": 1149.51596361,
+      "ema_50": 1154.20319184,
+      "ema_200": 1114.1086789,
       "supertrend_dir": 1,
-      "volume_ratio": 0.09,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.18948982,
-      "timestamp": "2026-09-12T10:19:32.415573+00:00"
-    },
-    {
-      "symbol": "RAYUSDT",
-      "baseAsset": "RAY",
-      "price": 1.59609997,
-      "price_str": "1.5961",
-      "volume_24h": 198140984.0,
-      "volume_24h_str": "198.14M",
-      "price_change_24h": 0.37795,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 49.5,
-      "rsi_label": "محايد",
-      "ema_20": 1.6124895,
-      "ema_50": 1.54192453,
-      "ema_200": 1.22547642,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.15,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.01394233,
-      "timestamp": "2026-09-12T10:19:32.415573+00:00"
+      "macd_hist": 0.76227229,
+      "timestamp": "2026-09-12T13:55:26.073810+00:00"
     }
   ],
-  "next_update": "2026-09-12T11:05:00+00:00"
+  "next_update": "2026-09-12T14:05:00+00:00"
 }
