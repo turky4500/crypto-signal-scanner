@@ -1,20 +1,96 @@
 {
-  "timestamp": "2026-09-12T23:51:15.449243+00:00",
+  "timestamp": "2026-09-13T03:54:50.326010+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 0,
-    "errors": 17,
-    "scan_duration": 71.139371,
-    "scan_start": "2026-09-12T23:51:15.449243+00:00",
-    "scan_end": "2026-09-12T23:52:26.588614+00:00",
+    "signals_found": 3,
+    "errors": 16,
+    "scan_duration": 78.518867,
+    "scan_start": "2026-09-13T03:54:50.326010+00:00",
+    "scan_end": "2026-09-13T03:56:08.844877+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 0,
+      "A": 3,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [],
-  "next_update": "2026-09-13T00:05:00+00:00"
+  "signals": [
+    {
+      "symbol": "REZUSDT",
+      "baseAsset": "REZ",
+      "price": 0.003671,
+      "price_str": "0.00367100",
+      "volume_24h": 149781941.0,
+      "volume_24h_str": "149.78M",
+      "price_change_24h": 13.74617,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 49.65,
+      "rsi_label": "محايد",
+      "ema_20": 0.00375708,
+      "ema_50": 0.00351901,
+      "ema_200": 0.00324801,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.31,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -1.861e-05,
+      "timestamp": "2026-09-13T03:54:50.326010+00:00"
+    },
+    {
+      "symbol": "FLOCKUSDT",
+      "baseAsset": "FLOCK",
+      "price": 0.076848,
+      "price_str": "0.076848",
+      "volume_24h": 136763871.0,
+      "volume_24h_str": "136.76M",
+      "price_change_24h": 28.43485,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 58.55,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.0736731,
+      "ema_50": 0.06873323,
+      "ema_200": 0.06389534,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.85,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.00054183,
+      "timestamp": "2026-09-13T03:54:50.326010+00:00"
+    },
+    {
+      "symbol": "DEBITUSDT",
+      "baseAsset": "DEBIT",
+      "price": 2.07182932,
+      "price_str": "2.0718",
+      "volume_24h": 122174830.0,
+      "volume_24h_str": "122.17M",
+      "price_change_24h": 6.88963,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 61.48,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 2.00298287,
+      "ema_50": 1.98161224,
+      "ema_200": 1.82096283,
+      "supertrend_dir": 1,
+      "volume_ratio": 3.78,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": 0.01454786,
+      "timestamp": "2026-09-13T03:54:50.326010+00:00"
+    }
+  ],
+  "next_update": "2026-09-13T04:05:00+00:00"
 }
