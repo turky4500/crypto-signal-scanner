@@ -1,96 +1,121 @@
 {
-  "timestamp": "2026-09-13T03:54:50.326010+00:00",
+  "timestamp": "2026-09-13T14:10:14.536987+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 3,
-    "errors": 16,
-    "scan_duration": 78.518867,
-    "scan_start": "2026-09-13T03:54:50.326010+00:00",
-    "scan_end": "2026-09-13T03:56:08.844877+00:00",
+    "signals_found": 4,
+    "errors": 14,
+    "scan_duration": 71.275163,
+    "scan_start": "2026-09-13T14:10:14.536987+00:00",
+    "scan_end": "2026-09-13T14:11:25.812150+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 3,
+      "A": 4,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "REZUSDT",
-      "baseAsset": "REZ",
-      "price": 0.003671,
-      "price_str": "0.00367100",
-      "volume_24h": 149781941.0,
-      "volume_24h_str": "149.78M",
-      "price_change_24h": 13.74617,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 49.65,
-      "rsi_label": "محايد",
-      "ema_20": 0.00375708,
-      "ema_50": 0.00351901,
-      "ema_200": 0.00324801,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.31,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.861e-05,
-      "timestamp": "2026-09-13T03:54:50.326010+00:00"
-    },
-    {
       "symbol": "FLOCKUSDT",
       "baseAsset": "FLOCK",
-      "price": 0.076848,
-      "price_str": "0.076848",
-      "volume_24h": 136763871.0,
-      "volume_24h_str": "136.76M",
-      "price_change_24h": 28.43485,
+      "price": 0.079148,
+      "price_str": "0.079148",
+      "volume_24h": 145293867.0,
+      "volume_24h_str": "145.29M",
+      "price_change_24h": 7.77818,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 58.55,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.0736731,
-      "ema_50": 0.06873323,
-      "ema_200": 0.06389534,
+      "rsi": 53.96,
+      "rsi_label": "محايد",
+      "ema_20": 0.07856611,
+      "ema_50": 0.07303982,
+      "ema_200": 0.06564773,
       "supertrend_dir": 1,
-      "volume_ratio": 0.85,
+      "volume_ratio": 0.01,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00054183,
-      "timestamp": "2026-09-13T03:54:50.326010+00:00"
+      "macd_hist": -0.00037567,
+      "timestamp": "2026-09-13T14:10:14.536987+00:00"
     },
     {
       "symbol": "DEBITUSDT",
       "baseAsset": "DEBIT",
-      "price": 2.07182932,
-      "price_str": "2.0718",
-      "volume_24h": 122174830.0,
-      "volume_24h_str": "122.17M",
-      "price_change_24h": 6.88963,
+      "price": 2.16648149,
+      "price_str": "2.1665",
+      "volume_24h": 88969479.0,
+      "volume_24h_str": "88.97M",
+      "price_change_24h": 10.85591,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 61.48,
+      "rsi": 64.59,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 2.00298287,
-      "ema_50": 1.98161224,
-      "ema_200": 1.82096283,
+      "ema_20": 2.10900173,
+      "ema_50": 2.04414058,
+      "ema_200": 1.85571003,
       "supertrend_dir": 1,
-      "volume_ratio": 3.78,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 0.01454786,
-      "timestamp": "2026-09-13T03:54:50.326010+00:00"
+      "volume_ratio": 0.19,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 0.00617962,
+      "timestamp": "2026-09-13T14:10:14.536987+00:00"
+    },
+    {
+      "symbol": "B3USDT",
+      "baseAsset": "B3",
+      "price": 0.0006118,
+      "price_str": "0.00061180",
+      "volume_24h": 77969723.0,
+      "volume_24h_str": "77.97M",
+      "price_change_24h": 24.9187,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 57.44,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.00059425,
+      "ema_50": 0.00054944,
+      "ema_200": 0.00049486,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.1,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 5.3e-07,
+      "timestamp": "2026-09-13T14:10:14.536987+00:00"
+    },
+    {
+      "symbol": "ARKUSDT",
+      "baseAsset": "ARK",
+      "price": 0.16878954,
+      "price_str": "0.168790",
+      "volume_24h": 74739011.0,
+      "volume_24h_str": "74.74M",
+      "price_change_24h": 43.45251,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 58.29,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.15827558,
+      "ema_50": 0.14048625,
+      "ema_200": 0.12436671,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.16,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 0.00044576,
+      "timestamp": "2026-09-13T14:10:14.536987+00:00"
     }
   ],
-  "next_update": "2026-09-13T04:05:00+00:00"
+  "next_update": "2026-09-13T15:05:00+00:00"
 }
