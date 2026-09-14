@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-14T12:11:56.200230+00:00",
+  "timestamp": "2026-09-14T18:26:09.795718+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 14,
-    "scan_duration": 60.959393,
-    "scan_start": "2026-09-14T12:11:56.200230+00:00",
-    "scan_end": "2026-09-14T12:12:57.159623+00:00",
+    "signals_found": 1,
+    "errors": 15,
+    "scan_duration": 71.42751,
+    "scan_start": "2026-09-14T18:26:09.795718+00:00",
+    "scan_end": "2026-09-14T18:27:21.223228+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 1,
       "B": 0,
       "C": 0
     }
@@ -19,53 +19,28 @@
     {
       "symbol": "ETHUSDT",
       "baseAsset": "ETH",
-      "price": 2511.0,
-      "price_str": "2,511.00",
-      "volume_24h": 11151240346.0,
-      "volume_24h_str": "11.15B",
-      "price_change_24h": 1.23929,
+      "price": 2535.82006836,
+      "price_str": "2,535.82",
+      "volume_24h": 13313583955.0,
+      "volume_24h_str": "13.31B",
+      "price_change_24h": 1.24193,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 51.97,
-      "rsi_label": "محايد",
-      "ema_20": 2508.3917189,
-      "ema_50": 2507.22078546,
-      "ema_200": 2493.45723103,
+      "rsi": 64.03,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 2513.2950144,
+      "ema_50": 2509.42684354,
+      "ema_200": 2494.8103011,
       "supertrend_dir": 1,
-      "volume_ratio": 0.07,
+      "volume_ratio": 0.64,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 1.28484194,
-      "timestamp": "2026-09-14T12:11:56.200230+00:00"
-    },
-    {
-      "symbol": "REZUSDT",
-      "baseAsset": "REZ",
-      "price": 0.0046086,
-      "price_str": "0.00460860",
-      "volume_24h": 150089459.0,
-      "volume_24h_str": "150.09M",
-      "price_change_24h": 16.57704,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 53.4,
-      "rsi_label": "محايد",
-      "ema_20": 0.00456571,
-      "ema_50": 0.00422543,
-      "ema_200": 0.00354288,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.26,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -3.769e-05,
-      "timestamp": "2026-09-14T12:11:56.200230+00:00"
+      "macd_hist": 2.83776249,
+      "timestamp": "2026-09-14T18:26:09.795718+00:00"
     }
   ],
-  "next_update": "2026-09-14T13:05:00+00:00"
+  "next_update": "2026-09-14T19:05:00+00:00"
 }
