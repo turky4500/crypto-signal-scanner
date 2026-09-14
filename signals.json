@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-14T05:55:51.631457+00:00",
+  "timestamp": "2026-09-14T12:11:56.200230+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 2,
     "errors": 14,
-    "scan_duration": 68.761363,
-    "scan_start": "2026-09-14T05:55:51.631457+00:00",
-    "scan_end": "2026-09-14T05:57:00.392820+00:00",
+    "scan_duration": 60.959393,
+    "scan_start": "2026-09-14T12:11:56.200230+00:00",
+    "scan_end": "2026-09-14T12:12:57.159623+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -17,55 +17,55 @@
   },
   "signals": [
     {
-      "symbol": "REZUSDT",
-      "baseAsset": "REZ",
-      "price": 0.004452,
-      "price_str": "0.00445200",
-      "volume_24h": 150486399.0,
-      "volume_24h_str": "150.49M",
-      "price_change_24h": 29.5849,
+      "symbol": "ETHUSDT",
+      "baseAsset": "ETH",
+      "price": 2511.0,
+      "price_str": "2,511.00",
+      "volume_24h": 11151240346.0,
+      "volume_24h_str": "11.15B",
+      "price_change_24h": 1.23929,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 52.69,
+      "rsi": 51.97,
       "rsi_label": "محايد",
-      "ema_20": 0.00443355,
-      "ema_50": 0.00407097,
-      "ema_200": 0.00345848,
+      "ema_20": 2508.3917189,
+      "ema_50": 2507.22078546,
+      "ema_200": 2493.45723103,
       "supertrend_dir": 1,
-      "volume_ratio": 0.01,
+      "volume_ratio": 0.07,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -3.137e-05,
-      "timestamp": "2026-09-14T05:55:51.631457+00:00"
+      "macd_hist": 1.28484194,
+      "timestamp": "2026-09-14T12:11:56.200230+00:00"
     },
     {
-      "symbol": "ARKUSDT",
-      "baseAsset": "ARK",
-      "price": 0.17718394,
-      "price_str": "0.177184",
-      "volume_24h": 89612075.0,
-      "volume_24h_str": "89.61M",
-      "price_change_24h": 17.29435,
+      "symbol": "REZUSDT",
+      "baseAsset": "REZ",
+      "price": 0.0046086,
+      "price_str": "0.00460860",
+      "volume_24h": 150089459.0,
+      "volume_24h_str": "150.09M",
+      "price_change_24h": 16.57704,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 64.09,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.15771313,
-      "ema_50": 0.14670958,
-      "ema_200": 0.12685621,
+      "rsi": 53.4,
+      "rsi_label": "محايد",
+      "ema_20": 0.00456571,
+      "ema_50": 0.00422543,
+      "ema_200": 0.00354288,
       "supertrend_dir": 1,
-      "volume_ratio": 0.4,
+      "volume_ratio": 0.26,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00226958,
-      "timestamp": "2026-09-14T05:55:51.631457+00:00"
+      "macd_hist": -3.769e-05,
+      "timestamp": "2026-09-14T12:11:56.200230+00:00"
     }
   ],
-  "next_update": "2026-09-14T06:05:00+00:00"
+  "next_update": "2026-09-14T13:05:00+00:00"
 }
