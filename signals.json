@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-14T00:50:22.800308+00:00",
+  "timestamp": "2026-09-14T05:55:51.631457+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
-    "errors": 15,
-    "scan_duration": 74.47502,
-    "scan_start": "2026-09-14T00:50:22.800308+00:00",
-    "scan_end": "2026-09-14T00:51:37.275328+00:00",
+    "signals_found": 2,
+    "errors": 14,
+    "scan_duration": 68.761363,
+    "scan_start": "2026-09-14T05:55:51.631457+00:00",
+    "scan_end": "2026-09-14T05:57:00.392820+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 2,
       "B": 0,
       "C": 0
     }
@@ -19,28 +19,53 @@
     {
       "symbol": "REZUSDT",
       "baseAsset": "REZ",
-      "price": 0.0043865,
-      "price_str": "0.00438650",
-      "volume_24h": 125373373.0,
-      "volume_24h_str": "125.37M",
-      "price_change_24h": 9.77702,
+      "price": 0.004452,
+      "price_str": "0.00445200",
+      "volume_24h": 150486399.0,
+      "volume_24h_str": "150.49M",
+      "price_change_24h": 29.5849,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 54.64,
+      "rsi": 52.69,
       "rsi_label": "محايد",
-      "ema_20": 0.00432534,
-      "ema_50": 0.00395372,
-      "ema_200": 0.00339994,
+      "ema_20": 0.00443355,
+      "ema_50": 0.00407097,
+      "ema_200": 0.00345848,
       "supertrend_dir": 1,
-      "volume_ratio": 0.03,
+      "volume_ratio": 0.01,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.111e-05,
-      "timestamp": "2026-09-14T00:50:22.800308+00:00"
+      "macd_hist": -3.137e-05,
+      "timestamp": "2026-09-14T05:55:51.631457+00:00"
+    },
+    {
+      "symbol": "ARKUSDT",
+      "baseAsset": "ARK",
+      "price": 0.17718394,
+      "price_str": "0.177184",
+      "volume_24h": 89612075.0,
+      "volume_24h_str": "89.61M",
+      "price_change_24h": 17.29435,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 64.09,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.15771313,
+      "ema_50": 0.14670958,
+      "ema_200": 0.12685621,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.4,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 0.00226958,
+      "timestamp": "2026-09-14T05:55:51.631457+00:00"
     }
   ],
-  "next_update": "2026-09-14T01:05:00+00:00"
+  "next_update": "2026-09-14T06:05:00+00:00"
 }
