@@ -1,71 +1,20 @@
 {
-  "timestamp": "2026-09-14T22:20:55.406232+00:00",
+  "timestamp": "2026-09-15T01:15:57.172460+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
+    "signals_found": 0,
     "errors": 15,
-    "scan_duration": 70.391896,
-    "scan_start": "2026-09-14T22:20:55.406232+00:00",
-    "scan_end": "2026-09-14T22:22:05.798128+00:00",
+    "scan_duration": 71.544114,
+    "scan_start": "2026-09-15T01:15:57.172460+00:00",
+    "scan_end": "2026-09-15T01:17:08.716574+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 0,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "ETHUSDT",
-      "baseAsset": "ETH",
-      "price": 2546.2199707,
-      "price_str": "2,546.22",
-      "volume_24h": 16456606622.0,
-      "volume_24h_str": "16.46B",
-      "price_change_24h": 2.76529,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 60.87,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 2525.80634029,
-      "ema_50": 2515.63132542,
-      "ema_200": 2497.03167734,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.1,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 4.24005229,
-      "timestamp": "2026-09-14T22:20:55.406232+00:00"
-    },
-    {
-      "symbol": "WBTUSDT",
-      "baseAsset": "WBT",
-      "price": 81.61244965,
-      "price_str": "81.6124",
-      "volume_24h": 132877613.0,
-      "volume_24h_str": "132.88M",
-      "price_change_24h": 2.4596,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 59.95,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 81.15368211,
-      "ema_50": 80.68508588,
-      "ema_200": 78.76200783,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.0710292,
-      "timestamp": "2026-09-14T22:20:55.406232+00:00"
-    }
-  ],
-  "next_update": "2026-09-14T23:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-09-15T02:05:00+00:00"
 }
