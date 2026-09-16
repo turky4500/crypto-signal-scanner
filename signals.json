@@ -1,20 +1,46 @@
 {
-  "timestamp": "2026-09-16T18:44:50.854055+00:00",
+  "timestamp": "2026-09-16T21:57:42.732775+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 0,
+    "signals_found": 1,
     "errors": 16,
-    "scan_duration": 75.63273,
-    "scan_start": "2026-09-16T18:44:50.854055+00:00",
-    "scan_end": "2026-09-16T18:46:06.486785+00:00",
+    "scan_duration": 76.247647,
+    "scan_start": "2026-09-16T21:57:42.732775+00:00",
+    "scan_end": "2026-09-16T21:58:58.980422+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 0,
+      "A": 1,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [],
-  "next_update": "2026-09-16T19:05:00+00:00"
+  "signals": [
+    {
+      "symbol": "LSKUSDT",
+      "baseAsset": "LSK",
+      "price": 0.70259702,
+      "price_str": "0.702597",
+      "volume_24h": 296639536.0,
+      "volume_24h_str": "296.64M",
+      "price_change_24h": 82.48005,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 59.82,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.61534201,
+      "ema_50": 0.52860592,
+      "ema_200": 0.3389021,
+      "supertrend_dir": 1,
+      "volume_ratio": 1.84,
+      "volume_label": "حجم فوق المتوسط 📊",
+      "macd_hist": 0.00971207,
+      "timestamp": "2026-09-16T21:57:42.732775+00:00"
+    }
+  ],
+  "next_update": "2026-09-16T22:05:00+00:00"
 }
