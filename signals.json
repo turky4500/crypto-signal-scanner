@@ -1,121 +1,71 @@
 {
-  "timestamp": "2026-09-18T12:48:05.130414+00:00",
+  "timestamp": "2026-09-18T16:58:56.234414+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 4,
+    "signals_found": 2,
     "errors": 15,
-    "scan_duration": 71.068076,
-    "scan_start": "2026-09-18T12:48:05.130414+00:00",
-    "scan_end": "2026-09-18T12:49:16.198490+00:00",
+    "scan_duration": 74.579335,
+    "scan_start": "2026-09-18T16:58:56.234414+00:00",
+    "scan_end": "2026-09-18T17:00:10.813749+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 4,
+      "A": 2,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "REZUSDT",
-      "baseAsset": "REZ",
-      "price": 0.0038964,
-      "price_str": "0.00389640",
-      "volume_24h": 358579957.0,
-      "volume_24h_str": "358.58M",
-      "price_change_24h": 1.89151,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 50.71,
-      "rsi_label": "محايد",
-      "ema_20": 0.00391701,
-      "ema_50": 0.00383153,
-      "ema_200": 0.0036848,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.06,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -9.01e-06,
-      "timestamp": "2026-09-18T12:48:05.130414+00:00"
-    },
-    {
       "symbol": "GUSDT",
       "baseAsset": "G",
       "price": 2.195e-05,
       "price_str": "0.00002195",
-      "volume_24h": 289141918.0,
-      "volume_24h_str": "289.14M",
-      "price_change_24h": 90.48644,
+      "volume_24h": 415578934.0,
+      "volume_24h_str": "415.58M",
+      "price_change_24h": 87.28677,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 47.58,
+      "rsi": 47.59,
       "rsi_label": "محايد",
       "ema_20": 2.195e-05,
       "ema_50": 2.194e-05,
-      "ema_200": 2.142e-05,
+      "ema_200": 2.143e-05,
       "supertrend_dir": 1,
       "volume_ratio": 0,
       "volume_label": "حجم منخفض 📉",
       "macd_hist": 0.0,
-      "timestamp": "2026-09-18T12:48:05.130414+00:00"
+      "timestamp": "2026-09-18T16:58:56.234414+00:00"
     },
     {
-      "symbol": "XAUTUSDT",
-      "baseAsset": "XAUT",
-      "price": 4364.99462891,
-      "price_str": "4,364.99",
-      "volume_24h": 196805544.0,
-      "volume_24h_str": "196.81M",
-      "price_change_24h": 0.18753,
+      "symbol": "REZUSDT",
+      "baseAsset": "REZ",
+      "price": 0.003855,
+      "price_str": "0.00385500",
+      "volume_24h": 336392898.0,
+      "volume_24h_str": "336.39M",
+      "price_change_24h": 4.67397,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 55.66,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 4360.57198812,
-      "ema_50": 4341.17190905,
-      "ema_200": 4342.36436373,
+      "rsi": 47.01,
+      "rsi_label": "محايد",
+      "ema_20": 0.00391364,
+      "ema_50": 0.00384292,
+      "ema_200": 0.00369359,
       "supertrend_dir": 1,
-      "volume_ratio": 0.92,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.81446324,
-      "timestamp": "2026-09-18T12:48:05.130414+00:00"
-    },
-    {
-      "symbol": "PROVEUSDT",
-      "baseAsset": "PROVE",
-      "price": 0.20020001,
-      "price_str": "0.200200",
-      "volume_24h": 136704110.0,
-      "volume_24h_str": "136.70M",
-      "price_change_24h": 4.72723,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 64.14,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.19667379,
-      "ema_50": 0.19245384,
-      "ema_200": 0.18891982,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.1,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00016668,
-      "timestamp": "2026-09-18T12:48:05.130414+00:00"
+      "macd_hist": -2.124e-05,
+      "timestamp": "2026-09-18T16:58:56.234414+00:00"
     }
   ],
-  "next_update": "2026-09-18T13:05:00+00:00"
+  "next_update": "2026-09-18T17:05:00+00:00"
 }
