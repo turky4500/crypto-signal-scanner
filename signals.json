@@ -1,71 +1,46 @@
 {
-  "timestamp": "2026-09-19T10:32:21.771384+00:00",
+  "timestamp": "2026-09-19T14:13:01.857694+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
+    "signals_found": 1,
     "errors": 14,
-    "scan_duration": 67.497452,
-    "scan_start": "2026-09-19T10:32:21.771384+00:00",
-    "scan_end": "2026-09-19T10:33:29.268836+00:00",
+    "scan_duration": 71.115936,
+    "scan_start": "2026-09-19T14:13:01.857694+00:00",
+    "scan_end": "2026-09-19T14:14:12.973630+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 1,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "PROVEUSDT",
-      "baseAsset": "PROVE",
-      "price": 0.21430001,
-      "price_str": "0.214300",
-      "volume_24h": 191035353.0,
-      "volume_24h_str": "191.04M",
-      "price_change_24h": 8.82945,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 56.41,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.21300186,
-      "ema_50": 0.20496059,
-      "ema_200": 0.19264849,
-      "supertrend_dir": 1,
-      "volume_ratio": 1.57,
-      "volume_label": "حجم فوق المتوسط 📊",
-      "macd_hist": -0.00075466,
-      "timestamp": "2026-09-19T10:32:21.771384+00:00"
-    },
-    {
       "symbol": "SPYBUSDT",
       "baseAsset": "SPYB",
-      "price": 761.17163086,
-      "price_str": "761.1716",
-      "volume_24h": 177186543.0,
-      "volume_24h_str": "177.19M",
-      "price_change_24h": -0.06521,
+      "price": 761.15618896,
+      "price_str": "761.1562",
+      "volume_24h": 149382799.0,
+      "volume_24h_str": "149.38M",
+      "price_change_24h": 0.29014,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 50.44,
+      "rsi": 50.45,
       "rsi_label": "محايد",
-      "ema_20": 761.20867461,
-      "ema_50": 760.79274977,
-      "ema_200": 760.89034695,
+      "ema_20": 761.17931119,
+      "ema_50": 760.83794066,
+      "ema_200": 760.89982621,
       "supertrend_dir": 1,
       "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.08418671,
-      "timestamp": "2026-09-19T10:32:21.771384+00:00"
+      "macd_hist": -0.06723074,
+      "timestamp": "2026-09-19T14:13:01.857694+00:00"
     }
   ],
-  "next_update": "2026-09-19T11:05:00+00:00"
+  "next_update": "2026-09-19T15:05:00+00:00"
 }
