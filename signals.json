@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-19T20:15:01.247038+00:00",
+  "timestamp": "2026-09-19T22:44:31.493177+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 3,
     "errors": 14,
-    "scan_duration": 67.088095,
-    "scan_start": "2026-09-19T20:15:01.247038+00:00",
-    "scan_end": "2026-09-19T20:16:08.335133+00:00",
+    "scan_duration": 75.079746,
+    "scan_start": "2026-09-19T22:44:31.493177+00:00",
+    "scan_end": "2026-09-19T22:45:46.572923+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -19,78 +19,78 @@
     {
       "symbol": "ETHUSDT",
       "baseAsset": "ETH",
-      "price": 2634.29003906,
-      "price_str": "2,634.29",
-      "volume_24h": 12115790277.0,
-      "volume_24h_str": "12.12B",
-      "price_change_24h": -0.04891,
+      "price": 2628.98999023,
+      "price_str": "2,628.99",
+      "volume_24h": 11333116903.0,
+      "volume_24h_str": "11.33B",
+      "price_change_24h": 0.26074,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 61.19,
+      "rsi": 56.72,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 2628.17312724,
-      "ema_50": 2581.69321344,
-      "ema_200": 2517.69007175,
+      "ema_20": 2628.30620048,
+      "ema_50": 2585.35167694,
+      "ema_200": 2519.91519562,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -5.24896773,
-      "timestamp": "2026-09-19T20:15:01.247038+00:00"
+      "volume_ratio": 4.65,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": -5.92583769,
+      "timestamp": "2026-09-19T22:44:31.493177+00:00"
     },
     {
       "symbol": "ARUSDT",
       "baseAsset": "AR",
-      "price": 4.33893871,
-      "price_str": "4.3389",
-      "volume_24h": 210833079.0,
-      "volume_24h_str": "210.83M",
-      "price_change_24h": 23.13563,
+      "price": 4.21510124,
+      "price_str": "4.2151",
+      "volume_24h": 190326213.0,
+      "volume_24h_str": "190.33M",
+      "price_change_24h": 17.53168,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 57.52,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 4.24916786,
-      "ema_50": 3.7459051,
-      "ema_200": 3.03968897,
+      "rsi": 53.33,
+      "rsi_label": "محايد",
+      "ema_20": 4.24411236,
+      "ema_50": 3.78344659,
+      "ema_200": 3.06359899,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
+      "volume_ratio": 0.03,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.06855903,
-      "timestamp": "2026-09-19T20:15:01.247038+00:00"
+      "macd_hist": -0.08444255,
+      "timestamp": "2026-09-19T22:44:31.493177+00:00"
     },
     {
       "symbol": "PROVEUSDT",
       "baseAsset": "PROVE",
-      "price": 0.222,
-      "price_str": "0.222000",
-      "volume_24h": 141887344.0,
-      "volume_24h_str": "141.89M",
-      "price_change_24h": 6.53133,
+      "price": 0.21950001,
+      "price_str": "0.219500",
+      "volume_24h": 139330284.0,
+      "volume_24h_str": "139.33M",
+      "price_change_24h": 2.92141,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 63.05,
+      "rsi": 58.42,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.2169499,
-      "ema_50": 0.20953798,
-      "ema_200": 0.19512178,
+      "ema_20": 0.2173008,
+      "ema_50": 0.21025119,
+      "ema_200": 0.19559406,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
+      "volume_ratio": 0.06,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -9.657e-05,
-      "timestamp": "2026-09-19T20:15:01.247038+00:00"
+      "macd_hist": -0.00037233,
+      "timestamp": "2026-09-19T22:44:31.493177+00:00"
     }
   ],
-  "next_update": "2026-09-19T21:05:00+00:00"
+  "next_update": "2026-09-19T23:05:00+00:00"
 }
