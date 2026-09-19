@@ -1,46 +1,71 @@
 {
-  "timestamp": "2026-09-19T01:01:33.695668+00:00",
+  "timestamp": "2026-09-19T05:39:08.596498+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
-    "errors": 14,
-    "scan_duration": 68.604038,
-    "scan_start": "2026-09-19T01:01:33.695668+00:00",
-    "scan_end": "2026-09-19T01:02:42.299706+00:00",
+    "signals_found": 2,
+    "errors": 13,
+    "scan_duration": 64.521886,
+    "scan_start": "2026-09-19T05:39:08.596498+00:00",
+    "scan_end": "2026-09-19T05:40:13.118384+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 2,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "XAUTUSDT",
-      "baseAsset": "XAUT",
-      "price": 4373.8359375,
-      "price_str": "4,373.84",
-      "volume_24h": 194745019.0,
-      "volume_24h_str": "194.75M",
-      "price_change_24h": 0.4127,
+      "symbol": "SPYBUSDT",
+      "baseAsset": "SPYB",
+      "price": 761.38757324,
+      "price_str": "761.3876",
+      "volume_24h": 189283637.0,
+      "volume_24h_str": "189.28M",
+      "price_change_24h": -0.07973,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 54.98,
+      "rsi": 51.78,
       "rsi_label": "محايد",
-      "ema_20": 4369.41789232,
-      "ema_50": 4352.45070143,
-      "ema_200": 4338.65064288,
+      "ema_20": 761.33460258,
+      "ema_50": 760.74425326,
+      "ema_200": 760.88631656,
       "supertrend_dir": 1,
-      "volume_ratio": 4.82,
+      "volume_ratio": 0.04,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 0.05339937,
+      "timestamp": "2026-09-19T05:39:08.596498+00:00"
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "baseAsset": "XAUT",
+      "price": 4374.45068359,
+      "price_str": "4,374.45",
+      "volume_24h": 173861639.0,
+      "volume_24h_str": "173.86M",
+      "price_change_24h": 0.22858,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 55.1,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 4371.53354167,
+      "ema_50": 4357.06777085,
+      "ema_200": 4340.71400708,
+      "supertrend_dir": 1,
+      "volume_ratio": 3.69,
       "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": -1.26424443,
-      "timestamp": "2026-09-19T01:01:33.695668+00:00"
+      "macd_hist": -1.55634759,
+      "timestamp": "2026-09-19T05:39:08.596498+00:00"
     }
   ],
-  "next_update": "2026-09-19T01:05:00+00:00"
+  "next_update": "2026-09-19T06:05:00+00:00"
 }
