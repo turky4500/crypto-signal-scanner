@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-19T14:13:01.857694+00:00",
+  "timestamp": "2026-09-19T17:50:32.017019+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
-    "errors": 14,
-    "scan_duration": 71.115936,
-    "scan_start": "2026-09-19T14:13:01.857694+00:00",
-    "scan_end": "2026-09-19T14:14:12.973630+00:00",
+    "errors": 15,
+    "scan_duration": 72.096789,
+    "scan_start": "2026-09-19T17:50:32.017019+00:00",
+    "scan_end": "2026-09-19T17:51:44.113808+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -17,30 +17,30 @@
   },
   "signals": [
     {
-      "symbol": "SPYBUSDT",
-      "baseAsset": "SPYB",
-      "price": 761.15618896,
-      "price_str": "761.1562",
-      "volume_24h": 149382799.0,
-      "volume_24h_str": "149.38M",
-      "price_change_24h": 0.29014,
+      "symbol": "ARUSDT",
+      "baseAsset": "AR",
+      "price": 4.32305288,
+      "price_str": "4.3231",
+      "volume_24h": 214619954.0,
+      "volume_24h_str": "214.62M",
+      "price_change_24h": 32.32304,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 50.45,
-      "rsi_label": "محايد",
-      "ema_20": 761.17931119,
-      "ema_50": 760.83794066,
-      "ema_200": 760.89982621,
+      "rsi": 57.76,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 4.22366369,
+      "ema_50": 3.67373086,
+      "ema_200": 3.00120232,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
+      "volume_ratio": 0.33,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.06723074,
-      "timestamp": "2026-09-19T14:13:01.857694+00:00"
+      "macd_hist": -0.03098149,
+      "timestamp": "2026-09-19T17:50:32.017019+00:00"
     }
   ],
-  "next_update": "2026-09-19T15:05:00+00:00"
+  "next_update": "2026-09-19T18:05:00+00:00"
 }
