@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-20T21:16:09.699738+00:00",
+  "timestamp": "2026-09-20T23:56:59.743987+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 4,
+    "signals_found": 2,
     "errors": 14,
-    "scan_duration": 68.491681,
-    "scan_start": "2026-09-20T21:16:09.699738+00:00",
-    "scan_end": "2026-09-20T21:17:18.191419+00:00",
+    "scan_duration": 75.71938,
+    "scan_start": "2026-09-20T23:56:59.743987+00:00",
+    "scan_end": "2026-09-20T23:58:15.463367+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 4,
+      "A": 2,
       "B": 0,
       "C": 0
     }
@@ -19,103 +19,53 @@
     {
       "symbol": "BTCUSDT",
       "baseAsset": "BTC",
-      "price": 80788.0625,
-      "price_str": "80,788.06",
-      "volume_24h": 23814939530.0,
-      "volume_24h_str": "23.81B",
-      "price_change_24h": -0.40897,
+      "price": 81167.4609375,
+      "price_str": "81,167.46",
+      "volume_24h": 23980547485.0,
+      "volume_24h_str": "23.98B",
+      "price_change_24h": -0.13435,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 49.74,
-      "rsi_label": "محايد",
-      "ema_20": 80833.11402879,
-      "ema_50": 80486.74814751,
-      "ema_200": 78512.16761848,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.26,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 46.94292146,
-      "timestamp": "2026-09-20T21:16:09.699738+00:00"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "baseAsset": "ETH",
-      "price": 2620.14990234,
-      "price_str": "2,620.15",
-      "volume_24h": 11160388947.0,
-      "volume_24h_str": "11.16B",
-      "price_change_24h": -0.42639,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 55.54,
+      "rsi": 57.65,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 2609.7488642,
-      "ema_50": 2595.41670766,
-      "ema_200": 2529.96402799,
+      "ema_20": 80906.24659517,
+      "ema_50": 80544.81773357,
+      "ema_200": 78566.2807132,
       "supertrend_dir": 1,
-      "volume_ratio": 1.16,
-      "volume_label": "حجم عادي",
-      "macd_hist": 5.28302654,
-      "timestamp": "2026-09-20T21:16:09.699738+00:00"
-    },
-    {
-      "symbol": "TRXUSDT",
-      "baseAsset": "TRX",
-      "price": 0.34271994,
-      "price_str": "0.342720",
-      "volume_24h": 452178696.0,
-      "volume_24h_str": "452.18M",
-      "price_change_24h": 1.01903,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 55.69,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.3424263,
-      "ema_50": 0.34055448,
-      "ema_200": 0.33865728,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.5,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00016048,
-      "timestamp": "2026-09-20T21:16:09.699738+00:00"
+      "volume_ratio": 2.16,
+      "volume_label": "حجم كبير 📈",
+      "macd_hist": 55.47598918,
+      "timestamp": "2026-09-20T23:56:59.743987+00:00"
     },
     {
       "symbol": "PROVEUSDT",
       "baseAsset": "PROVE",
-      "price": 0.22499999,
-      "price_str": "0.225000",
-      "volume_24h": 149861453.0,
-      "volume_24h_str": "149.86M",
-      "price_change_24h": 2.6919,
+      "price": 0.23109999,
+      "price_str": "0.231100",
+      "volume_24h": 152524526.0,
+      "volume_24h_str": "152.52M",
+      "price_change_24h": 4.61319,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 53.64,
-      "rsi_label": "محايد",
-      "ema_20": 0.22395072,
-      "ema_50": 0.21847451,
-      "ema_200": 0.19951124,
+      "rsi": 62.25,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.22512782,
+      "ema_50": 0.21939716,
+      "ema_200": 0.20012473,
       "supertrend_dir": 1,
-      "volume_ratio": 0.11,
+      "volume_ratio": 0.07,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00014095,
-      "timestamp": "2026-09-20T21:16:09.699738+00:00"
+      "macd_hist": 0.0001982,
+      "timestamp": "2026-09-20T23:56:59.743987+00:00"
     }
   ],
-  "next_update": "2026-09-20T22:05:00+00:00"
+  "next_update": "2026-09-21T00:05:00+00:00"
 }
