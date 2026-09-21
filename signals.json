@@ -1,71 +1,46 @@
 {
-  "timestamp": "2026-09-20T23:56:59.743987+00:00",
+  "timestamp": "2026-09-21T04:01:07.015531+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
+    "signals_found": 1,
     "errors": 14,
-    "scan_duration": 75.71938,
-    "scan_start": "2026-09-20T23:56:59.743987+00:00",
-    "scan_end": "2026-09-20T23:58:15.463367+00:00",
+    "scan_duration": 72.215362,
+    "scan_start": "2026-09-21T04:01:07.015531+00:00",
+    "scan_end": "2026-09-21T04:02:19.230893+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 1,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "BTCUSDT",
-      "baseAsset": "BTC",
-      "price": 81167.4609375,
-      "price_str": "81,167.46",
-      "volume_24h": 23980547485.0,
-      "volume_24h_str": "23.98B",
-      "price_change_24h": -0.13435,
+      "symbol": "DGAIUSDT",
+      "baseAsset": "DGAI",
+      "price": 0.95731443,
+      "price_str": "0.957314",
+      "volume_24h": 125221896.0,
+      "volume_24h_str": "125.22M",
+      "price_change_24h": 0.11669,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 57.65,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 80906.24659517,
-      "ema_50": 80544.81773357,
-      "ema_200": 78566.2807132,
+      "rsi": 52.31,
+      "rsi_label": "محايد",
+      "ema_20": 0.95552639,
+      "ema_50": 0.9531638,
+      "ema_200": 0.86005439,
       "supertrend_dir": 1,
-      "volume_ratio": 2.16,
-      "volume_label": "حجم كبير 📈",
-      "macd_hist": 55.47598918,
-      "timestamp": "2026-09-20T23:56:59.743987+00:00"
-    },
-    {
-      "symbol": "PROVEUSDT",
-      "baseAsset": "PROVE",
-      "price": 0.23109999,
-      "price_str": "0.231100",
-      "volume_24h": 152524526.0,
-      "volume_24h_str": "152.52M",
-      "price_change_24h": 4.61319,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 62.25,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.22512782,
-      "ema_50": 0.21939716,
-      "ema_200": 0.20012473,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.07,
+      "volume_ratio": 0.93,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.0001982,
-      "timestamp": "2026-09-20T23:56:59.743987+00:00"
+      "macd_hist": 0.00044703,
+      "timestamp": "2026-09-21T04:01:07.015531+00:00"
     }
   ],
-  "next_update": "2026-09-21T00:05:00+00:00"
+  "next_update": "2026-09-21T04:05:00+00:00"
 }
