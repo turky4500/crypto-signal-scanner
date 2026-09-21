@@ -1,46 +1,20 @@
 {
-  "timestamp": "2026-09-21T04:01:07.015531+00:00",
+  "timestamp": "2026-09-21T09:47:48.672191+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
-    "errors": 14,
-    "scan_duration": 72.215362,
-    "scan_start": "2026-09-21T04:01:07.015531+00:00",
-    "scan_end": "2026-09-21T04:02:19.230893+00:00",
+    "signals_found": 0,
+    "errors": 15,
+    "scan_duration": 71.084578,
+    "scan_start": "2026-09-21T09:47:48.672191+00:00",
+    "scan_end": "2026-09-21T09:48:59.756769+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 0,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "DGAIUSDT",
-      "baseAsset": "DGAI",
-      "price": 0.95731443,
-      "price_str": "0.957314",
-      "volume_24h": 125221896.0,
-      "volume_24h_str": "125.22M",
-      "price_change_24h": 0.11669,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 52.31,
-      "rsi_label": "محايد",
-      "ema_20": 0.95552639,
-      "ema_50": 0.9531638,
-      "ema_200": 0.86005439,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.93,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00044703,
-      "timestamp": "2026-09-21T04:01:07.015531+00:00"
-    }
-  ],
-  "next_update": "2026-09-21T04:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-09-21T10:05:00+00:00"
 }
