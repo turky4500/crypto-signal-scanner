@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-22T18:36:10.287996+00:00",
+  "timestamp": "2026-09-22T21:52:11.405150+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
     "errors": 15,
-    "scan_duration": 74.082362,
-    "scan_start": "2026-09-22T18:36:10.287996+00:00",
-    "scan_end": "2026-09-22T18:37:24.370358+00:00",
+    "scan_duration": 76.856978,
+    "scan_start": "2026-09-22T21:52:11.405150+00:00",
+    "scan_end": "2026-09-22T21:53:28.262128+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -19,28 +19,28 @@
     {
       "symbol": "XAUTUSDT",
       "baseAsset": "XAUT",
-      "price": 4354.48876953,
-      "price_str": "4,354.49",
-      "volume_24h": 213527007.0,
-      "volume_24h_str": "213.53M",
-      "price_change_24h": 0.09418,
+      "price": 4356.28320312,
+      "price_str": "4,356.28",
+      "volume_24h": 210252578.0,
+      "volume_24h_str": "210.25M",
+      "price_change_24h": 0.36214,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 57.18,
+      "rsi": 56.64,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 4338.98736504,
-      "ema_50": 4346.62734051,
-      "ema_200": 4339.25322076,
+      "ema_20": 4344.02060196,
+      "ema_50": 4347.96631609,
+      "ema_200": 4339.82210457,
       "supertrend_dir": 1,
-      "volume_ratio": 2.7,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 3.18463373,
-      "timestamp": "2026-09-22T18:36:10.287996+00:00"
+      "volume_ratio": 1.15,
+      "volume_label": "حجم عادي",
+      "macd_hist": 4.18807187,
+      "timestamp": "2026-09-22T21:52:11.405150+00:00"
     }
   ],
-  "next_update": "2026-09-22T19:05:00+00:00"
+  "next_update": "2026-09-22T22:05:00+00:00"
 }
