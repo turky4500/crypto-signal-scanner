@@ -1,71 +1,121 @@
 {
-  "timestamp": "2026-09-21T23:54:55.168810+00:00",
+  "timestamp": "2026-09-22T03:58:31.567875+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 14,
-    "scan_duration": 66.733837,
-    "scan_start": "2026-09-21T23:54:55.168810+00:00",
-    "scan_end": "2026-09-21T23:56:01.902647+00:00",
+    "signals_found": 4,
+    "errors": 13,
+    "scan_duration": 65.063775,
+    "scan_start": "2026-09-22T03:58:31.567875+00:00",
+    "scan_end": "2026-09-22T03:59:36.631650+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
-      "B": 0,
+      "A": 3,
+      "B": 1,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "TRXUSDT",
-      "baseAsset": "TRX",
-      "price": 0.34443694,
-      "price_str": "0.344437",
-      "volume_24h": 455377831.0,
-      "volume_24h_str": "455.38M",
-      "price_change_24h": 0.56723,
+      "symbol": "RLUSDUSDT",
+      "baseAsset": "RLUSD",
+      "price": 0.9999947,
+      "price_str": "0.999995",
+      "volume_24h": 416822558.0,
+      "volume_24h_str": "416.82M",
+      "price_change_24h": -0.00495,
       "strategies": [
-        "A"
+        "B"
       ],
       "strategy_labels": [
-        "استمرار الاتجاه"
+        "تقاطع الزخم"
       ],
-      "rsi": 58.1,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.3440456,
-      "ema_50": 0.34278698,
-      "ema_200": 0.3397198,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.51,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00011801,
-      "timestamp": "2026-09-21T23:54:55.168810+00:00"
+      "rsi": 52.74,
+      "rsi_label": "محايد",
+      "ema_20": 0.99995345,
+      "ema_50": 0.99995315,
+      "ema_200": 0.99995141,
+      "supertrend_dir": 0,
+      "volume_ratio": 2.4,
+      "volume_label": "حجم كبير 📈",
+      "macd_hist": 9.15e-06,
+      "timestamp": "2026-09-22T03:58:31.567875+00:00"
     },
     {
       "symbol": "SEIUSDT",
       "baseAsset": "SEI",
-      "price": 0.05943,
-      "price_str": "0.059430",
-      "volume_24h": 199649300.0,
-      "volume_24h_str": "199.65M",
-      "price_change_24h": 11.22937,
+      "price": 0.06017,
+      "price_str": "0.060170",
+      "volume_24h": 228755735.0,
+      "volume_24h_str": "228.76M",
+      "price_change_24h": 10.06503,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 60.76,
+      "rsi": 60.88,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.05826637,
-      "ema_50": 0.05498274,
-      "ema_200": 0.04844028,
+      "ema_20": 0.05888839,
+      "ema_50": 0.05574262,
+      "ema_200": 0.04836087,
       "supertrend_dir": 1,
-      "volume_ratio": 0.2,
+      "volume_ratio": 0.26,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00040297,
-      "timestamp": "2026-09-21T23:54:55.168810+00:00"
+      "macd_hist": -0.00023865,
+      "timestamp": "2026-09-22T03:58:31.567875+00:00"
+    },
+    {
+      "symbol": "WBTUSDT",
+      "baseAsset": "WBT",
+      "price": 86.01652527,
+      "price_str": "86.0165",
+      "volume_24h": 223416542.0,
+      "volume_24h_str": "223.42M",
+      "price_change_24h": 3.49509,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 54.28,
+      "rsi_label": "محايد",
+      "ema_20": 86.04462414,
+      "ema_50": 84.71026452,
+      "ema_200": 81.62010162,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.35,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.20604899,
+      "timestamp": "2026-09-22T03:58:31.567875+00:00"
+    },
+    {
+      "symbol": "ZETAUSDT",
+      "baseAsset": "ZETA",
+      "price": 0.060546,
+      "price_str": "0.060546",
+      "volume_24h": 222240568.0,
+      "volume_24h_str": "222.24M",
+      "price_change_24h": 5.4656,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 56.12,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.05901011,
+      "ema_50": 0.05294111,
+      "ema_200": 0.04122489,
+      "supertrend_dir": 1,
+      "volume_ratio": 1.74,
+      "volume_label": "حجم فوق المتوسط 📊",
+      "macd_hist": -0.00082001,
+      "timestamp": "2026-09-22T03:58:31.567875+00:00"
     }
   ],
-  "next_update": "2026-09-22T00:05:00+00:00"
+  "next_update": "2026-09-22T04:05:00+00:00"
 }
