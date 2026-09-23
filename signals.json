@@ -1,46 +1,96 @@
 {
-  "timestamp": "2026-09-23T00:08:05.015836+00:00",
+  "timestamp": "2026-09-23T05:38:03.352731+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
+    "signals_found": 3,
     "errors": 16,
-    "scan_duration": 76.170073,
-    "scan_start": "2026-09-23T00:08:05.015836+00:00",
-    "scan_end": "2026-09-23T00:09:21.185909+00:00",
+    "scan_duration": 73.250596,
+    "scan_start": "2026-09-23T05:38:03.352731+00:00",
+    "scan_end": "2026-09-23T05:39:16.603327+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 3,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "XAUTUSDT",
-      "baseAsset": "XAUT",
-      "price": 4362.93798828,
-      "price_str": "4,362.94",
-      "volume_24h": 209567109.0,
-      "volume_24h_str": "209.57M",
-      "price_change_24h": -0.20058,
+      "symbol": "TRXUSDT",
+      "baseAsset": "TRX",
+      "price": 0.34368628,
+      "price_str": "0.343686",
+      "volume_24h": 515449626.0,
+      "volume_24h_str": "515.45M",
+      "price_change_24h": -1.47627,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 59.38,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 4347.36736001,
-      "ema_50": 4349.0727428,
-      "ema_200": 4338.83026614,
+      "rsi": 49.92,
+      "rsi_label": "محايد",
+      "ema_20": 0.34353676,
+      "ema_50": 0.34367315,
+      "ema_200": 0.33968781,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
+      "volume_ratio": 0.17,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 4.10293069,
-      "timestamp": "2026-09-23T00:08:05.015836+00:00"
+      "macd_hist": 0.00027814,
+      "timestamp": "2026-09-23T05:38:03.352731+00:00"
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "baseAsset": "MUBARAK",
+      "price": 0.0696077,
+      "price_str": "0.069608",
+      "volume_24h": 240067562.0,
+      "volume_24h_str": "240.07M",
+      "price_change_24h": 32.04416,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 50.54,
+      "rsi_label": "محايد",
+      "ema_20": 0.07226389,
+      "ema_50": 0.06074809,
+      "ema_200": 0.04081863,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.54,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.00167122,
+      "timestamp": "2026-09-23T05:38:03.352731+00:00"
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "baseAsset": "XAUT",
+      "price": 4339.52294922,
+      "price_str": "4,339.52",
+      "volume_24h": 189564079.0,
+      "volume_24h_str": "189.56M",
+      "price_change_24h": 0.33221,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 46.52,
+      "rsi_label": "محايد",
+      "ema_20": 4345.15770402,
+      "ema_50": 4347.69609181,
+      "ema_200": 4339.05537659,
+      "supertrend_dir": 1,
+      "volume_ratio": 1.98,
+      "volume_label": "حجم فوق المتوسط 📊",
+      "macd_hist": -0.70849315,
+      "timestamp": "2026-09-23T05:38:03.352731+00:00"
     }
   ],
-  "next_update": "2026-09-23T01:05:00+00:00"
+  "next_update": "2026-09-23T06:05:00+00:00"
 }
