@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-23T15:24:25.104312+00:00",
+  "timestamp": "2026-09-23T19:33:12.147245+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
-    "errors": 17,
-    "scan_duration": 70.838299,
-    "scan_start": "2026-09-23T15:24:25.104312+00:00",
-    "scan_end": "2026-09-23T15:25:35.942611+00:00",
+    "errors": 16,
+    "scan_duration": 76.020116,
+    "scan_start": "2026-09-23T19:33:12.147245+00:00",
+    "scan_end": "2026-09-23T19:34:28.167361+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -19,28 +19,28 @@
     {
       "symbol": "BCHUSDT",
       "baseAsset": "BCH",
-      "price": 342.1000061,
-      "price_str": "342.1000",
-      "volume_24h": 1478369294.0,
-      "volume_24h_str": "1.48B",
-      "price_change_24h": 5.20089,
+      "price": 348.83999634,
+      "price_str": "348.8400",
+      "volume_24h": 1359737698.0,
+      "volume_24h_str": "1.36B",
+      "price_change_24h": 2.05869,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 54.88,
-      "rsi_label": "محايد",
-      "ema_20": 341.54523239,
-      "ema_50": 316.70219098,
-      "ema_200": 264.86185842,
+      "rsi": 58.09,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 344.09232833,
+      "ema_50": 321.53124293,
+      "ema_200": 268.17695902,
       "supertrend_dir": 1,
-      "volume_ratio": 0.08,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -3.20755928,
-      "timestamp": "2026-09-23T15:24:25.104312+00:00"
+      "macd_hist": -2.79697934,
+      "timestamp": "2026-09-23T19:33:12.147245+00:00"
     }
   ],
-  "next_update": "2026-09-23T16:05:00+00:00"
+  "next_update": "2026-09-23T20:05:00+00:00"
 }
