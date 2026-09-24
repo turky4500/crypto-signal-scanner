@@ -1,46 +1,96 @@
 {
-  "timestamp": "2026-09-23T22:48:58.669691+00:00",
+  "timestamp": "2026-09-24T01:14:09.658508+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
-    "errors": 14,
-    "scan_duration": 71.082877,
-    "scan_start": "2026-09-23T22:48:58.669691+00:00",
-    "scan_end": "2026-09-23T22:50:09.752568+00:00",
+    "signals_found": 3,
+    "errors": 15,
+    "scan_duration": 71.890446,
+    "scan_start": "2026-09-24T01:14:09.658508+00:00",
+    "scan_end": "2026-09-24T01:15:21.548954+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 3,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "BCHUSDT",
-      "baseAsset": "BCH",
-      "price": 338.57998657,
-      "price_str": "338.5800",
-      "volume_24h": 1168758758.0,
-      "volume_24h_str": "1.17B",
-      "price_change_24h": -0.28161,
+      "symbol": "MTRGUSDT",
+      "baseAsset": "MTRG",
+      "price": 0.01009234,
+      "price_str": "0.010092",
+      "volume_24h": 20712828867.0,
+      "volume_24h_str": "20.71B",
+      "price_change_24h": -1.736,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 50.15,
+      "rsi": 49.8,
       "rsi_label": "محايد",
-      "ema_20": 342.11861667,
-      "ema_50": 323.20764156,
-      "ema_200": 270.18991702,
+      "ema_20": 0.01006081,
+      "ema_50": 0.01018489,
+      "ema_200": 0.00992033,
       "supertrend_dir": 1,
-      "volume_ratio": 0.31,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -3.81419843,
-      "timestamp": "2026-09-23T22:48:58.669691+00:00"
+      "macd_hist": 2.843e-05,
+      "timestamp": "2026-09-24T01:14:09.658508+00:00"
+    },
+    {
+      "symbol": "BCHUSDT",
+      "baseAsset": "BCH",
+      "price": 338.52999878,
+      "price_str": "338.5300",
+      "volume_24h": 1182909891.0,
+      "volume_24h_str": "1.18B",
+      "price_change_24h": -1.28375,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 50.29,
+      "rsi_label": "محايد",
+      "ema_20": 340.93782439,
+      "ema_50": 324.82678086,
+      "ema_200": 266.6534484,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.04,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -3.23409008,
+      "timestamp": "2026-09-24T01:14:09.658508+00:00"
+    },
+    {
+      "symbol": "TRXUSDT",
+      "baseAsset": "TRX",
+      "price": 0.34300289,
+      "price_str": "0.343003",
+      "volume_24h": 509605560.0,
+      "volume_24h_str": "509.61M",
+      "price_change_24h": 0.07289,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 57.29,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.3417112,
+      "ema_50": 0.34245393,
+      "ema_200": 0.3395731,
+      "supertrend_dir": 1,
+      "volume_ratio": 1.07,
+      "volume_label": "حجم عادي",
+      "macd_hist": 0.00035988,
+      "timestamp": "2026-09-24T01:14:09.658508+00:00"
     }
   ],
-  "next_update": "2026-09-23T23:05:00+00:00"
+  "next_update": "2026-09-24T02:05:00+00:00"
 }
