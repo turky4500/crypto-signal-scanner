@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-09-24T07:24:59.776511+00:00",
+  "timestamp": "2026-09-24T13:23:19.159713+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 2,
-    "errors": 15,
-    "scan_duration": 70.069281,
-    "scan_start": "2026-09-24T07:24:59.776511+00:00",
-    "scan_end": "2026-09-24T07:26:09.845792+00:00",
+    "errors": 16,
+    "scan_duration": 77.58031,
+    "scan_start": "2026-09-24T13:23:19.159713+00:00",
+    "scan_end": "2026-09-24T13:24:36.740023+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
-      "B": 0,
+      "A": 1,
+      "B": 1,
       "C": 0
     }
   },
@@ -19,53 +19,53 @@
     {
       "symbol": "BCHUSDT",
       "baseAsset": "BCH",
-      "price": 338.73999023,
-      "price_str": "338.7400",
-      "volume_24h": 989997307.0,
-      "volume_24h_str": "990.00M",
-      "price_change_24h": -3.86398,
+      "price": 335.6000061,
+      "price_str": "335.6000",
+      "volume_24h": 768117238.0,
+      "volume_24h_str": "768.12M",
+      "price_change_24h": -4.93084,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 50.0,
+      "rsi": 48.52,
       "rsi_label": "محايد",
-      "ema_20": 340.34965797,
-      "ema_50": 327.99321382,
-      "ema_200": 270.90412639,
+      "ema_20": 337.41450574,
+      "ema_50": 329.22587411,
+      "ema_200": 274.56329925,
       "supertrend_dir": 1,
       "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.55889511,
-      "timestamp": "2026-09-24T07:24:59.776511+00:00"
+      "macd_hist": -1.12833822,
+      "timestamp": "2026-09-24T13:23:19.159713+00:00"
     },
     {
-      "symbol": "TRXUSDT",
-      "baseAsset": "TRX",
-      "price": 0.34353122,
-      "price_str": "0.343531",
-      "volume_24h": 514837529.0,
-      "volume_24h_str": "514.84M",
-      "price_change_24h": -0.06967,
+      "symbol": "ONDOUSDT",
+      "baseAsset": "ONDO",
+      "price": 0.48152,
+      "price_str": "0.481520",
+      "volume_24h": 535718397.0,
+      "volume_24h_str": "535.72M",
+      "price_change_24h": 11.98976,
       "strategies": [
-        "A"
+        "B"
       ],
       "strategy_labels": [
-        "استمرار الاتجاه"
+        "تقاطع الزخم"
       ],
-      "rsi": 58.21,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.34247855,
-      "ema_50": 0.34265988,
-      "ema_200": 0.33979983,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.25,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00033818,
-      "timestamp": "2026-09-24T07:24:59.776511+00:00"
+      "rsi": 76.98,
+      "rsi_label": "ذروة الشراء القوية",
+      "ema_20": 0.43247275,
+      "ema_50": 0.42985833,
+      "ema_200": 0.40221021,
+      "supertrend_dir": 0,
+      "volume_ratio": 3.5,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": 0.00585928,
+      "timestamp": "2026-09-24T13:23:19.159713+00:00"
     }
   ],
-  "next_update": "2026-09-24T08:05:00+00:00"
+  "next_update": "2026-09-24T14:05:00+00:00"
 }
