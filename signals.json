@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-09-24T13:23:19.159713+00:00",
+  "timestamp": "2026-09-24T18:19:42.323327+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 16,
-    "scan_duration": 77.58031,
-    "scan_start": "2026-09-24T13:23:19.159713+00:00",
-    "scan_end": "2026-09-24T13:24:36.740023+00:00",
+    "signals_found": 1,
+    "errors": 15,
+    "scan_duration": 74.393578,
+    "scan_start": "2026-09-24T18:19:42.323327+00:00",
+    "scan_end": "2026-09-24T18:20:56.716905+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
       "A": 1,
-      "B": 1,
+      "B": 0,
       "C": 0
     }
   },
@@ -19,53 +19,28 @@
     {
       "symbol": "BCHUSDT",
       "baseAsset": "BCH",
-      "price": 335.6000061,
-      "price_str": "335.6000",
-      "volume_24h": 768117238.0,
-      "volume_24h_str": "768.12M",
-      "price_change_24h": -4.93084,
+      "price": 336.73001099,
+      "price_str": "336.7300",
+      "volume_24h": 561038009.0,
+      "volume_24h_str": "561.04M",
+      "price_change_24h": -3.18826,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 48.52,
+      "rsi": 49.77,
       "rsi_label": "محايد",
-      "ema_20": 337.41450574,
-      "ema_50": 329.22587411,
-      "ema_200": 274.56329925,
+      "ema_20": 337.14832012,
+      "ema_50": 330.60599656,
+      "ema_200": 277.60318661,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.12833822,
-      "timestamp": "2026-09-24T13:23:19.159713+00:00"
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "baseAsset": "ONDO",
-      "price": 0.48152,
-      "price_str": "0.481520",
-      "volume_24h": 535718397.0,
-      "volume_24h_str": "535.72M",
-      "price_change_24h": 11.98976,
-      "strategies": [
-        "B"
-      ],
-      "strategy_labels": [
-        "تقاطع الزخم"
-      ],
-      "rsi": 76.98,
-      "rsi_label": "ذروة الشراء القوية",
-      "ema_20": 0.43247275,
-      "ema_50": 0.42985833,
-      "ema_200": 0.40221021,
-      "supertrend_dir": 0,
-      "volume_ratio": 3.5,
+      "volume_ratio": 9.76,
       "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 0.00585928,
-      "timestamp": "2026-09-24T13:23:19.159713+00:00"
+      "macd_hist": -0.26187632,
+      "timestamp": "2026-09-24T18:19:42.323327+00:00"
     }
   ],
-  "next_update": "2026-09-24T14:05:00+00:00"
+  "next_update": "2026-09-24T19:05:00+00:00"
 }
