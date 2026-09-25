@@ -1,20 +1,46 @@
 {
-  "timestamp": "2026-09-25T07:19:12.890647+00:00",
+  "timestamp": "2026-09-25T13:23:36.018652+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 0,
+    "signals_found": 1,
     "errors": 14,
-    "scan_duration": 68.974724,
-    "scan_start": "2026-09-25T07:19:12.890647+00:00",
-    "scan_end": "2026-09-25T07:20:21.865371+00:00",
+    "scan_duration": 71.658356,
+    "scan_start": "2026-09-25T13:23:36.018652+00:00",
+    "scan_end": "2026-09-25T13:24:47.677008+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 0,
+      "A": 1,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [],
-  "next_update": "2026-09-25T08:05:00+00:00"
+  "signals": [
+    {
+      "symbol": "BCHUSDT",
+      "baseAsset": "BCH",
+      "price": 336.3500061,
+      "price_str": "336.3500",
+      "volume_24h": 399109439.0,
+      "volume_24h_str": "399.11M",
+      "price_change_24h": -0.03769,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 49.52,
+      "rsi_label": "محايد",
+      "ema_20": 336.49582135,
+      "ema_50": 333.84983635,
+      "ema_200": 284.1466087,
+      "supertrend_dir": 1,
+      "volume_ratio": 2.09,
+      "volume_label": "حجم كبير 📈",
+      "macd_hist": -0.03404858,
+      "timestamp": "2026-09-25T13:23:36.018652+00:00"
+    }
+  ],
+  "next_update": "2026-09-25T14:05:00+00:00"
 }
