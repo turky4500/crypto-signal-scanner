@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-27T17:35:27.019170+00:00",
+  "timestamp": "2026-09-27T21:04:33.711077+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
-    "errors": 13,
-    "scan_duration": 66.602008,
-    "scan_start": "2026-09-27T17:35:27.019170+00:00",
-    "scan_end": "2026-09-27T17:36:33.621178+00:00",
+    "errors": 14,
+    "scan_duration": 72.34795,
+    "scan_start": "2026-09-27T21:04:33.711077+00:00",
+    "scan_end": "2026-09-27T21:05:46.059027+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -19,28 +19,28 @@
     {
       "symbol": "SEIUSDT",
       "baseAsset": "SEI",
-      "price": 0.07413,
-      "price_str": "0.074130",
-      "volume_24h": 101002391.0,
-      "volume_24h_str": "101.00M",
-      "price_change_24h": 1.25933,
+      "price": 0.07527,
+      "price_str": "0.075270",
+      "volume_24h": 105284316.0,
+      "volume_24h_str": "105.28M",
+      "price_change_24h": 5.21953,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 55.82,
+      "rsi": 60.97,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.07359553,
-      "ema_50": 0.07191878,
-      "ema_200": 0.06183019,
+      "ema_20": 0.07417196,
+      "ema_50": 0.07242593,
+      "ema_200": 0.06236037,
       "supertrend_dir": 1,
-      "volume_ratio": 0.45,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00011965,
-      "timestamp": "2026-09-27T17:35:27.019170+00:00"
+      "macd_hist": 6.535e-05,
+      "timestamp": "2026-09-27T21:04:33.711077+00:00"
     }
   ],
-  "next_update": "2026-09-27T18:05:00+00:00"
+  "next_update": "2026-09-27T22:05:00+00:00"
 }
