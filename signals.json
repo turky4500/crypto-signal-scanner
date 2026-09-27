@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-27T06:24:00.246882+00:00",
+  "timestamp": "2026-09-27T12:51:55.603786+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 3,
-    "errors": 15,
-    "scan_duration": 73.960045,
-    "scan_start": "2026-09-27T06:24:00.246882+00:00",
-    "scan_end": "2026-09-27T06:25:14.206927+00:00",
+    "signals_found": 1,
+    "errors": 16,
+    "scan_duration": 76.353786,
+    "scan_start": "2026-09-27T12:51:55.603786+00:00",
+    "scan_end": "2026-09-27T12:53:11.957572+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 3,
+      "A": 1,
       "B": 0,
       "C": 0
     }
@@ -19,78 +19,28 @@
     {
       "symbol": "BCHUSDT",
       "baseAsset": "BCH",
-      "price": 341.17999268,
-      "price_str": "341.1800",
-      "volume_24h": 219319983.0,
-      "volume_24h_str": "219.32M",
-      "price_change_24h": 1.3327,
+      "price": 339.23999023,
+      "price_str": "339.2400",
+      "volume_24h": 248925697.0,
+      "volume_24h_str": "248.93M",
+      "price_change_24h": 1.35648,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 60.62,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 335.21874749,
-      "ema_50": 335.64846293,
-      "ema_200": 302.03608488,
+      "rsi": 53.56,
+      "rsi_label": "محايد",
+      "ema_20": 337.71717601,
+      "ema_50": 336.79275769,
+      "ema_200": 304.31583063,
       "supertrend_dir": 1,
-      "volume_ratio": 13.82,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 0.22125739,
-      "timestamp": "2026-09-27T06:24:00.246882+00:00"
-    },
-    {
-      "symbol": "AMPUSDT",
-      "baseAsset": "AMP",
-      "price": 0.0007134,
-      "price_str": "0.00071340",
-      "volume_24h": 121706948.0,
-      "volume_24h_str": "121.71M",
-      "price_change_24h": 43.58935,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 55.74,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.00069804,
-      "ema_50": 0.00062668,
-      "ema_200": 0.00052535,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.34,
+      "volume_ratio": 0.12,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.33e-05,
-      "timestamp": "2026-09-27T06:24:00.246882+00:00"
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "baseAsset": "RENDER",
-      "price": 2.0309,
-      "price_str": "2.0309",
-      "volume_24h": 98866964.0,
-      "volume_24h_str": "98.87M",
-      "price_change_24h": 6.22764,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 58.83,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 1.99772093,
-      "ema_50": 1.95796394,
-      "ema_200": 1.78891193,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.97,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00051817,
-      "timestamp": "2026-09-27T06:24:00.246882+00:00"
+      "macd_hist": 0.54370923,
+      "timestamp": "2026-09-27T12:51:55.603786+00:00"
     }
   ],
-  "next_update": "2026-09-27T07:05:00+00:00"
+  "next_update": "2026-09-27T13:05:00+00:00"
 }
