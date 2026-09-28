@@ -1,20 +1,6 @@
 {
-  "timestamp": "2026-09-27T23:46:15.405004+00:00",
-  "stats": {
-    "total_scanned": 50,
-    "signals_found": 0,
-    "errors": 13,
-    "scan_duration": 67.396412,
-    "scan_start": "2026-09-27T23:46:15.405004+00:00",
-    "scan_end": "2026-09-27T23:47:22.801416+00:00",
-    "min_volume": 1000000,
-    "timeframe": "1H",
-    "strategies": {
-      "A": 0,
-      "B": 0,
-      "C": 0
-    }
-  },
+  "timestamp": "2026-09-28T04:25:32.172199+00:00",
+  "total_scanned": 0,
   "signals": [],
-  "next_update": "2026-09-28T00:05:00+00:00"
+  "error": "فشل في جلب الأزواج"
 }
