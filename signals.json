@@ -1,6 +1,71 @@
 {
-  "timestamp": "2026-09-29T23:32:38.253028+00:00",
-  "total_scanned": 0,
-  "signals": [],
-  "error": "فشل في جلب الأزواج"
+  "timestamp": "2026-09-30T04:41:50.818349+00:00",
+  "stats": {
+    "total_scanned": 50,
+    "signals_found": 2,
+    "errors": 18,
+    "scan_duration": 74.396875,
+    "scan_start": "2026-09-30T04:41:50.818349+00:00",
+    "scan_end": "2026-09-30T04:43:05.215224+00:00",
+    "min_volume": 1000000,
+    "timeframe": "1H",
+    "strategies": {
+      "A": 1,
+      "B": 1,
+      "C": 0
+    }
+  },
+  "signals": [
+    {
+      "symbol": "SANDUSDT",
+      "baseAsset": "SAND",
+      "price": 0.0444,
+      "price_str": "0.044400",
+      "volume_24h": 13848828909.0,
+      "volume_24h_str": "13.85B",
+      "price_change_24h": 4.34154,
+      "strategies": [
+        "B"
+      ],
+      "strategy_labels": [
+        "تقاطع الزخم"
+      ],
+      "rsi": 59.35,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.04367736,
+      "ema_50": 0.04365631,
+      "ema_200": 0.04331927,
+      "supertrend_dir": 0,
+      "volume_ratio": 1.61,
+      "volume_label": "حجم فوق المتوسط 📊",
+      "macd_hist": 7.57e-05,
+      "timestamp": "2026-09-30T04:41:50.818349+00:00"
+    },
+    {
+      "symbol": "QNTUSDT",
+      "baseAsset": "QNT",
+      "price": 287.25,
+      "price_str": "287.2500",
+      "volume_24h": 952303561.0,
+      "volume_24h_str": "952.30M",
+      "price_change_24h": 19.82566,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 63.31,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 266.64862029,
+      "ema_50": 245.90216968,
+      "ema_200": 148.31841347,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.73,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 2.66484926,
+      "timestamp": "2026-09-30T04:41:50.818349+00:00"
+    }
+  ],
+  "next_update": "2026-09-30T05:05:00+00:00"
 }
