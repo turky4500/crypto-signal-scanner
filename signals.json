@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-09-30T16:43:37.461597+00:00",
+  "timestamp": "2026-09-30T21:18:44.388063+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
-    "errors": 5,
-    "scan_duration": 25.693637,
-    "scan_start": "2026-09-30T16:43:37.461597+00:00",
-    "scan_end": "2026-09-30T16:44:03.155234+00:00",
+    "errors": 18,
+    "scan_duration": 78.407254,
+    "scan_start": "2026-09-30T21:18:44.388063+00:00",
+    "scan_end": "2026-09-30T21:20:02.795317+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -19,28 +19,28 @@
     {
       "symbol": "QNTUSDT",
       "baseAsset": "QNT",
-      "price": 298.62,
-      "price_str": "298.6200",
-      "volume_24h": 1015687118.0,
-      "volume_24h_str": "1.02B",
-      "price_change_24h": 18.98507,
+      "price": 286.82000732,
+      "price_str": "286.8200",
+      "volume_24h": 904278515.0,
+      "volume_24h_str": "904.28M",
+      "price_change_24h": 6.48979,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 59.93,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 286.84239918,
-      "ema_50": 264.43502089,
-      "ema_200": 168.92390589,
+      "rsi": 51.25,
+      "rsi_label": "محايد",
+      "ema_20": 289.08995922,
+      "ema_50": 269.59557436,
+      "ema_200": 171.03754405,
       "supertrend_dir": 1,
-      "volume_ratio": 0.74,
+      "volume_ratio": 0.62,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.35071346,
-      "timestamp": "2026-09-30T16:43:37.461597+00:00"
+      "macd_hist": -2.72098051,
+      "timestamp": "2026-09-30T21:18:44.388063+00:00"
     }
   ],
-  "next_update": "2026-09-30T17:05:00+00:00"
+  "next_update": "2026-09-30T22:05:00+00:00"
 }
