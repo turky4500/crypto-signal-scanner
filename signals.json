@@ -1,71 +1,20 @@
 {
-  "timestamp": "2026-10-02T01:23:57.218568+00:00",
+  "timestamp": "2026-10-02T08:08:03.177339+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 16,
-    "scan_duration": 79.402347,
-    "scan_start": "2026-10-02T01:23:57.218568+00:00",
-    "scan_end": "2026-10-02T01:25:16.620915+00:00",
+    "signals_found": 0,
+    "errors": 15,
+    "scan_duration": 73.330157,
+    "scan_start": "2026-10-02T08:08:03.177339+00:00",
+    "scan_end": "2026-10-02T08:09:16.507496+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
-      "B": 1,
+      "A": 0,
+      "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "LTCUSDT",
-      "baseAsset": "LTC",
-      "price": 68.76799774,
-      "price_str": "68.7680",
-      "volume_24h": 342733632.0,
-      "volume_24h_str": "342.73M",
-      "price_change_24h": 2.00919,
-      "strategies": [
-        "B"
-      ],
-      "strategy_labels": [
-        "تقاطع الزخم"
-      ],
-      "rsi": 66.44,
-      "rsi_label": "ذروة الشراء",
-      "ema_20": 67.68587607,
-      "ema_50": 67.63055144,
-      "ema_200": 68.66680207,
-      "supertrend_dir": 0,
-      "volume_ratio": 6.91,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 0.19406356,
-      "timestamp": "2026-10-02T01:23:57.218568+00:00"
-    },
-    {
-      "symbol": "MOVRUSDT",
-      "baseAsset": "MOVR",
-      "price": 2.86542344,
-      "price_str": "2.8654",
-      "volume_24h": 206484190.0,
-      "volume_24h_str": "206.48M",
-      "price_change_24h": 21.67315,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 55.24,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 2.79280768,
-      "ema_50": 2.344078,
-      "ema_200": 1.41540282,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.01,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.04562056,
-      "timestamp": "2026-10-02T01:23:57.218568+00:00"
-    }
-  ],
-  "next_update": "2026-10-02T02:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-10-02T09:05:00+00:00"
 }
