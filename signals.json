@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-03T06:11:09.021310+00:00",
+  "timestamp": "2026-10-03T12:19:20.377498+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 2,
-    "errors": 15,
-    "scan_duration": 75.906065,
-    "scan_start": "2026-10-03T06:11:09.021310+00:00",
-    "scan_end": "2026-10-03T06:12:24.927375+00:00",
+    "errors": 14,
+    "scan_duration": 71.184574,
+    "scan_start": "2026-10-03T12:19:20.377498+00:00",
+    "scan_end": "2026-10-03T12:20:31.562072+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -19,53 +19,53 @@
     {
       "symbol": "QNTUSDT",
       "baseAsset": "QNT",
-      "price": 256.55999756,
-      "price_str": "256.5600",
-      "volume_24h": 431363234.0,
-      "volume_24h_str": "431.36M",
-      "price_change_24h": 3.62136,
+      "price": 256.57000732,
+      "price_str": "256.5700",
+      "volume_24h": 373844867.0,
+      "volume_24h_str": "373.84M",
+      "price_change_24h": 3.7188,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 56.76,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 248.38774023,
-      "ema_50": 252.90134223,
-      "ema_200": 204.77730335,
+      "rsi": 53.75,
+      "rsi_label": "محايد",
+      "ema_20": 253.27340116,
+      "ema_50": 254.31102629,
+      "ema_200": 207.97346058,
       "supertrend_dir": 1,
-      "volume_ratio": 0.84,
+      "volume_ratio": 0.16,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 2.7836716,
-      "timestamp": "2026-10-03T06:11:09.021310+00:00"
+      "macd_hist": 1.21494626,
+      "timestamp": "2026-10-03T12:19:20.377498+00:00"
     },
     {
-      "symbol": "MANAUSDT",
-      "baseAsset": "MANA",
-      "price": 0.1078,
-      "price_str": "0.107800",
-      "volume_24h": 207530901.0,
-      "volume_24h_str": "207.53M",
-      "price_change_24h": 22.51634,
+      "symbol": "TRXUSDT",
+      "baseAsset": "TRX",
+      "price": 0.33650675,
+      "price_str": "0.336507",
+      "volume_24h": 306025045.0,
+      "volume_24h_str": "306.03M",
+      "price_change_24h": 0.51819,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 63.94,
+      "rsi": 64.75,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.10192357,
-      "ema_50": 0.09738073,
-      "ema_200": 0.09220231,
+      "ema_20": 0.33541686,
+      "ema_50": 0.33531057,
+      "ema_200": 0.33607741,
       "supertrend_dir": 1,
-      "volume_ratio": 0.2,
+      "volume_ratio": 0.11,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00067908,
-      "timestamp": "2026-10-03T06:11:09.021310+00:00"
+      "macd_hist": 0.00023653,
+      "timestamp": "2026-10-03T12:19:20.377498+00:00"
     }
   ],
-  "next_update": "2026-10-03T07:05:00+00:00"
+  "next_update": "2026-10-03T13:05:00+00:00"
 }
