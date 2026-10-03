@@ -1,71 +1,20 @@
 {
-  "timestamp": "2026-10-02T20:28:25.466602+00:00",
+  "timestamp": "2026-10-03T00:15:03.651031+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 14,
-    "scan_duration": 68.29109,
-    "scan_start": "2026-10-02T20:28:25.466602+00:00",
-    "scan_end": "2026-10-02T20:29:33.757692+00:00",
+    "signals_found": 0,
+    "errors": 15,
+    "scan_duration": 73.984781,
+    "scan_start": "2026-10-03T00:15:03.651031+00:00",
+    "scan_end": "2026-10-03T00:16:17.635812+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 0,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "SANDUSDT",
-      "baseAsset": "SAND",
-      "price": 0.0637,
-      "price_str": "0.063700",
-      "volume_24h": 325724258.0,
-      "volume_24h_str": "325.72M",
-      "price_change_24h": 43.1123,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 63.25,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.05934967,
-      "ema_50": 0.05289135,
-      "ema_200": 0.04656588,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.38,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00041668,
-      "timestamp": "2026-10-02T20:28:25.466602+00:00"
-    },
-    {
-      "symbol": "MANAUSDT",
-      "baseAsset": "MANA",
-      "price": 0.0984,
-      "price_str": "0.098400",
-      "volume_24h": 135375839.0,
-      "volume_24h_str": "135.38M",
-      "price_change_24h": 10.25057,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 53.48,
-      "rsi_label": "محايد",
-      "ema_20": 0.09792438,
-      "ema_50": 0.09436711,
-      "ema_200": 0.09074284,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.13,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00057105,
-      "timestamp": "2026-10-02T20:28:25.466602+00:00"
-    }
-  ],
-  "next_update": "2026-10-02T21:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-10-03T01:05:00+00:00"
 }
