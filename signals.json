@@ -1,121 +1,71 @@
 {
-  "timestamp": "2026-10-04T19:19:00.891984+00:00",
+  "timestamp": "2026-10-04T22:53:00.585827+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 4,
-    "errors": 16,
-    "scan_duration": 76.242292,
-    "scan_start": "2026-10-04T19:19:00.891984+00:00",
-    "scan_end": "2026-10-04T19:20:17.134276+00:00",
+    "signals_found": 2,
+    "errors": 17,
+    "scan_duration": 79.426514,
+    "scan_start": "2026-10-04T22:53:00.585827+00:00",
+    "scan_end": "2026-10-04T22:54:20.012341+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 4,
-      "B": 0,
+      "A": 1,
+      "B": 1,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "QNTUSDT",
-      "baseAsset": "QNT",
-      "price": 257.77999878,
-      "price_str": "257.7800",
-      "volume_24h": 237611302.0,
-      "volume_24h_str": "237.61M",
-      "price_change_24h": 1.52733,
+      "symbol": "TRXUSDT",
+      "baseAsset": "TRX",
+      "price": 0.33580339,
+      "price_str": "0.335803",
+      "volume_24h": 202593377.0,
+      "volume_24h_str": "202.59M",
+      "price_change_24h": 0.13821,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 48.61,
+      "rsi": 53.64,
       "rsi_label": "محايد",
-      "ema_20": 258.8498245,
-      "ema_50": 258.12170251,
-      "ema_200": 228.1464908,
+      "ema_20": 0.33561748,
+      "ema_50": 0.33556855,
+      "ema_200": 0.33567969,
       "supertrend_dir": 1,
-      "volume_ratio": 0.15,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.76570107,
-      "timestamp": "2026-10-04T19:19:00.891984+00:00"
-    },
-    {
-      "symbol": "STRKUSDT",
-      "baseAsset": "STRK",
-      "price": 0.05450543,
-      "price_str": "0.054505",
-      "volume_24h": 188557110.0,
-      "volume_24h_str": "188.56M",
-      "price_change_24h": 6.96092,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 54.93,
-      "rsi_label": "محايد",
-      "ema_20": 0.05417162,
-      "ema_50": 0.05077443,
-      "ema_200": 0.04485848,
-      "supertrend_dir": 1,
-      "volume_ratio": 0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00039234,
-      "timestamp": "2026-10-04T19:19:00.891984+00:00"
+      "volume_ratio": 3.66,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": 7.2e-06,
+      "timestamp": "2026-10-04T22:53:00.585827+00:00"
     },
     {
       "symbol": "BEAMUSDT",
       "baseAsset": "BEAM",
-      "price": 0.01169337,
-      "price_str": "0.011693",
-      "volume_24h": 89038116.0,
-      "volume_24h_str": "89.04M",
-      "price_change_24h": 21.41199,
+      "price": 0.01231181,
+      "price_str": "0.012312",
+      "volume_24h": 86757760.0,
+      "volume_24h_str": "86.76M",
+      "price_change_24h": 20.43836,
       "strategies": [
-        "A"
+        "B"
       ],
       "strategy_labels": [
-        "استمرار الاتجاه"
+        "تقاطع الزخم"
       ],
-      "rsi": 53.75,
-      "rsi_label": "محايد",
-      "ema_20": 0.0116317,
-      "ema_50": 0.01165791,
-      "ema_200": 0.01166569,
+      "rsi": 73.73,
+      "rsi_label": "ذروة الشراء القوية",
+      "ema_20": 0.01170081,
+      "ema_50": 0.01168349,
+      "ema_200": 0.01167194,
       "supertrend_dir": 1,
-      "volume_ratio": 0.79,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 1.993e-05,
-      "timestamp": "2026-10-04T19:19:00.891984+00:00"
-    },
-    {
-      "symbol": "ICPUSDT",
-      "baseAsset": "ICP",
-      "price": 3.41490006,
-      "price_str": "3.4149",
-      "volume_24h": 76935181.0,
-      "volume_24h_str": "76.94M",
-      "price_change_24h": 3.6285,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 57.28,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 3.37270794,
-      "ema_50": 3.34698072,
-      "ema_200": 3.27434078,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.27,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00028652,
-      "timestamp": "2026-10-04T19:19:00.891984+00:00"
+      "volume_ratio": 1.98,
+      "volume_label": "حجم فوق المتوسط 📊",
+      "macd_hist": 5.355e-05,
+      "timestamp": "2026-10-04T22:53:00.585827+00:00"
     }
   ],
-  "next_update": "2026-10-04T20:05:00+00:00"
+  "next_update": "2026-10-04T23:05:00+00:00"
 }
