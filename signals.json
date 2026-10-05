@@ -1,71 +1,96 @@
 {
-  "timestamp": "2026-10-05T01:44:23.000772+00:00",
+  "timestamp": "2026-10-05T08:37:34.043850+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
+    "signals_found": 3,
     "errors": 16,
-    "scan_duration": 73.068445,
-    "scan_start": "2026-10-05T01:44:23.000772+00:00",
-    "scan_end": "2026-10-05T01:45:36.069217+00:00",
+    "scan_duration": 72.988698,
+    "scan_start": "2026-10-05T08:37:34.043850+00:00",
+    "scan_end": "2026-10-05T08:38:47.032548+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 3,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "TRXUSDT",
-      "baseAsset": "TRX",
-      "price": 0.33624879,
-      "price_str": "0.336249",
-      "volume_24h": 216038191.0,
-      "volume_24h_str": "216.04M",
-      "price_change_24h": 0.14283,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 60.57,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.33568311,
-      "ema_50": 0.33560115,
-      "ema_200": 0.33544444,
-      "supertrend_dir": 1,
-      "volume_ratio": 4.61,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 4.459e-05,
-      "timestamp": "2026-10-05T01:44:23.000772+00:00"
-    },
-    {
       "symbol": "STRKUSDT",
       "baseAsset": "STRK",
-      "price": 0.05826554,
-      "price_str": "0.058266",
-      "volume_24h": 169415563.0,
-      "volume_24h_str": "169.42M",
-      "price_change_24h": 8.73229,
+      "price": 0.05813267,
+      "price_str": "0.058133",
+      "volume_24h": 155838828.0,
+      "volume_24h_str": "155.84M",
+      "price_change_24h": 6.25187,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 63.81,
+      "rsi": 59.18,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.05605875,
-      "ema_50": 0.05238557,
-      "ema_200": 0.04511235,
+      "ema_20": 0.05707456,
+      "ema_50": 0.05378993,
+      "ema_200": 0.04599493,
       "supertrend_dir": 1,
       "volume_ratio": 0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -3.9e-07,
-      "timestamp": "2026-10-05T01:44:23.000772+00:00"
+      "macd_hist": -0.00031588,
+      "timestamp": "2026-10-05T08:37:34.043850+00:00"
+    },
+    {
+      "symbol": "BEAMUSDT",
+      "baseAsset": "BEAM",
+      "price": 0.0120931,
+      "price_str": "0.012093",
+      "volume_24h": 128841836.0,
+      "volume_24h_str": "128.84M",
+      "price_change_24h": -12.56017,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 57.57,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.01196274,
+      "ema_50": 0.01183084,
+      "ema_200": 0.0116653,
+      "supertrend_dir": 1,
+      "volume_ratio": 1.54,
+      "volume_label": "حجم فوق المتوسط 📊",
+      "macd_hist": -5.84e-06,
+      "timestamp": "2026-10-05T08:37:34.043850+00:00"
+    },
+    {
+      "symbol": "DAIUSDT",
+      "baseAsset": "DAI",
+      "price": 0.99988598,
+      "price_str": "0.999886",
+      "volume_24h": 117010356.0,
+      "volume_24h_str": "117.01M",
+      "price_change_24h": 0.02026,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 55.5,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.99938667,
+      "ema_50": 0.99933983,
+      "ema_200": 0.99954018,
+      "supertrend_dir": 1,
+      "volume_ratio": 1.29,
+      "volume_label": "حجم عادي",
+      "macd_hist": 0.00012281,
+      "timestamp": "2026-10-05T08:37:34.043850+00:00"
     }
   ],
-  "next_update": "2026-10-05T02:05:00+00:00"
+  "next_update": "2026-10-05T09:05:00+00:00"
 }
