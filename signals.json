@@ -1,96 +1,71 @@
 {
-  "timestamp": "2026-10-05T08:37:34.043850+00:00",
+  "timestamp": "2026-10-05T18:06:39.070220+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 3,
+    "signals_found": 2,
     "errors": 16,
-    "scan_duration": 72.988698,
-    "scan_start": "2026-10-05T08:37:34.043850+00:00",
-    "scan_end": "2026-10-05T08:38:47.032548+00:00",
+    "scan_duration": 73.863466,
+    "scan_start": "2026-10-05T18:06:39.070220+00:00",
+    "scan_end": "2026-10-05T18:07:52.933686+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 3,
+      "A": 2,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "STRKUSDT",
-      "baseAsset": "STRK",
-      "price": 0.05813267,
-      "price_str": "0.058133",
-      "volume_24h": 155838828.0,
-      "volume_24h_str": "155.84M",
-      "price_change_24h": 6.25187,
+      "symbol": "TRXUSDT",
+      "baseAsset": "TRX",
+      "price": 0.33666968,
+      "price_str": "0.336670",
+      "volume_24h": 305912966.0,
+      "volume_24h_str": "305.91M",
+      "price_change_24h": 0.42144,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 59.18,
+      "rsi": 62.24,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.05707456,
-      "ema_50": 0.05378993,
-      "ema_200": 0.04599493,
+      "ema_20": 0.33610913,
+      "ema_50": 0.33583288,
+      "ema_200": 0.33553113,
       "supertrend_dir": 1,
-      "volume_ratio": 0,
+      "volume_ratio": 0.01,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00031588,
-      "timestamp": "2026-10-05T08:37:34.043850+00:00"
-    },
-    {
-      "symbol": "BEAMUSDT",
-      "baseAsset": "BEAM",
-      "price": 0.0120931,
-      "price_str": "0.012093",
-      "volume_24h": 128841836.0,
-      "volume_24h_str": "128.84M",
-      "price_change_24h": -12.56017,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 57.57,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.01196274,
-      "ema_50": 0.01183084,
-      "ema_200": 0.0116653,
-      "supertrend_dir": 1,
-      "volume_ratio": 1.54,
-      "volume_label": "حجم فوق المتوسط 📊",
-      "macd_hist": -5.84e-06,
-      "timestamp": "2026-10-05T08:37:34.043850+00:00"
+      "macd_hist": 8.985e-05,
+      "timestamp": "2026-10-05T18:06:39.070220+00:00"
     },
     {
       "symbol": "DAIUSDT",
       "baseAsset": "DAI",
-      "price": 0.99988598,
-      "price_str": "0.999886",
-      "volume_24h": 117010356.0,
-      "volume_24h_str": "117.01M",
-      "price_change_24h": 0.02026,
+      "price": 0.99983978,
+      "price_str": "0.999840",
+      "volume_24h": 221930928.0,
+      "volume_24h_str": "221.93M",
+      "price_change_24h": -0.00312,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 55.5,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.99938667,
-      "ema_50": 0.99933983,
-      "ema_200": 0.99954018,
+      "rsi": 54.8,
+      "rsi_label": "محايد",
+      "ema_20": 0.99963991,
+      "ema_50": 0.99948824,
+      "ema_200": 0.9995641,
       "supertrend_dir": 1,
-      "volume_ratio": 1.29,
-      "volume_label": "حجم عادي",
-      "macd_hist": 0.00012281,
-      "timestamp": "2026-10-05T08:37:34.043850+00:00"
+      "volume_ratio": 0.0,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -9.84e-06,
+      "timestamp": "2026-10-05T18:06:39.070220+00:00"
     }
   ],
-  "next_update": "2026-10-05T09:05:00+00:00"
+  "next_update": "2026-10-05T19:05:00+00:00"
 }
