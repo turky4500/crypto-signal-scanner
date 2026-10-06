@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-10-06T00:40:13.781829+00:00",
+  "timestamp": "2026-10-06T07:19:41.860850+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 16,
-    "scan_duration": 79.204845,
-    "scan_start": "2026-10-06T00:40:13.781829+00:00",
-    "scan_end": "2026-10-06T00:41:32.986674+00:00",
+    "signals_found": 3,
+    "errors": 15,
+    "scan_duration": 72.163629,
+    "scan_start": "2026-10-06T07:19:41.860850+00:00",
+    "scan_end": "2026-10-06T07:20:54.024479+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 3,
       "B": 0,
       "C": 0
     }
@@ -19,53 +19,78 @@
     {
       "symbol": "TRXUSDT",
       "baseAsset": "TRX",
-      "price": 0.3362318,
-      "price_str": "0.336232",
-      "volume_24h": 314275132.0,
-      "volume_24h_str": "314.28M",
-      "price_change_24h": 0.26158,
+      "price": 0.3368836,
+      "price_str": "0.336884",
+      "volume_24h": 322381602.0,
+      "volume_24h_str": "322.38M",
+      "price_change_24h": 0.53718,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 52.24,
-      "rsi_label": "محايد",
-      "ema_20": 0.33621208,
-      "ema_50": 0.33592202,
-      "ema_200": 0.33544154,
+      "rsi": 61.33,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.33621771,
+      "ema_50": 0.33600282,
+      "ema_200": 0.33550469,
       "supertrend_dir": 1,
-      "volume_ratio": 0.11,
+      "volume_ratio": 0.88,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -3.26e-06,
-      "timestamp": "2026-10-06T00:40:13.781829+00:00"
+      "macd_hist": 1.558e-05,
+      "timestamp": "2026-10-06T07:19:41.860850+00:00"
     },
     {
       "symbol": "QNTUSDT",
       "baseAsset": "QNT",
-      "price": 266.25,
-      "price_str": "266.2500",
-      "volume_24h": 237524778.0,
-      "volume_24h_str": "237.52M",
-      "price_change_24h": 4.75459,
+      "price": 254.57000732,
+      "price_str": "254.5700",
+      "volume_24h": 226301349.0,
+      "volume_24h_str": "226.30M",
+      "price_change_24h": 0.36649,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 64.21,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 255.17825525,
-      "ema_50": 255.50320135,
-      "ema_200": 251.8528219,
+      "rsi": 45.25,
+      "rsi_label": "محايد",
+      "ema_20": 258.27316796,
+      "ema_50": 257.14264977,
+      "ema_200": 252.65648483,
       "supertrend_dir": 1,
-      "volume_ratio": 3.09,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 0.80863786,
-      "timestamp": "2026-10-06T00:40:13.781829+00:00"
+      "volume_ratio": 0.14,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.4346064,
+      "timestamp": "2026-10-06T07:19:41.860850+00:00"
+    },
+    {
+      "symbol": "ICPUSDT",
+      "baseAsset": "ICP",
+      "price": 3.4447999,
+      "price_str": "3.4448",
+      "volume_24h": 108876712.0,
+      "volume_24h_str": "108.88M",
+      "price_change_24h": 4.34971,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 47.61,
+      "rsi_label": "محايد",
+      "ema_20": 3.47655422,
+      "ema_50": 3.4272379,
+      "ema_200": 3.32166585,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.1,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.01516088,
+      "timestamp": "2026-10-06T07:19:41.860850+00:00"
     }
   ],
-  "next_update": "2026-10-06T01:05:00+00:00"
+  "next_update": "2026-10-06T08:05:00+00:00"
 }
