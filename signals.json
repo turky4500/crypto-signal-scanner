@@ -1,71 +1,96 @@
 {
-  "timestamp": "2026-10-06T14:52:39.501838+00:00",
+  "timestamp": "2026-10-06T20:03:49.610514+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 13,
-    "scan_duration": 70.658805,
-    "scan_start": "2026-10-06T14:52:39.501838+00:00",
-    "scan_end": "2026-10-06T14:53:50.160643+00:00",
+    "signals_found": 3,
+    "errors": 14,
+    "scan_duration": 68.42673,
+    "scan_start": "2026-10-06T20:03:49.610514+00:00",
+    "scan_end": "2026-10-06T20:04:58.037244+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 3,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "RLCUSDT",
-      "baseAsset": "RLC",
-      "price": 0.88099998,
-      "price_str": "0.881000",
-      "volume_24h": 235552862.0,
-      "volume_24h_str": "235.55M",
-      "price_change_24h": 55.66725,
+      "symbol": "ORCAUSDT",
+      "baseAsset": "ORCA",
+      "price": 2.80439997,
+      "price_str": "2.8044",
+      "volume_24h": 291183222.0,
+      "volume_24h_str": "291.18M",
+      "price_change_24h": 25.16326,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 61.86,
+      "rsi": 61.8,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.80770806,
-      "ema_50": 0.65093504,
-      "ema_200": 0.45665318,
+      "ema_20": 2.61243574,
+      "ema_50": 2.35103872,
+      "ema_200": 1.93381436,
       "supertrend_dir": 1,
-      "volume_ratio": 0.26,
+      "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -0.00471761,
-      "timestamp": "2026-10-06T14:52:39.501838+00:00"
+      "macd_hist": 0.01452261,
+      "timestamp": "2026-10-06T20:03:49.610514+00:00"
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "baseAsset": "XAUT",
+      "price": 4170.58349609,
+      "price_str": "4,170.58",
+      "volume_24h": 220966214.0,
+      "volume_24h_str": "220.97M",
+      "price_change_24h": 0.74273,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 62.16,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 4155.76863856,
+      "ema_50": 4149.58355634,
+      "ema_200": 4164.42741531,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.0,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 2.34993954,
+      "timestamp": "2026-10-06T20:03:49.610514+00:00"
     },
     {
       "symbol": "QNTUSDT",
       "baseAsset": "QNT",
-      "price": 261.82000732,
-      "price_str": "261.8200",
-      "volume_24h": 217931515.0,
-      "volume_24h_str": "217.93M",
-      "price_change_24h": 1.90522,
+      "price": 256.76998901,
+      "price_str": "256.7700",
+      "volume_24h": 219442857.0,
+      "volume_24h_str": "219.44M",
+      "price_change_24h": 2.62074,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 58.04,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 257.37040596,
-      "ema_50": 256.92210925,
-      "ema_200": 252.89114641,
+      "rsi": 47.9,
+      "rsi_label": "محايد",
+      "ema_20": 258.01144355,
+      "ema_50": 257.35132615,
+      "ema_200": 253.24724058,
       "supertrend_dir": 1,
-      "volume_ratio": 4.65,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": -0.09886848,
-      "timestamp": "2026-10-06T14:52:39.501838+00:00"
+      "volume_ratio": 0.24,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.09062997,
+      "timestamp": "2026-10-06T20:03:49.610514+00:00"
     }
   ],
-  "next_update": "2026-10-06T15:05:00+00:00"
+  "next_update": "2026-10-06T20:05:00+00:00"
 }
