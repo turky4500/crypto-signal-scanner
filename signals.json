@@ -1,46 +1,20 @@
 {
-  "timestamp": "2026-11-06T07:46:05.409743+00:00",
+  "timestamp": "2026-11-06T15:46:22.904247+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
-    "errors": 15,
-    "scan_duration": 72.788559,
-    "scan_start": "2026-11-06T07:46:05.409743+00:00",
-    "scan_end": "2026-11-06T07:47:18.198302+00:00",
+    "signals_found": 0,
+    "errors": 14,
+    "scan_duration": 71.278152,
+    "scan_start": "2026-11-06T15:46:22.904247+00:00",
+    "scan_end": "2026-11-06T15:47:34.182399+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
       "A": 0,
-      "B": 1,
+      "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "AKEUSDT",
-      "baseAsset": "AKE",
-      "price": 0.00517692,
-      "price_str": "0.00517692",
-      "volume_24h": 123477478.0,
-      "volume_24h_str": "123.48M",
-      "price_change_24h": 105.69561,
-      "strategies": [
-        "B"
-      ],
-      "strategy_labels": [
-        "تقاطع الزخم"
-      ],
-      "rsi": 81.2,
-      "rsi_label": "ذروة الشراء القوية",
-      "ema_20": 0.00325075,
-      "ema_50": 0.00323173,
-      "ema_200": 0.00962372,
-      "supertrend_dir": 0,
-      "volume_ratio": 1.62,
-      "volume_label": "حجم فوق المتوسط 📊",
-      "macd_hist": 0.00034968,
-      "timestamp": "2026-11-06T07:46:05.409743+00:00"
-    }
-  ],
-  "next_update": "2026-11-06T08:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-11-06T16:05:00+00:00"
 }
