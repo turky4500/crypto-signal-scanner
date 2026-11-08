@@ -1,29 +1,79 @@
 {
-  "timestamp": "2026-11-08T05:08:31.302709+00:00",
+  "timestamp": "2026-11-08T12:57:23.794226+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
+    "signals_found": 3,
     "errors": 15,
-    "scan_duration": 73.737863,
-    "scan_start": "2026-11-08T05:08:31.302709+00:00",
-    "scan_end": "2026-11-08T05:09:45.040572+00:00",
+    "scan_duration": 69.674261,
+    "scan_start": "2026-11-08T12:57:23.794226+00:00",
+    "scan_end": "2026-11-08T12:58:33.468487+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
       "A": 1,
-      "B": 0,
+      "B": 2,
       "C": 0
     }
   },
   "signals": [
     {
+      "symbol": "USDCUSDT",
+      "baseAsset": "USDC",
+      "price": 0.99979752,
+      "price_str": "0.999798",
+      "volume_24h": 4457566568.0,
+      "volume_24h_str": "4.46B",
+      "price_change_24h": -0.01655,
+      "strategies": [
+        "B"
+      ],
+      "strategy_labels": [
+        "تقاطع الزخم"
+      ],
+      "rsi": 52.81,
+      "rsi_label": "محايد",
+      "ema_20": 0.99976779,
+      "ema_50": 0.99976737,
+      "ema_200": 0.99975108,
+      "supertrend_dir": 0,
+      "volume_ratio": 2.97,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": 4.14e-06,
+      "timestamp": "2026-11-08T12:57:23.794226+00:00"
+    },
+    {
+      "symbol": "MPRAUSDT",
+      "baseAsset": "MPRA",
+      "price": 5956029440.0,
+      "price_str": "5,956,029,440.00",
+      "volume_24h": 54419789.0,
+      "volume_24h_str": "54.42M",
+      "price_change_24h": -0.41296,
+      "strategies": [
+        "B"
+      ],
+      "strategy_labels": [
+        "تقاطع الزخم"
+      ],
+      "rsi": 52.83,
+      "rsi_label": "محايد",
+      "ema_20": 5932347927.6494255,
+      "ema_50": 5931696841.795849,
+      "ema_200": 5934592416.239503,
+      "supertrend_dir": 0,
+      "volume_ratio": 7.85,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": 1864640.49231675,
+      "timestamp": "2026-11-08T12:57:23.794226+00:00"
+    },
+    {
       "symbol": "METUSDT",
       "baseAsset": "MET",
       "price": 0.48385447,
       "price_str": "0.483854",
-      "volume_24h": 56854300.0,
-      "volume_24h_str": "56.85M",
-      "price_change_24h": 15.14693,
+      "volume_24h": 51236825.0,
+      "volume_24h_str": "51.24M",
+      "price_change_24h": 2.34668,
       "strategies": [
         "A"
       ],
@@ -32,15 +82,15 @@
       ],
       "rsi": 57.34,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.48366007,
-      "ema_50": 0.48365953,
-      "ema_200": 0.4818739,
+      "ema_20": 0.48375799,
+      "ema_50": 0.48370714,
+      "ema_200": 0.4820078,
       "supertrend_dir": 1,
       "volume_ratio": 0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.557e-05,
-      "timestamp": "2026-11-08T05:08:31.302709+00:00"
+      "macd_hist": -3.476e-05,
+      "timestamp": "2026-11-08T12:57:23.794226+00:00"
     }
   ],
-  "next_update": "2026-11-08T06:05:00+00:00"
+  "next_update": "2026-11-08T13:05:00+00:00"
 }
