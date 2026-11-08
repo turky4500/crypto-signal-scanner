@@ -1,46 +1,46 @@
 {
-  "timestamp": "2026-11-08T18:15:30.377102+00:00",
+  "timestamp": "2026-11-08T22:41:41.526411+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
     "errors": 14,
-    "scan_duration": 69.322439,
-    "scan_start": "2026-11-08T18:15:30.377102+00:00",
-    "scan_end": "2026-11-08T18:16:39.699541+00:00",
+    "scan_duration": 73.683838,
+    "scan_start": "2026-11-08T22:41:41.526411+00:00",
+    "scan_end": "2026-11-08T22:42:55.210249+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
-      "B": 0,
+      "A": 0,
+      "B": 1,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "METUSDT",
-      "baseAsset": "MET",
-      "price": 0.48385447,
-      "price_str": "0.483854",
-      "volume_24h": 39521701.0,
-      "volume_24h_str": "39.52M",
-      "price_change_24h": -3.11718,
+      "symbol": "USDGUSDT",
+      "baseAsset": "USDG",
+      "price": 5.26122904,
+      "price_str": "5.2612",
+      "volume_24h": 243524835.0,
+      "volume_24h_str": "243.52M",
+      "price_change_24h": 0.02178,
       "strategies": [
-        "A"
+        "B"
       ],
       "strategy_labels": [
-        "استمرار الاتجاه"
+        "تقاطع الزخم"
       ],
-      "rsi": 57.34,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.48380155,
-      "ema_50": 0.48373858,
-      "ema_200": 0.48211534,
+      "rsi": 67.93,
+      "rsi_label": "ذروة الشراء",
+      "ema_20": 5.2066991,
+      "ema_50": 5.20363378,
+      "ema_200": 5.21794276,
       "supertrend_dir": 1,
-      "volume_ratio": 0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -3.095e-05,
-      "timestamp": "2026-11-08T18:15:30.377102+00:00"
+      "volume_ratio": 3.25,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": 0.00356691,
+      "timestamp": "2026-11-08T22:41:41.526411+00:00"
     }
   ],
-  "next_update": "2026-11-08T19:05:00+00:00"
+  "next_update": "2026-11-08T23:05:00+00:00"
 }
