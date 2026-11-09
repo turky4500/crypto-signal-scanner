@@ -1,46 +1,20 @@
 {
-  "timestamp": "2026-11-08T22:41:41.526411+00:00",
+  "timestamp": "2026-11-09T02:28:02.077928+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
+    "signals_found": 0,
     "errors": 14,
-    "scan_duration": 73.683838,
-    "scan_start": "2026-11-08T22:41:41.526411+00:00",
-    "scan_end": "2026-11-08T22:42:55.210249+00:00",
+    "scan_duration": 78.324271,
+    "scan_start": "2026-11-09T02:28:02.077928+00:00",
+    "scan_end": "2026-11-09T02:29:20.402199+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
       "A": 0,
-      "B": 1,
+      "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "USDGUSDT",
-      "baseAsset": "USDG",
-      "price": 5.26122904,
-      "price_str": "5.2612",
-      "volume_24h": 243524835.0,
-      "volume_24h_str": "243.52M",
-      "price_change_24h": 0.02178,
-      "strategies": [
-        "B"
-      ],
-      "strategy_labels": [
-        "تقاطع الزخم"
-      ],
-      "rsi": 67.93,
-      "rsi_label": "ذروة الشراء",
-      "ema_20": 5.2066991,
-      "ema_50": 5.20363378,
-      "ema_200": 5.21794276,
-      "supertrend_dir": 1,
-      "volume_ratio": 3.25,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 0.00356691,
-      "timestamp": "2026-11-08T22:41:41.526411+00:00"
-    }
-  ],
-  "next_update": "2026-11-08T23:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-11-09T03:05:00+00:00"
 }
