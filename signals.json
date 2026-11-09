@@ -1,20 +1,71 @@
 {
-  "timestamp": "2026-11-09T11:04:12.300534+00:00",
+  "timestamp": "2026-11-09T21:23:41.119618+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 0,
+    "signals_found": 2,
     "errors": 14,
-    "scan_duration": 73.246729,
-    "scan_start": "2026-11-09T11:04:12.300534+00:00",
-    "scan_end": "2026-11-09T11:05:25.547263+00:00",
+    "scan_duration": 76.27331,
+    "scan_start": "2026-11-09T21:23:41.119618+00:00",
+    "scan_end": "2026-11-09T21:24:57.392928+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 0,
+      "A": 2,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [],
-  "next_update": "2026-11-09T12:05:00+00:00"
+  "signals": [
+    {
+      "symbol": "XAUTUSDT",
+      "baseAsset": "XAUT",
+      "price": 4116.31054688,
+      "price_str": "4,116.31",
+      "volume_24h": 239058646.0,
+      "volume_24h_str": "239.06M",
+      "price_change_24h": 1.58812,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 64.31,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 4093.23779486,
+      "ema_50": 4077.86011785,
+      "ema_200": 4008.30107576,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.3,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 1.33507549,
+      "timestamp": "2026-11-09T21:23:41.119618+00:00"
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "baseAsset": "PAXG",
+      "price": 4119.85986328,
+      "price_str": "4,119.86",
+      "volume_24h": 124604299.0,
+      "volume_24h_str": "124.60M",
+      "price_change_24h": 1.71016,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 63.57,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 4097.45943232,
+      "ema_50": 4081.60729832,
+      "ema_200": 4017.73108176,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.06,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 1.32808491,
+      "timestamp": "2026-11-09T21:23:41.119618+00:00"
+    }
+  ],
+  "next_update": "2026-11-09T22:05:00+00:00"
 }
