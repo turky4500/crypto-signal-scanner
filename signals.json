@@ -1,96 +1,20 @@
 {
-  "timestamp": "2026-11-10T03:59:12.637525+00:00",
+  "timestamp": "2026-11-10T12:18:18.953415+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 3,
+    "signals_found": 0,
     "errors": 14,
-    "scan_duration": 75.777659,
-    "scan_start": "2026-11-10T03:59:12.637525+00:00",
-    "scan_end": "2026-11-10T04:00:28.415184+00:00",
+    "scan_duration": 74.710167,
+    "scan_start": "2026-11-10T12:18:18.953415+00:00",
+    "scan_end": "2026-11-10T12:19:33.663582+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 3,
+      "A": 0,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "USDGUSDT",
-      "baseAsset": "USDG",
-      "price": 5.23328638,
-      "price_str": "5.2333",
-      "volume_24h": 581963391.0,
-      "volume_24h_str": "581.96M",
-      "price_change_24h": -0.0034,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 60.58,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 5.2043244,
-      "ema_50": 5.20232291,
-      "ema_200": 5.21039335,
-      "supertrend_dir": 1,
-      "volume_ratio": 7.45,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 0.00149925,
-      "timestamp": "2026-11-10T03:59:12.637525+00:00"
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "baseAsset": "XAUT",
-      "price": 4092.58959961,
-      "price_str": "4,092.59",
-      "volume_24h": 170258367.0,
-      "volume_24h_str": "170.26M",
-      "price_change_24h": -0.17288,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 49.29,
-      "rsi_label": "محايد",
-      "ema_20": 4097.65579557,
-      "ema_50": 4083.4200352,
-      "ema_200": 4016.82598359,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.37,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -2.29857591,
-      "timestamp": "2026-11-10T03:59:12.637525+00:00"
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "baseAsset": "PAXG",
-      "price": 4094.58007812,
-      "price_str": "4,094.58",
-      "volume_24h": 96723480.0,
-      "volume_24h_str": "96.72M",
-      "price_change_24h": -0.18471,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 48.59,
-      "rsi_label": "محايد",
-      "ema_20": 4101.19158821,
-      "ema_50": 4086.96893425,
-      "ema_200": 4026.07564769,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.07,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -2.77177897,
-      "timestamp": "2026-11-10T03:59:12.637525+00:00"
-    }
-  ],
-  "next_update": "2026-11-10T04:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-11-10T13:05:00+00:00"
 }
