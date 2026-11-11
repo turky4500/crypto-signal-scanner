@@ -1,46 +1,20 @@
 {
-  "timestamp": "2026-11-11T01:06:27.903557+00:00",
+  "timestamp": "2026-11-11T08:59:31.634757+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 1,
-    "errors": 14,
-    "scan_duration": 75.277122,
-    "scan_start": "2026-11-11T01:06:27.903557+00:00",
-    "scan_end": "2026-11-11T01:07:43.180679+00:00",
+    "signals_found": 0,
+    "errors": 13,
+    "scan_duration": 67.851998,
+    "scan_start": "2026-11-11T08:59:31.634757+00:00",
+    "scan_end": "2026-11-11T09:00:39.486755+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 1,
+      "A": 0,
       "B": 0,
       "C": 0
     }
   },
-  "signals": [
-    {
-      "symbol": "USDGUSDT",
-      "baseAsset": "USDG",
-      "price": 5.23520279,
-      "price_str": "5.2352",
-      "volume_24h": 474017371.0,
-      "volume_24h_str": "474.02M",
-      "price_change_24h": 0.00094,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 58.92,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 5.20579636,
-      "ema_50": 5.20333477,
-      "ema_200": 5.20512935,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.12,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00230349,
-      "timestamp": "2026-11-11T01:06:27.903557+00:00"
-    }
-  ],
-  "next_update": "2026-11-11T02:05:00+00:00"
+  "signals": [],
+  "next_update": "2026-11-11T09:05:00+00:00"
 }
