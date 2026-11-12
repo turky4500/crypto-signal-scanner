@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-11-11T23:21:51.516955+00:00",
+  "timestamp": "2026-11-12T06:23:02.678275+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
     "errors": 13,
-    "scan_duration": 65.321287,
-    "scan_start": "2026-11-11T23:21:51.516955+00:00",
-    "scan_end": "2026-11-11T23:22:56.838242+00:00",
+    "scan_duration": 72.150296,
+    "scan_start": "2026-11-12T06:23:02.678275+00:00",
+    "scan_end": "2026-11-12T06:24:14.828571+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -17,30 +17,30 @@
   },
   "signals": [
     {
-      "symbol": "USDCUSDT",
-      "baseAsset": "USDC",
-      "price": 0.99990791,
-      "price_str": "0.999908",
-      "volume_24h": 10746591545.0,
-      "volume_24h_str": "10.75B",
-      "price_change_24h": 0.00298,
+      "symbol": "DAIUSDT",
+      "baseAsset": "DAI",
+      "price": 0.99960423,
+      "price_str": "0.999604",
+      "volume_24h": 129738404.0,
+      "volume_24h_str": "129.74M",
+      "price_change_24h": -0.00652,
       "strategies": [
         "B"
       ],
       "strategy_labels": [
         "تقاطع الزخم"
       ],
-      "rsi": 58.8,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.9997579,
-      "ema_50": 0.9997571,
-      "ema_200": 0.99975901,
+      "rsi": 52.24,
+      "rsi_label": "محايد",
+      "ema_20": 0.99951773,
+      "ema_50": 0.99951714,
+      "ema_200": 0.99961356,
       "supertrend_dir": 0,
-      "volume_ratio": 2.93,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 8.08e-06,
-      "timestamp": "2026-11-11T23:21:51.516955+00:00"
+      "volume_ratio": 1.71,
+      "volume_label": "حجم فوق المتوسط 📊",
+      "macd_hist": 1.476e-05,
+      "timestamp": "2026-11-12T06:23:02.678275+00:00"
     }
   ],
-  "next_update": "2026-11-12T00:05:00+00:00"
+  "next_update": "2026-11-12T07:05:00+00:00"
 }
