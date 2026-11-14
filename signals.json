@@ -1,20 +1,71 @@
 {
-  "timestamp": "2026-11-14T07:27:25.399868+00:00",
+  "timestamp": "2026-11-14T14:52:29.774038+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 0,
-    "errors": 14,
-    "scan_duration": 68.45249,
-    "scan_start": "2026-11-14T07:27:25.399868+00:00",
-    "scan_end": "2026-11-14T07:28:33.852358+00:00",
+    "signals_found": 2,
+    "errors": 15,
+    "scan_duration": 75.500764,
+    "scan_start": "2026-11-14T14:52:29.774038+00:00",
+    "scan_end": "2026-11-14T14:53:45.274802+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 0,
-      "B": 0,
+      "A": 1,
+      "B": 1,
       "C": 0
     }
   },
-  "signals": [],
-  "next_update": "2026-11-14T08:05:00+00:00"
+  "signals": [
+    {
+      "symbol": "AKEUSDT",
+      "baseAsset": "AKE",
+      "price": 0.01275833,
+      "price_str": "0.012758",
+      "volume_24h": 419797974.0,
+      "volume_24h_str": "419.80M",
+      "price_change_24h": 87.32073,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 63.31,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.01188963,
+      "ema_50": 0.00913635,
+      "ema_200": 0.00574058,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.13,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": -0.00036731,
+      "timestamp": "2026-11-14T14:52:29.774038+00:00"
+    },
+    {
+      "symbol": "RLUSDUSDT",
+      "baseAsset": "RLUSD",
+      "price": 1.00006557,
+      "price_str": "1.0001",
+      "volume_24h": 335348352.0,
+      "volume_24h_str": "335.35M",
+      "price_change_24h": 0.00215,
+      "strategies": [
+        "B"
+      ],
+      "strategy_labels": [
+        "تقاطع الزخم"
+      ],
+      "rsi": 56.68,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.99991923,
+      "ema_50": 0.9999122,
+      "ema_200": 0.99992211,
+      "supertrend_dir": 0,
+      "volume_ratio": 2.15,
+      "volume_label": "حجم كبير 📈",
+      "macd_hist": 1.056e-05,
+      "timestamp": "2026-11-14T14:52:29.774038+00:00"
+    }
+  ],
+  "next_update": "2026-11-14T15:05:00+00:00"
 }
