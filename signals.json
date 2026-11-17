@@ -1,20 +1,46 @@
 {
-  "timestamp": "2026-11-17T00:02:31.131209+00:00",
+  "timestamp": "2026-11-17T07:43:00.503883+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 0,
+    "signals_found": 1,
     "errors": 16,
-    "scan_duration": 76.139614,
-    "scan_start": "2026-11-17T00:02:31.131209+00:00",
-    "scan_end": "2026-11-17T00:03:47.270823+00:00",
+    "scan_duration": 78.055006,
+    "scan_start": "2026-11-17T07:43:00.503883+00:00",
+    "scan_end": "2026-11-17T07:44:18.558889+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
       "A": 0,
-      "B": 0,
+      "B": 1,
       "C": 0
     }
   },
-  "signals": [],
-  "next_update": "2026-11-17T00:05:00+00:00"
+  "signals": [
+    {
+      "symbol": "INJUSDT",
+      "baseAsset": "INJ",
+      "price": 7.34499979,
+      "price_str": "7.3450",
+      "volume_24h": 82885157.0,
+      "volume_24h_str": "82.89M",
+      "price_change_24h": 8.1639,
+      "strategies": [
+        "B"
+      ],
+      "strategy_labels": [
+        "تقاطع الزخم"
+      ],
+      "rsi": 64.67,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 7.04441929,
+      "ema_50": 7.02864496,
+      "ema_200": 7.55522948,
+      "supertrend_dir": 0,
+      "volume_ratio": 2.13,
+      "volume_label": "حجم كبير 📈",
+      "macd_hist": 0.0560106,
+      "timestamp": "2026-11-17T07:43:00.503883+00:00"
+    }
+  ],
+  "next_update": "2026-11-17T08:05:00+00:00"
 }
