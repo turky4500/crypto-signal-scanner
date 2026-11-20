@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-11-20T06:21:50.483911+00:00",
+  "timestamp": "2026-11-20T15:57:35.472727+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
     "errors": 14,
-    "scan_duration": 69.42176,
-    "scan_start": "2026-11-20T06:21:50.483911+00:00",
-    "scan_end": "2026-11-20T06:22:59.905671+00:00",
+    "scan_duration": 70.713571,
+    "scan_start": "2026-11-20T15:57:35.472727+00:00",
+    "scan_end": "2026-11-20T15:58:46.186298+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
@@ -17,30 +17,30 @@
   },
   "signals": [
     {
-      "symbol": "PIEVERSEUSDT",
-      "baseAsset": "PIEVERSE",
-      "price": 2.96417737,
-      "price_str": "2.9642",
-      "volume_24h": 92552175.0,
-      "volume_24h_str": "92.55M",
-      "price_change_24h": 12.38484,
+      "symbol": "USDCVUSDT",
+      "baseAsset": "USDCV",
+      "price": 0.99876565,
+      "price_str": "0.998766",
+      "volume_24h": 93643034.0,
+      "volume_24h_str": "93.64M",
+      "price_change_24h": 0.0885,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 51.34,
+      "rsi": 51.37,
       "rsi_label": "محايد",
-      "ema_20": 2.9561991,
-      "ema_50": 2.82412496,
-      "ema_200": 2.15166209,
+      "ema_20": 0.99877931,
+      "ema_50": 0.99831903,
+      "ema_200": 0.99864603,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.00124128,
-      "timestamp": "2026-11-20T06:21:50.483911+00:00"
+      "volume_ratio": 4.89,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": -6.353e-05,
+      "timestamp": "2026-11-20T15:57:35.472727+00:00"
     }
   ],
-  "next_update": "2026-11-20T07:05:00+00:00"
+  "next_update": "2026-11-20T16:05:00+00:00"
 }
