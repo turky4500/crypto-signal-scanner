@@ -1,71 +1,46 @@
 {
-  "timestamp": "2026-11-22T21:39:29.997546+00:00",
+  "timestamp": "2026-11-23T02:22:53.797201+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 2,
-    "errors": 15,
-    "scan_duration": 75.433168,
-    "scan_start": "2026-11-22T21:39:29.997546+00:00",
-    "scan_end": "2026-11-22T21:40:45.430714+00:00",
+    "signals_found": 1,
+    "errors": 12,
+    "scan_duration": 50.41974,
+    "scan_start": "2026-11-23T02:22:53.797201+00:00",
+    "scan_end": "2026-11-23T02:23:44.216941+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
       "A": 1,
-      "B": 1,
+      "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "RLUSDUSDT",
-      "baseAsset": "RLUSD",
-      "price": 0.99999326,
-      "price_str": "0.999993",
-      "volume_24h": 192919491.0,
-      "volume_24h_str": "192.92M",
-      "price_change_24h": -0.01709,
-      "strategies": [
-        "B"
-      ],
-      "strategy_labels": [
-        "تقاطع الزخم"
-      ],
-      "rsi": 53.52,
-      "rsi_label": "محايد",
-      "ema_20": 0.99994172,
-      "ema_50": 0.99994133,
-      "ema_200": 0.99993485,
-      "supertrend_dir": 0,
-      "volume_ratio": 10.15,
-      "volume_label": "حجم كبير جداً ⚡",
-      "macd_hist": 6.23e-06,
-      "timestamp": "2026-11-22T21:39:29.997546+00:00"
-    },
-    {
       "symbol": "USDCVUSDT",
       "baseAsset": "USDCV",
-      "price": 0.99910992,
-      "price_str": "0.999110",
-      "volume_24h": 55257592.0,
-      "volume_24h_str": "55.26M",
-      "price_change_24h": 0.01249,
+      "price": 0.99897957,
+      "price_str": "0.998980",
+      "volume_24h": 63036762.0,
+      "volume_24h_str": "63.04M",
+      "price_change_24h": -0.02171,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 52.06,
+      "rsi": 49.75,
       "rsi_label": "محايد",
-      "ema_20": 0.99900021,
-      "ema_50": 0.99890599,
-      "ema_200": 0.99860693,
+      "ema_20": 0.99900195,
+      "ema_50": 0.99891674,
+      "ema_200": 0.99848586,
       "supertrend_dir": 1,
-      "volume_ratio": 0.79,
+      "volume_ratio": 0.73,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -4.57e-06,
-      "timestamp": "2026-11-22T21:39:29.997546+00:00"
+      "macd_hist": -4.21e-06,
+      "timestamp": "2026-11-23T02:22:53.797201+00:00"
     }
   ],
-  "next_update": "2026-11-22T22:05:00+00:00"
+  "next_update": "2026-11-23T03:05:00+00:00"
 }
