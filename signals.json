@@ -1,96 +1,46 @@
 {
-  "timestamp": "2026-11-24T09:00:04.637123+00:00",
+  "timestamp": "2026-11-24T20:01:20.320263+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 3,
+    "signals_found": 1,
     "errors": 13,
-    "scan_duration": 80.201369,
-    "scan_start": "2026-11-24T09:00:04.637123+00:00",
-    "scan_end": "2026-11-24T09:01:24.838492+00:00",
+    "scan_duration": 77.939737,
+    "scan_start": "2026-11-24T20:01:20.320263+00:00",
+    "scan_end": "2026-11-24T20:02:38.260000+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 3,
+      "A": 1,
       "B": 0,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "NVDABUSDT",
-      "baseAsset": "NVDAB",
-      "price": 161.42904663,
-      "price_str": "161.4290",
-      "volume_24h": 312335698.0,
-      "volume_24h_str": "312.34M",
-      "price_change_24h": 19.1086,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 61.28,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 160.00023008,
-      "ema_50": 150.5596698,
-      "ema_200": 150.07292213,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.09,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.34334038,
-      "timestamp": "2026-11-24T09:00:04.637123+00:00"
-    },
-    {
       "symbol": "USDCVUSDT",
       "baseAsset": "USDCV",
-      "price": 0.99916565,
-      "price_str": "0.999166",
-      "volume_24h": 130627747.0,
-      "volume_24h_str": "130.63M",
-      "price_change_24h": 0.03445,
+      "price": 0.99885136,
+      "price_str": "0.998851",
+      "volume_24h": 134762144.0,
+      "volume_24h_str": "134.76M",
+      "price_change_24h": -0.00404,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 51.63,
+      "rsi": 45.02,
       "rsi_label": "محايد",
-      "ema_20": 0.99911337,
-      "ema_50": 0.99904391,
-      "ema_200": 0.99850923,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.45,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": -6.46e-06,
-      "timestamp": "2026-11-24T09:00:04.637123+00:00"
-    },
-    {
-      "symbol": "NVDAXUSDT",
-      "baseAsset": "NVDAX",
-      "price": 161.35066223,
-      "price_str": "161.3507",
-      "volume_24h": 82966660.0,
-      "volume_24h_str": "82.97M",
-      "price_change_24h": 18.99838,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 61.23,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 160.28028542,
-      "ema_50": 151.19490018,
-      "ema_200": 150.41918896,
+      "ema_20": 0.9990308,
+      "ema_50": 0.99903079,
+      "ema_200": 0.99856648,
       "supertrend_dir": 1,
       "volume_ratio": 0.0,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": -1.47713765,
-      "timestamp": "2026-11-24T09:00:04.637123+00:00"
+      "macd_hist": -3.312e-05,
+      "timestamp": "2026-11-24T20:01:20.320263+00:00"
     }
   ],
-  "next_update": "2026-11-24T09:05:00+00:00"
+  "next_update": "2026-11-24T20:05:00+00:00"
 }
