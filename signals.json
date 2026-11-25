@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-11-25T03:27:36.045042+00:00",
+  "timestamp": "2026-11-25T13:59:27.022492+00:00",
   "stats": {
     "total_scanned": 50,
     "signals_found": 1,
-    "errors": 14,
-    "scan_duration": 72.827542,
-    "scan_start": "2026-11-25T03:27:36.045042+00:00",
-    "scan_end": "2026-11-25T03:28:48.872584+00:00",
+    "errors": 12,
+    "scan_duration": 67.938248,
+    "scan_start": "2026-11-25T13:59:27.022492+00:00",
+    "scan_end": "2026-11-25T14:00:34.960740+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
       "A": 1,
-      "B": 0,
+      "B": 1,
       "C": 0
     }
   },
@@ -19,28 +19,30 @@
     {
       "symbol": "USDCVUSDT",
       "baseAsset": "USDCV",
-      "price": 0.99943364,
-      "price_str": "0.999434",
-      "volume_24h": 128263280.0,
-      "volume_24h_str": "128.26M",
-      "price_change_24h": 0.01784,
+      "price": 0.99939549,
+      "price_str": "0.999395",
+      "volume_24h": 124927884.0,
+      "volume_24h_str": "124.93M",
+      "price_change_24h": -0.01641,
       "strategies": [
-        "A"
+        "A",
+        "B"
       ],
       "strategy_labels": [
-        "استمرار الاتجاه"
+        "استمرار الاتجاه",
+        "تقاطع الزخم"
       ],
-      "rsi": 56.84,
+      "rsi": 57.42,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.99908139,
-      "ema_50": 0.99905654,
-      "ema_200": 0.99849856,
+      "ema_20": 0.99905337,
+      "ema_50": 0.99904404,
+      "ema_200": 0.99854708,
       "supertrend_dir": 1,
-      "volume_ratio": 0.0,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 1.75e-05,
-      "timestamp": "2026-11-25T03:27:36.045042+00:00"
+      "volume_ratio": 5.1,
+      "volume_label": "حجم كبير جداً ⚡",
+      "macd_hist": 1.885e-05,
+      "timestamp": "2026-11-25T13:59:27.022492+00:00"
     }
   ],
-  "next_update": "2026-11-25T04:05:00+00:00"
+  "next_update": "2026-11-25T14:05:00+00:00"
 }
