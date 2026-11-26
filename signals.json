@@ -1,121 +1,146 @@
 {
-  "timestamp": "2026-11-25T22:59:03.359271+00:00",
+  "timestamp": "2026-11-26T04:44:58.187070+00:00",
   "stats": {
     "total_scanned": 50,
-    "signals_found": 4,
+    "signals_found": 5,
     "errors": 14,
-    "scan_duration": 65.85782,
-    "scan_start": "2026-11-25T22:59:03.359271+00:00",
-    "scan_end": "2026-11-25T23:00:09.217091+00:00",
+    "scan_duration": 73.566054,
+    "scan_start": "2026-11-26T04:44:58.187070+00:00",
+    "scan_end": "2026-11-26T04:46:11.753124+00:00",
     "min_volume": 1000000,
     "timeframe": "1H",
     "strategies": {
-      "A": 2,
+      "A": 3,
       "B": 2,
       "C": 0
     }
   },
   "signals": [
     {
-      "symbol": "LINKUSDT",
-      "baseAsset": "LINK",
-      "price": 9.02099991,
-      "price_str": "9.0210",
-      "volume_24h": 278947986.0,
-      "volume_24h_str": "278.95M",
-      "price_change_24h": 1.8808,
+      "symbol": "USDCUSDT",
+      "baseAsset": "USDC",
+      "price": 0.99992067,
+      "price_str": "0.999921",
+      "volume_24h": 16044576838.0,
+      "volume_24h_str": "16.04B",
+      "price_change_24h": -0.00964,
       "strategies": [
         "B"
       ],
       "strategy_labels": [
         "تقاطع الزخم"
       ],
-      "rsi": 62.12,
-      "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 8.85000316,
-      "ema_50": 8.84113795,
-      "ema_200": 8.89168299,
+      "rsi": 52.99,
+      "rsi_label": "محايد",
+      "ema_20": 0.99987785,
+      "ema_50": 0.99987628,
+      "ema_200": 0.99985947,
       "supertrend_dir": 0,
-      "volume_ratio": 1.59,
+      "volume_ratio": 1.81,
       "volume_label": "حجم فوق المتوسط 📊",
-      "macd_hist": 0.05424431,
-      "timestamp": "2026-11-25T22:59:03.359271+00:00"
+      "macd_hist": 6.08e-06,
+      "timestamp": "2026-11-26T04:44:58.187070+00:00"
     },
     {
-      "symbol": "WLDUSDT",
-      "baseAsset": "WLD",
-      "price": 0.23899999,
-      "price_str": "0.239000",
-      "volume_24h": 143754346.0,
-      "volume_24h_str": "143.75M",
-      "price_change_24h": 1.58254,
+      "symbol": "ETHUSDT",
+      "baseAsset": "ETH",
+      "price": 1701.68994141,
+      "price_str": "1,701.69",
+      "volume_24h": 13370914102.0,
+      "volume_24h_str": "13.37B",
+      "price_change_24h": 2.97943,
       "strategies": [
         "B"
       ],
       "strategy_labels": [
         "تقاطع الزخم"
       ],
-      "rsi": 60.89,
+      "rsi": 63.65,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 0.23439579,
-      "ema_50": 0.23437945,
-      "ema_200": 0.24331514,
-      "supertrend_dir": 0,
-      "volume_ratio": 2.28,
+      "ema_20": 1680.39803715,
+      "ema_50": 1679.80933957,
+      "ema_200": 1716.79870698,
+      "supertrend_dir": 1,
+      "volume_ratio": 2.4,
       "volume_label": "حجم كبير 📈",
-      "macd_hist": 0.00146178,
-      "timestamp": "2026-11-25T22:59:03.359271+00:00"
+      "macd_hist": 4.51182331,
+      "timestamp": "2026-11-26T04:44:58.187070+00:00"
+    },
+    {
+      "symbol": "USDCVUSDT",
+      "baseAsset": "USDCV",
+      "price": 0.99903405,
+      "price_str": "0.999034",
+      "volume_24h": 177457419.0,
+      "volume_24h_str": "177.46M",
+      "price_change_24h": 0.03584,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 49.58,
+      "rsi_label": "محايد",
+      "ema_20": 0.99906056,
+      "ema_50": 0.99904744,
+      "ema_200": 0.99852832,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.05,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 1.326e-05,
+      "timestamp": "2026-11-26T04:44:58.187070+00:00"
+    },
+    {
+      "symbol": "SQDUSDT",
+      "baseAsset": "SQD",
+      "price": 0.014483,
+      "price_str": "0.014483",
+      "volume_24h": 150649160.0,
+      "volume_24h_str": "150.65M",
+      "price_change_24h": 14.75157,
+      "strategies": [
+        "A"
+      ],
+      "strategy_labels": [
+        "استمرار الاتجاه"
+      ],
+      "rsi": 64.58,
+      "rsi_label": "قريب من ذروة الشراء",
+      "ema_20": 0.01388031,
+      "ema_50": 0.01350462,
+      "ema_200": 0.01387205,
+      "supertrend_dir": 1,
+      "volume_ratio": 0.07,
+      "volume_label": "حجم منخفض 📉",
+      "macd_hist": 7.487e-05,
+      "timestamp": "2026-11-26T04:44:58.187070+00:00"
     },
     {
       "symbol": "NVDABUSDT",
       "baseAsset": "NVDAB",
-      "price": 150.02644348,
-      "price_str": "150.0264",
-      "volume_24h": 123426276.0,
-      "volume_24h_str": "123.43M",
-      "price_change_24h": -2.82982,
+      "price": 153.20550537,
+      "price_str": "153.2055",
+      "volume_24h": 126659967.0,
+      "volume_24h_str": "126.66M",
+      "price_change_24h": 1.08141,
       "strategies": [
         "A"
       ],
       "strategy_labels": [
         "استمرار الاتجاه"
       ],
-      "rsi": 52.56,
-      "rsi_label": "محايد",
-      "ema_20": 148.53992401,
-      "ema_50": 149.76326848,
-      "ema_200": 148.33464186,
-      "supertrend_dir": 1,
-      "volume_ratio": 0.16,
-      "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.65581646,
-      "timestamp": "2026-11-25T22:59:03.359271+00:00"
-    },
-    {
-      "symbol": "PIEVERSEUSDT",
-      "baseAsset": "PIEVERSE",
-      "price": 3.54386902,
-      "price_str": "3.5439",
-      "volume_24h": 87891055.0,
-      "volume_24h_str": "87.89M",
-      "price_change_24h": 15.45694,
-      "strategies": [
-        "A"
-      ],
-      "strategy_labels": [
-        "استمرار الاتجاه"
-      ],
-      "rsi": 64.28,
+      "rsi": 61.75,
       "rsi_label": "قريب من ذروة الشراء",
-      "ema_20": 3.32478247,
-      "ema_50": 3.25344045,
-      "ema_200": 2.95283332,
+      "ema_20": 150.09671336,
+      "ema_50": 150.22537597,
+      "ema_200": 146.8836517,
       "supertrend_dir": 1,
-      "volume_ratio": 0.78,
+      "volume_ratio": 0.03,
       "volume_label": "حجم منخفض 📉",
-      "macd_hist": 0.0613248,
-      "timestamp": "2026-11-25T22:59:03.359271+00:00"
+      "macd_hist": 0.92942641,
+      "timestamp": "2026-11-26T04:44:58.187070+00:00"
     }
   ],
-  "next_update": "2026-11-25T23:05:00+00:00"
+  "next_update": "2026-11-26T05:05:00+00:00"
 }
